@@ -1,0 +1,30 @@
+                            CIA Notify
+                               v1.0
+             http://brlcad.org/wiki/Extension:CIAnotify
+
+This extension to Mediawiki sends change notifications to the CIA IRC
+reporting system.  CIA relays change notifications in real time to a
+project's IRC channel.  This extension works seamlessly and similar to
+the other commit hook available for CIA.  See http://cia.vc for more
+information about the CIA project.
+
+To install CIA Notify:
+
+1) Copy the extension to your Mediawiki extensions directory:
+	cp -R CIAnotify /path/to/your/mediawiki/extensions/.
+
+2) Edit LocalSettings.php, set cnProject and require the extension:
+	$cnProject = 'BRL-CAD';
+	require_once( "$IP/extensions/CIAnotify/CIAnotify.php" );
+
+3) Enjoy!  Note that $cnProject needs to match your CIA project name.
+   See http://cia.vc for more details.
+
+The CIA Notify Mediawiki extension was originally written by
+Christopher Sean Morrison ('brlcad' on Freenode) for the BRL-CAD open
+source project.  Special thanks are deserved to Brian Koontz
+('brianko' on Freenode) for inspiration.
+
+---
+Cheers!
+Sean

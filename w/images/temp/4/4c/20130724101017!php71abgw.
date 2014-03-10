@@ -1,0 +1,439 @@
+diff -Naur brlcad-7.22.0/include/ged.h brlcad/include/ged.h
+--- brlcad-7.22.0/include/ged.h	2012-06-25 04:37:10.000000000 +0100
++++ brlcad/include/ged.h	2013-07-22 19:37:56.497006994 +0100
+@@ -1494,6 +1494,11 @@
+ GED_EXPORT extern int ged_ptranslate(struct ged *gedp, int argc, const char *argv[]);
+ 
+ /**
++ *Pull objects' path transformations from primitives
++ */
++GED_EXPORT extern int ged_pull(struct ged *gedp, int argc, const char *argv[]);
++
++/**
+  * Push objects' path transformations to  primitives
+  */
+ GED_EXPORT extern int ged_push(struct ged *gedp, int argc, const char *argv[]);
+diff -Naur brlcad-7.22.0/src/libged/CMakeLists.txt brlcad/src/libged/CMakeLists.txt
+--- brlcad-7.22.0/src/libged/CMakeLists.txt	2012-06-25 04:37:12.000000000 +0100
++++ brlcad/src/libged/CMakeLists.txt	2013-07-22 19:38:28.029019420 +0100
+@@ -209,6 +209,7 @@
+   ps.c
+   pscale.c
+   ptranslate.c
++  pull.c
+   push.c
+   put.c
+   put_comb.c
+diff -Naur brlcad-7.22.0/src/libged/pull.c brlcad/src/libged/pull.c
+--- brlcad-7.22.0/src/libged/pull.c	1970-01-01 01:00:00.000000000 +0100
++++ brlcad/src/libged/pull.c	2013-07-22 19:37:56.498005106 +0100
+@@ -0,0 +1,387 @@
++/*                         P U L L . C
++ * BRL-CAD
++ *
++ * Copyright (c) 2008-2012 United States Government as represented by
++ * the U.S. Army Research Laboratory.
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public License
++ * version 2.1 as published by the Free Software Foundation.
++ *
++ * This library is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with this file; see the file named COPYING for more
++ * information.
++ */
++/** @file libged/push.c
++ *
++ * The pull command.
++ * This is a pull routine which reverses the effects of a push on geometry.
++ * Author: Nyah Check
++ * Note: File still under development...
++ */
++
++
++#include "common.h"
++
++#include <stdlib.h>
++#include <string.h>
++#include "bio.h"
++
++#include "bu.h"
++#include "bn.h"
++#include "cmd.h"
++
++#include "./ged_private.h"
++
++#define PULL_MAGIC_ID 0x70756C6C
++#define FOR_ALL_PULL_SOLIDS(_p, _phead) \
++    for (_p=_phead.forw; _p!=&_phead; _p=_p->forw)
++#define FOR_ALL_PULL_BACKS(_p,_phead)\
++    for(_p=_phead.back; _p!=&_phead; _p=_p->back)
++
++
++/** structure to hold all solids that that have been pulled. */
++struct p_solid {
++    uint32_t magic;
++    int ps_flag; /*flag is set to 1 when node is leaf.*/
++    struct p_solid *forw, *back;
++    struct directory *ps_dir;
++    mat_t p_mat;/*holds the current matrix transformation to be inverted.*/
++};
++
++
++/*this structure holds all objects to be pulled.*/
++struct pull_obj{
++	
++	struct ged *gedp;
++	struct p_solid p_head;
++	int p_err;
++};
++
++
++
++/**
++ *@brief
++ *mat_restore(): This routine performs the inverse of a matrix transformation and also
++ *               checks whether matrix belongs to leaf and does the right thing.      
++ */
++static void
++mat_restore(struct p_solid *psp,	
++	    matp_t(cur_mat))
++{
++    mat_t output;
++	
++    if (psp->ps_flag && !bn_mat_is_identity(psp->p_mat)) {  
++	MAT_COPY(output,psp->p_mat);
++	MAT_IDN(psp->p_mat);
++    }
++
++    else {
++
++	bn_mat_inverse(output, cur_mat);
++	MAT_COPY(psp->p_mat, output);
++    }
++    MAT_COPY(cur_mat, output);
++    return;
++
++}
++
++
++
++/**
++ * @brief
++ * A null routine that does nothing when called by db_tree-walk building up the linked list of solids
++ * to be pulled subsequently
++ */
++static union tree *
++pull_region(struct db_tree_state *UNUSED(tsp), const struct db_full_path *UNUSED(pathp), union tree *curtree, genptr_t UNUSED(client_data))
++{
++    return curtree;
++}
++
++
++/**
++ * P U L L _ L E A F
++ *
++ * This routine must be prepared to run in parallel.
++ *
++ * @brief
++ * This routine is called once for each leaf (solid) that is to
++ * be pulled.  All it does is build at pull_obj linked list. Which
++ * will be used in reversing the effects of push during a db_tree_walk
++ * traversal from the root. sets fs_flag to 1 when its leaf so as enable pull.
++ */
++static union tree *
++pull_leaf(struct db_tree_state *tsp,
++	  const struct db_full_path *pathp,
++	  struct rt_db_internal *ip,
++	  genptr_t client_data)
++{
++    union tree *curtree;
++    struct directory *dp;
++    struct p_solid *gpsp;
++    struct pull_obj *gpop = (struct pull_obj *)client_data;
++
++    RT_CK_TESS_TOL(tsp->ts_ttol);
++    BN_CK_TOL(tsp->ts_tol);
++    RT_CK_RESOURCE(tsp->ts_resp);
++
++    dp = pathp->fp_names[pathp->fp_len-1];
++
++    if (RT_G_DEBUG&DEBUG_TREEWALK) {
++	char *sofar = db_path_to_string(pathp);
++
++	bu_vls_printf(gpop->gedp->ged_result_str, "pull_leaf(%s) path='%s'\n", ip->idb_meth->ft_name, sofar);
++	bu_free((genptr_t)sofar, "path string");
++    }
++
++    /*
++     *This walks down the tree from the head checking directory pointers to see 
++     * if solid has been seen before; if yes the matrix transformations are compared
++     * and node is added unto linked list accordingly.dp->d_uses tells us
++     * if this solid (leaf) has been seen before.  If it hasn't just add
++     * it to the list.  If it has, search the list to see if the matrices
++     * match, taking note of the leaves as it moves down.
++     *
++     */
++
++    bu_semaphore_acquire(RT_SEM_WORKER);
++    FOR_ALL_PULL_SOLIDS(gpsp,gpop->p_head) {
++	if (gpsp->ps_dir == dp) {/*Checks whether this solid has been seen before by comparing matrix transformations.*/
++	  	if (!bn_mat_is_equal(gpsp->p_mat,
++			 tsp->ts_mat, tsp->ts_tol)) {
++			char *sofar = db_path_to_string(pathp);
++
++			bu_vls_printf(gpop->gedp->ged_result_str, "pull_leaf: matrix mismatch between '%s' and prior reference.\n", sofar);
++			bu_free((genptr_t)sofar, "path string");
++			gpop->p_err = 1;
++	   	}
++
++	   	bu_semaphore_release(RT_SEM_WORKER);
++	    	RT_GET_TREE(curtree, tsp->ts_resp);
++	    	curtree->tr_op = OP_NOP;
++	    	return curtree;
++	}
++   }
++
++    /*
++     * This is the first time we have seen this solid.
++     * checks to see if solid is a leaf(then mat_t is not identity) else
++     * mat_t has to be identity, since solid has been pushed previously.
++     */
++    gpsp = (struct p_solid *) bu_malloc(sizeof(struct p_solid), "Pull ident");
++    gpsp->magic = PULL_MAGIC_ID;
++    gpsp->ps_dir = dp;
++	
++    if(!bn_mat_is_identity(tsp->ts_mat) & (RT_DIR_SOLID | OP_SOLID)) {
++
++	MAT_COPY(gpsp->p_mat, tsp->ts_mat);
++	gpsp->ps_flag = 1;/* takes note of leaf. */
++		
++	bu_semaphore_release(RT_SEM_WORKER);
++    	RT_GET_TREE(curtree, tsp->ts_resp);
++	curtree->tr_op = OP_SOLID;
++    }
++    else if( !bn_mat_is_identity(tsp->ts_mat) && !(RT_DIR_SOLID)) {
++	char *sofar = db_path_to_string(pathp);
++
++	bu_vls_printf(gpop->gedp->ged_result_str, "pull_leaf: node '%s' not pushed.\n", sofar);
++	bu_free((genptr_t)sofar, "path string");
++	gpop->p_err = 1;   /* a non leaf node which has not been pushed. */
++	gpsp->ps_flag = 0;
++
++	bu_semaphore_release(RT_SEM_WORKER);
++    	RT_GET_TREE(curtree, tsp->ts_resp);
++	curtree->tr_op = OP_NOP;
++    }   
++    else {/* Since node along tree are identity after push. */
++	MAT_IDN(gpsp->p_mat);
++	gpsp->ps_flag = 0;
++
++	bu_semaphore_release(RT_SEM_WORKER);
++    	RT_GET_TREE(curtree, tsp->ts_resp);
++	curtree->tr_op = OP_NOT;
++    }
++	
++    gpsp->back = gpop->p_head.back;
++    gpop->p_head.back = gpsp;
++    gpsp->forw = &gpop->p_head;
++    gpsp->back->forw = gpsp;
++
++    return curtree;
++}
++
++
++
++/**
++ *@brief
++ *This is the ged_pull() routine which will actually pull the primitive matrix
++ * transformations to the root of the tree.
++ *Still under development...
++ */
++int ged_pull(struct ged *gedp, int argc, const char *argv[])
++{
++
++    struct p_solid *psp;
++    struct pull_obj *pop;
++    struct rt_db_internal intern;
++    mat_t mat;
++    int pull_err;
++    int i;
++    int ncpu;
++    int c;
++    int debug;
++    static const char *usage = "object";
++
++    GED_CHECK_DATABASE_OPEN(gedp, GED_ERROR);
++    GED_CHECK_READ_ONLY(gedp, GED_ERROR);
++    GED_CHECK_ARGC_GT_0(gedp, argc, GED_ERROR);
++
++    /* initialize result */
++    bu_vls_trunc(gedp->ged_result_str, 0);
++
++    /* must be wanting help */
++    if (argc == 1) {
++	bu_vls_printf(gedp->ged_result_str, "Usage: %s %s", argv[0], usage);
++	return GED_HELP;
++    }
++
++    if (argc != 2) {
++	bu_vls_printf(gedp->ged_result_str, "Usage: %s %s", argv[0], usage);
++	return GED_ERROR;
++    }
++
++
++    BU_GET(pop, struct pull_obj);
++    pop->gedp = gedp;
++    pop->p_err = 0;
++    pop->p_head.magic = PULL_MAGIC_ID;
++    pop->p_head.forw = pop->p_head.back = &pop->p_head;
++    pop->p_head.ps_dir = (struct directory *) 0;
++	
++    debug = RT_G_DEBUG;
++
++    /* get directory pointer for arg */
++    if ((pop->p_head.ps_dir = db_lookup(gedp->ged_wdbp->dbip,  argv[1], LOOKUP_NOISY)) == RT_DIR_NULL)
++	return GED_ERROR;
++
++    /* Checks whether the object is not a primitive.*/
++    if (pop->p_head.ps_dir->d_flags & RT_DIR_SOLID) {
++	bu_log("Attempt to pull primitive, aborting.\n");
++	return GED_ERROR;
++    }
++
++    /* Initial values for options, must be reset each time */
++    ncpu = 1;
++
++    /* Parse options */
++    bu_optind = 1;	/* re-init bu_getopt() */
++    while ((c = bu_getopt(argc, (char * const *)argv, "d")) != -1) {
++	switch (c) {
++	   case 'd':
++		rt_g.debug |= DEBUG_TREEWALK;
++		break;
++	  case '?':
++	  default:
++		bu_vls_printf(gedp->ged_result_str, "ged_pull: usage pull [-d] root \n");
++		break;
++	}
++    }
++
++    /*
++     * builds a linked list of solids which corresponds to the nodes    ERROR HERE.....
++     * down a CSG tree with the correct matrix transformation for each  
++     * node and this checks to make sure linked list is properly built to
++     * depict the arrangement of nodes down the tree to the leaves.
++     * list built such that a leaf is at the tail.
++     */
++    i = db_walk_tree(gedp->ged_wdbp->dbip, argc,
++	             (const char **)argv, ncpu, 
++		      &gedp->ged_wdbp->wdb_initial_tree_state,
++		      0, 
++		      pull_region, 
++		      pull_leaf,/*creates a linked list for nodes down the tree. */ 
++		      (genptr_t)pop);
++			 
++    /*
++     *This determines if there was an error in buil+ding the linked list
++     *it then frees up the built list and returns. This occurs in a case
++     * where there is an attempt to pull an object which has not been pushed.
++     */
++    if (i < 0 || pop->p_err) {
++	while (pop->p_head.forw != &pop->p_head) {
++		psp = pop->p_head.forw;
++		psp->forw->back = psp->back;
++		psp->back->forw = psp->forw;
++		bu_free((genptr_t)psp, "Pull non-ident");
++	}
++	
++	rt_g.debug = debug;
++	bu_free((genptr_t)pop, "ged_pull: pop");
++	bu_vls_printf(gedp->ged_result_str, "ged_pull:\tdb_walk_tree failed or there was a solid\t\n having a non- identity matrix transformation ");
++	return GED_ERROR;
++    }
++
++    /*
++     *The linked list of nodes on the tree has been built so a reverse process of
++     *applying the original matrix transformations on the nodes while moving back up the
++     *tree is used before writing the changes to the database and freeing  up the linked list.
++     *Here we move backwards of the list from the leaves to head of list.
++     */
++    FOR_ALL_PULL_BACKS(psp,pop->p_head) {
++    
++	mat_restore(psp,mat);
++	if (rt_db_get_internal(&intern, psp->ps_dir,gedp->ged_wdbp->dbip,psp->p_mat, &rt_uniresource) < 0) {
++	    bu_vls_printf(gedp->ged_result_str, "ged_pull: Read error fetching '%s'\n", psp->ps_dir->d_namep);
++	    pop->p_err = -1;
++	    continue;
++	}
++	RT_CK_DB_INTERNAL(&intern);
++
++	if (rt_db_put_internal(psp->ps_dir, gedp->ged_wdbp->dbip, &intern, &rt_uniresource) < 0) {
++	    bu_vls_printf(gedp->ged_result_str, "ged_pull(%s): solid export failure\n", psp->ps_dir->d_namep);
++	}
++	rt_db_free_internal(&intern);	
++    }
++
++    /*
++     *Still thinking whether to write a loop that checks the combinations to see whether the 
++     *the matrix transformations at the combinations have been restored. 
++     * *** still thinking...
++     */
++	
++
++    /*
++     *New matrix transformations have been written to database reversing the push
++     *so built linked list is to be deallocated.
++     */
++    while (pop->p_head.forw != (struct p_solid *)&pop->p_head) {
++	psp = (struct p_solid *)pop->p_head.forw;
++	psp->forw->back = psp->back;
++	psp->back->forw = psp->forw;
++	bu_free((genptr_t)psp, "node free.");
++    }
++
++   rt_g.debug = debug;
++   pull_err = pop->p_err;
++   bu_free((genptr_t)pop, "ged_pull: pop");
++
++   return pull_err ? GED_ERROR : GED_OK;
++}
++
++
++/** @} */
++/*
++ * Local Variables:
++ * mode: C
++ * tab-width: 8
++ * indent-tabs-mode: t
++ * c-file-style: "stroustrup"
++ * End:
++ * ex: shiftwidth=4 tabstop=8
++ */
+diff -Naur brlcad-7.22.0/src/libtclcad/tclcad_obj.c brlcad/src/libtclcad/tclcad_obj.c
+--- brlcad-7.22.0/src/libtclcad/tclcad_obj.c	2012-06-25 04:37:13.000000000 +0100
++++ brlcad/src/libtclcad/tclcad_obj.c	2013-07-22 19:37:56.502006009 +0100
+@@ -1033,6 +1033,7 @@
+     {"pscale_mode",	"obj attribute x y", TO_UNLIMITED, to_pscale_mode, GED_FUNC_PTR_NULL},
+     {"ptranslate",	(char *)0, TO_UNLIMITED, to_pass_through_func, ged_ptranslate},
+     {"ptranslate_mode",	"obj attribute x y", TO_UNLIMITED, to_ptranslate_mode, GED_FUNC_PTR_NULL},
++    {"pull",    (char *)0, TO_UNLIMITED, to_pass_through_func, ged_pull},
+     {"push",	(char *)0, TO_UNLIMITED, to_pass_through_func, ged_push},
+     {"put",	(char *)0, TO_UNLIMITED, to_pass_through_func, ged_put},
+     {"put_comb",	(char *)0, TO_UNLIMITED, to_pass_through_func, ged_put_comb},
+diff -Naur brlcad-7.22.0/src/mged/setup.c brlcad/src/mged/setup.c
+--- brlcad-7.22.0/src/mged/setup.c	2012-06-25 04:37:12.000000000 +0100
++++ brlcad/src/mged/setup.c	2013-07-22 19:37:56.504009782 +0100
+@@ -262,6 +262,7 @@
+     {"press", f_press, GED_FUNC_PTR_NULL},
+     {"preview", cmd_ged_dm_wrapper, ged_preview},
+     {"ps", f_ps, GED_FUNC_PTR_NULL},
++    {"pull", cmd_ged_plain_wrapper, ged_pull},
+     {"push", cmd_ged_plain_wrapper, ged_push},
+     {"put", cmd_ged_plain_wrapper, ged_put},
+     {"put_comb", cmd_ged_plain_wrapper, ged_put_comb},

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language ?>" xml:lang="<?php print $language ?>">
+	<head>
+		<?php 
+		if( isset( $head_title ) ) {
+			echo '<title>' . $head_title . '</title>' . $head . $styles . $scripts;
+		} else {
+		?>
+			<meta http-equiv="Content-Type" content="<?php $this->text('mimetype') ?>; charset=<?php $this->text('charset') ?>" />
+			<?php $this->html('headlinks') ?>
+			<title><?php $this->text('pagetitle') ?></title>
+			<style type="text/css" media="all">@import "<?php $this->text('stylepath') ?>/common/shared.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";</style>
+			<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
+			<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/common/wikibits.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"><!-- wikibits js --></script>
+			<?php if($this->data['pagecss'   ]) { ?><style type="text/css"><?php $this->html('pagecss'   ) ?></style><?php } ?>
+			<?php if($this->data['usercss'   ]) { ?><style type="text/css"><?php $this->html('usercss'   ) ?></style><?php } ?>
+			<?php if($this->data['jsvarurl'  ]) { ?><script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('jsvarurl'  ) ?>"><!-- site js --></script><?php	} ?>
+			<?php if($this->data['userjs'    ]) { ?><script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('userjs' ) ?>"></script><?php } ?>
+			<?php if($this->data['userjsprev']) { ?><script type="<?php $this->text('jsmimetype') ?>"><?php $this->html('userjsprev') ?></script><?php } ?>
+			<?php if($this->data['trackbackhtml']) print $this->data['trackbackhtml']; ?>
+			<?php $this->html('headscripts') ?>
+			<link rel="shortcut icon" href="/d/misc/favicon.ico" type="image/x-icon" />
+			<style type="text/css" media="all">@import "/d/modules/forum/forum.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/logintoboggan/logintoboggan.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/node/node.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/poll/poll.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/system/defaults.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/system/system.css";</style>
+			<style type="text/css" media="all">@import "/d/modules/user/user.css";</style>
+			<style type="text/css" media="all">@import "/d/themes/brlcad/style.css";</style>
+		<?php
+		}
+		?>
+		<!--[if IE]>
+		<style type="text/css">
+		#navback {
+		width:500px;
+		}
+		</style>
+		<![endif]-->
+		<script type="text/javascript">
+		function resizeWindow()
+		{
+		  window.resizeBy(-1,-1)
+		  window.resizeBy(1,1)
+		}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<a id="horizontalthing"></a>
+				<div id="topsearch">
+					<b class="sboxcontent">
+					<form action="/d/index.php?q=search/node" method="post">
+						<div id="custom-search-div">
+							<input type="text" maxlength="200" name="search_theme_form_keys" id="cstom-search-term"  size="16" value="" title="Enter the terms you wish to search for." />
+							<input type="submit" name="op" id="custom-search-submit" value="Search" />
+						</div>
+					</form>
+					</b></b><b class="sb6"></b><b class="sb5"></b><b class="sb4"></b><b class="sb3"></b><b class="sb2"></b><b class="sb1"></b>
+				</div>
+				<a id="xyz"></a>
+				<a id="rightheader"></a>
+				<a id="leftheader"></a>
+				<a id="logotext" href="/d/index.php"></a>
+				<a id="download" href="/d/downloads"></a>
+				<div id="navigationnew">
+<!--					<b class="rb1"></b><b class="rb2"></b><b class="rb3"></b><b class="rb4"></b><b class="rb5"></b><b class="rb6"></b><b class="rb7"></b> -->
+					<b class="rboxcontent" style="padding-bottom:1px;padding-top:1px;">
+						<a class="navitem" href="/d/about">About</a>
+<!--						<a class="navitem" href="/d/downloads">Download</a>-->
+						<a class="navitem" href="/wiki/Documentation">Documentation</a>
+						<a class="navitem" href="/d/community">Community</a>
+						<a class="navitem" href="/d/development">Development</a>
+						<a class="navitem" href="/wiki/Support">Support</a>
+						<a class="navitem" href="/d/contact">&iquest;?</a>
+					</b><b class="rb7"></b><b class="rb6"></b><b class="rb5"></b><b class="rb4"></b><b class="rb3"></b><b class="rb2"></b><b class="rb1"></b>
+				</div>
+			</div><!-- end-of-header -->
+			<table id="wrapper">
+				<tr valign="top">
+					<td id="content">
+						<br class="clear" />
+						<br class="clear" />
+						<?php if( $head_title ) { ?>
+						<h1 class="title"><?php print $title ?></h1>
+						<?php print $breadcrumb ?>
+						<div id="custom-tabs"><?php print $tabs ?></div>
+						<?php print $help ?>
+						<?php print $messages ?>
+						<?php print $sidebar_left; ?>
+						<?php print $content; ?>
+                                                <?php print $feed_icons; ?>
+						<?php } else { ?>
+						<h1 class="title"><?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?></h1>
+						<div id="custom-tabs">
+							<ul class="tabs primary">
+	<?php			foreach($this->data['content_actions'] as $key => $tab) { ?>
+								 <li id="ca-<?php echo Sanitizer::escapeId($key) ?>"<?php
+					 	if($tab['class']) { ?> class="<?php echo htmlspecialchars($tab['class']) ?>"<?php }
+					 ?>><a href="<?php echo htmlspecialchars($tab['href']) ?>"<?php echo $skin->tooltipAndAccesskey('ca-'.$key) ?>><?php
+					 echo htmlspecialchars($tab['text']) ?></a></li>
+	<?php			 } ?>
+							</ul>
+						</div>
+						<?php $this->html('bodytext') ?>
+						<?php if($this->data['catlinks']) { ?><div id="catlinks"><?php $this->html('catlinks') ?></div><?php } ?>
+						<?php } ?>
+					</td>
+					<td id="sidebar">
+						<?php if( $head_title ) { ?>
+						<?php echo $sidebar_right; ?>
+						<?php } else { ?>
+						<div class="block"><b class="rb1"></b><b class="rb2"></b><b class="rb3"></b><b class="rb4"></b><b class="rb5"></b><b class="rb6"></b><b class="rb7"></b><b class="rboxcontent"><div class="content">
+							<ul>
+<?php 			foreach($this->data['personal_urls'] as $key => $item) { ?>
+								<li id="pt-<?php echo Sanitizer::escapeId($key) ?>"<?php
+					if ($item['active']) { ?> class="active"<?php } ?>><a href="<?php
+				echo htmlspecialchars($item['href']) ?>"<?php echo $skin->tooltipAndAccesskey('pt-'.$key) ?><?php
+				if(!empty($item['class'])) { ?> class="<?php
+				echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php
+				echo htmlspecialchars($item['text']) ?></a></li>
+<?php			} ?>
+							</ul>
+						</div></b><b class="rb7"></b><b class="rb6"></b><b class="rb5"></b><b class="rb4"></b><b class="rb3"></b><b class="rb2"></b><b class="rb1"></b></div>
+						<div class="block" id="toolbox"><b class="rb1"></b><b class="rb2"></b><b class="rb3"></b><b class="rb4"></b><b class="rb5"></b><b class="rb6"></b><b class="rb7"></b><b class="rboxcontent">
+							<h2 class="title"><?php $this->msg('toolbox') ?></h2><div class="content">
+							<ul>
+<?php
+		if($this->data['notspecialpage']) { ?>
+								<li id="t-whatlinkshere"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['whatlinkshere']['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-whatlinkshere') ?>><?php $this->msg('whatlinkshere') ?></a></li>
+<?php
+			if( $this->data['nav_urls']['recentchangeslinked'] ) { ?>
+								<li id="t-recentchangeslinked"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['recentchangeslinked']['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-recentchangeslinked') ?>><?php $this->msg('recentchangeslinked') ?></a></li>
+<?php 		}
+		}
+		if(isset($this->data['nav_urls']['trackbacklink'])) { ?>
+								<li id="t-trackbacklink"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['trackbacklink']['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-trackbacklink') ?>><?php $this->msg('trackbacklink') ?></a></li>
+<?php 	}
+		if($this->data['feeds']) { ?>
+								<li id="feedlinks"><?php foreach($this->data['feeds'] as $key => $feed) {
+					?><span id="feed-<?php echo Sanitizer::escapeId($key) ?>"><a href="<?php
+					echo htmlspecialchars($feed['href']) ?>"<?php echo $skin->tooltipAndAccesskey('feed-'.$key) ?>><?php echo htmlspecialchars($feed['text'])?></a>&nbsp;</span>
+					<?php } ?></li><?php
+		}
+
+		foreach( array('contributions', 'log', 'blockip', 'emailuser', 'upload', 'specialpages') as $special ) {
+
+			if($this->data['nav_urls'][$special]) { ?>
+								<li id="t-<?php echo $special ?>"><a href="<?php echo htmlspecialchars($this->data['nav_urls'][$special]['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-'.$special) ?>><?php $this->msg($special) ?></a></li>
+<?php		}
+		}
+
+		if(!empty($this->data['nav_urls']['print']['href'])) { ?>
+								<li id="t-print"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['print']['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-print') ?>><?php $this->msg('printableversion') ?></a></li><?php
+		}
+
+		if(!empty($this->data['nav_urls']['permalink']['href'])) { ?>
+								<li id="t-permalink"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['permalink']['href'])
+				?>"<?php echo $skin->tooltipAndAccesskey('t-permalink') ?>><?php $this->msg('permalink') ?></a></li><?php
+		} elseif ($this->data['nav_urls']['permalink']['href'] === '') { ?>
+								<li id="t-ispermalink"<?php echo $skin->tooltip('t-ispermalink') ?>><?php $this->msg('permalink') ?></li><?php
+		}
+
+?>
+							</ul></div></b><b class="rb7"></b><b class="rb6"></b><b class="rb5"></b><b class="rb4"></b><b class="rb3"></b><b class="rb2"></b><b class="rb1"></b>
+						</div>
+<?php
+		if( $this->data['language_urls'] ) { ?>
+						<div class="block" id="languages">
+							<h2 class="title"><?php $this->msg('otherlanguages') ?></h2>
+							<ul>
+<?php		foreach($this->data['language_urls'] as $langlink) { ?>
+								<li class="<?php echo htmlspecialchars($langlink['class'])?>"><?php
+				?><a href="<?php echo htmlspecialchars($langlink['href']) ?>"><?php echo $langlink['text'] ?></a></li>
+<?php		} ?>
+							</ul>
+						</div>
+<?php	} ?>
+						<?php } ?>
+					</td>
+				</tr>
+			</table>
+			<br class="clear" />
+			<br class="clear" />
+			<br class="clear" />
+			<br class="clear" />
+			<div id="footer">
+				<a id="horizontalthing2"></a>
+				<div id="bottomsearch">
+					<b class="sboxcontent">
+					<form action="/d/index.php?q=search/node"  method="post">
+						<div id="custom-search-div-bottom">
+							<input type="text" maxlength="200" name="search_theme_form_keys" id="cstom-search-term-bottom"  size="16" value="" title="Enter the terms you wish to search for." />
+							<input type="submit" name="op" id="custom-search-submit-bottom" value="Search" />
+						</div>
+					</form>
+					</b></b><b class="bb6"></b><b class="bb5"></b><b class="bb4"></b><b class="bb3"></b><b class="bb2"></b><b class="bb1"></b>
+				</div>
+				<p id="quotes"><?php require_once( "/usr/web/my.brlcad.org/skin/quotes.php" ); ?></p>
+				<p id="copyright"><?php print $footer_message ?></p>
+			</div>
+		</div>
+<?php print $closure ?>
+	</body>
+</html>

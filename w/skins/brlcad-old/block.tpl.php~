@@ -1,0 +1,3 @@
+<div class="block block-<?php print $block->module; ?>" id="block-<?php print $block->module; ?>-<?php print $block->delta; ?>"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b><b class="xboxcontent">
+    <h2 class="title"><?php print $block->subject; ?></h2>
+    <div class="content"><?php print $block->content; ?></div></b><b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>

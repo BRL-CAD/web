@@ -1,0 +1,44 @@
+This is the changelog for the Realnames extension.
+http://www.mediawiki.org/wiki/Extension:Update
+
+== 0.1.3 (2011-12-25) ==
+bugfix:
+* fixed STRICT warnings on 1.18 (thanks MWJames)
+
+notes:
+* switched to a more permissive and correct bsd-2-clause license agreement for commits
+
+testing:
+* trunk 2011-12-25 stable 1.18.0, 1.17.1, 1.16.5, 1.15.5
+
+== 0.1.2 (2011-10-11) ==
+bugfix:
+* changed a call method to support php < 5.3.x (thanks Wikimanz) 
+
+testing: 
+* trunk 2011-09-22 stable 1.17.0, 1.16.5, 1.15.5
+
+== 0.1.1 (2011-10-09) ==
+features:
+* new Special:Update interface (no longer based on Special:Version)
+ 
+bugfix:
+* various strict php warnings/errors (thanks Wikimanz)
+* now tries to guess MW link to extension if url is diff
+* improved version comparison using php's version_compare()
+* added mediawiki 1.15.5 support (better http request handling)
+* improved translation support for translatewiki.net (thanks Nikerabbit)
+* hook SoftwareInfo removed
+
+testing: 
+* trunk 2011-09-22 stable 1.17.0, 1.16.5, 1.15.5
+
+== 0.1 (2011-09-20) ==
+Initial release includes checks for:
+* MediaWiki stable version (w/ download link)
+* MW stable PHP requirement
+* MW stable MySQL requirement
+* MW extension page version changes from extension credits
+
+Any issues, email olivier.beaton@gmail.com
+As always, this extension is pay-what-you want, http://olivierbeaton.com/mediawiki#update

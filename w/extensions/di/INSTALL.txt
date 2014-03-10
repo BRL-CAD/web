@@ -1,0 +1,45 @@
+Overview, description and discussion is at http://www.mediawiki.org/w/index.php?title=Extension:DrupalIntegration
+
+1. Download the DrupalIntegrationx.x.x.zip file and unpack files into temporary location. You will
+have two folders. One "di" has MediaWiki extension. Another "mwi" has Drupal module.
+
+2. Installing MediaWiki extention
+2.1 Place "di" folder with all files to your_wiki_path/extensions/
+2.2 Edit configuration settings in file your_wiki_path/extensions/di/iwDrupalConfig.php
+2.3 Put the following line in LocalSettings.php:
+    include_once ($IP . '/extensions/di/iwDrupal.php');
+2.4 Go to special page Version and check that DrupalIntegration extension is listed in installed extensions
+    your_wiki_url/index.php?title=Special:Version
+
+3. Installing Drupal module
+3.1 Place "mwi" folder to your_drupal_path/sites/all/modules
+3.2 Run sql command in mwi/install.sql file in Drupal database
+3.3 Edit configuration settings in file your_drupal_path/sites/all/modules/mwi/mwi.config
+3.4 Sign in as Drupal admin and go to drupal admin pages, then to site building, then to module panel.
+    your_drupal_url/admin/build/modules
+3.5 Enable "Drupal Integration" module at "mediawiki" section. This will run batch synchronization routine. 
+    If you are not logged into Wiki, you will be logged out of Drupal as admin user account will be replaced with WikiSysop account from your wiki.
+    If you are logged into Wiki, you will be logged in to Drupal as WikiSysop that is admin user in Drupal from now on.
+    You might see number of notices and warnings if Drupal has roles with the same names as transfered wiki groups.
+    Ignore them.
+3.6 Login to wiki as WikiSysop
+3.7 Go to Drupal as you are recognized by Drupal as WikiSysop then installation is completed
+
+4. Customizing Drupal
+4.1 Go to administration of Drupal.
+4.2 In order to remove Drupal login form that does not work anyway
+    go to site building->blocks
+    for User login block select none and press save blocks
+4.4 In order to remove log out link in user's menu that does not work anyway
+    go to site building->menus->navigation
+    uncheck Log out menu item to disable it
+    Save configuration
+4.5 In order to add log out link at the same place, but with logging out from wiki
+    go to site building->menus->navigation->add item
+    enter path to log out url, e.g. http://example.com/wiki/index.php?title=Special:UserLogout&returnto=Special:UserLogin
+    enter menu link title, e.g. Log out
+    give weight of 10 to have log out link at the bottom of navigation menu
+4.6 In order to add login link at Drupal pages
+    go to  site building->menus->primary links->add item
+    enter path to login url, e.g. http://example.com/wiki/index.php?title=Special:UserLogin
+    enter menu link title, e.g. Login

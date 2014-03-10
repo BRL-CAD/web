@@ -1,0 +1,82 @@
+/**
+ *@brief
+ *  CodePatch: This code patch demonstrates how to determine the inverse any matrix transformation as would be applied in the pull 
+ *           routine together with a sample linked list used to keep track of the transformations on the primitive object.
+ *Author: Nyah Check(Ch3ck)
+ *Note: This code uses some directives defined in /include/vmath.h file. So please refer to brlcad source code.
+ */
+/*
+ * Local Variables:
+ * tab-width: 8
+ * mode: C
+ * indent-tabs-mode: t
+ * c-file-style: "stroustrup"
+ * End:
+ * ex: shiftwidth=4 tabstop=8
+ */
+
+#include <stdio.h>
+#include "vmath.h"
+
+
+/*This is a sample structure that would hold the original and inverse matrices from the primitive together 
+  with the original directory pointer.*/
+struct pull_obj
+{
+	/*This determines the type of transformation which occured.*/
+	typedef enum{ROTATE, TRANSLATE, SCALE, NONE = 0}Trans;
+
+	mat_t Inv_Matrix;/*Inverse matrix*/
+	mat_t Or_Matrix; /*Original Matrix*/
+
+	struct pull_obj *next, *prev;
+	struct directory *dirptr;/*directory pointer.*/
+};
+
+
+/**
+ *InverseTransf(): This routine computes the Inverse of a transformation storing the results on the linked list
+ *Precondition: a 4x4 matrix(mat_t and push_obj structure with type of transformation
+ *Postcondition: returns 0 if successfull or 1 - otherwise
+ */
+int InverseTransf(mat_t transf, struct pull_obj result)
+{	
+	/*This matrix will hold the inverse matrix transformations.*/
+	mat_t Inverse;
+	
+	MAT_IDN(Inverse); /*initializes all matrices to identity.
+	
+	/*determines the type of transformation and determines the inverse.*/
+	if( result->Trans == ROTATE)
+		MAT_TRANSPOSE(Inverse, transf);
+		
+	else if (result->Trans == SCALE)
+		MAT_SCALE(Inverse, 1.0/transf[MSX],1.0/transf[MSY], 1.0/transf[MSZ]);
+	
+	else if( result->Trans == TRANSLATE)
+		MAT_DELTAS_GET_NEG(Inverse,transf);
+	else
+		return 1;
+	
+	
+	/*copies the results to the linked list and returns to the calling function*/
+	MAT_COPY(result->Inv_Matrix, Inverse);
+	MAT_COPY(result->Or->Matrix, transf);
+	
+	/*deallocates memory for matrix.*/
+	bu_free(Inverse);
+	
+	return 0;
+	
+}
+
+
+/*
+ * Local Variables:
+ * tab-width: 8
+ * mode: C
+ * indent-tabs-mode: t
+ * c-file-style: "stroustrup"
+ * End:
+ * ex: shiftwidth=4 tabstop=8
+ */
