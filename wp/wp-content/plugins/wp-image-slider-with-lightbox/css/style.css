@@ -1,0 +1,15 @@
+.image_error{color:red;}
+.succMsg{background:#E2F3DA ;border: 1px solid #9ADF8F;color:#556652 !important;padding:8px 8px 8px 36px;text-align:left;margin:5px;margin-left: 0px;margin-top: 30px;width:505px !important;}
+.errMsg{background:#FFCECE ;border: 1px solid #DF8F8F;color:#665252 !important;padding:8px 8px 8px 36px; text-align:left;margin:5px;margin-left: 0px;margin-top: 30px;width:505px !important;}
+.arrowleft{vertical-align: middle;}
+.arrowright{vertical-align: middle;}
+.mainTable{background:#ECF5DE}
+.mainSliderDiv{}
+.sliderUl{}
+.sliderimgLi{list-style-type:none;list-style:none;padding:0px;margin:0px;}
+.sliderimgLi img{background: white;border: 1px solid #CCCCCC;padding: 12px;margin: 7px;}
+/*.nextimg{float: left;background: white url(../images/arrow.png) no-repeat;display: block;width: 30px;height: 30px;cursor: pointer;font-size: 1px;text-indent: -9999em;background-position: -30px -30px;clear:right;}*/
+.nextimg{background: url("../images/large_right.png") no-repeat scroll left top transparent;cursor: pointer;height: 40px;width: 40px;z-index: 100;}
+/*.previmg{float: left;background: white url(../images/arrow.png) no-repeat;display: block;width: 30px;height: 30px;cursor: pointer;font-size: 1px;text-indent: -9999em;}*/
+.previmg{ background: url("../images/large_left.png") no-repeat scroll left top transparent;cursor: pointer;height: 40px;width: 40px;z-index: 100;}
+.printCode{background: lightYellow none repeat scroll 0 0;border: 1px inset orange;height: 36px;margin: 10px;overflow: auto;padding: 6px;text-align: left;color: black;width:514px;}

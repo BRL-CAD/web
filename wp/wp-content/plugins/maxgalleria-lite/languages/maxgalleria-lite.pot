@@ -1,0 +1,777 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maxgalleria-lite\n"
+"POT-Creation-Date: 2013-11-25 09:19-0500\n"
+"PO-Revision-Date: 2013-11-25 09:19-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: maxgalleria-lite.php:121
+msgid "0 images"
+msgstr ""
+
+#: maxgalleria-lite.php:122
+msgid "1 image"
+msgstr ""
+
+#: maxgalleria-lite.php:123
+#, php-format
+msgid "%d images"
+msgstr ""
+
+#: maxgalleria-lite.php:153 maxgalleria-lite.php:288
+msgid "Galleries"
+msgstr ""
+
+#: maxgalleria-lite.php:188 meta/image-edit.php:72
+#: meta/image-gallery-images.php:331
+msgid "Title"
+msgstr ""
+
+#: maxgalleria-lite.php:189
+msgid "Thumbnail"
+msgstr ""
+
+#: maxgalleria-lite.php:190 meta/image-gallery-layout.php:55
+msgid "Template"
+msgstr ""
+
+#: maxgalleria-lite.php:191
+msgid "Number of Media"
+msgstr ""
+
+#: maxgalleria-lite.php:192
+msgid "Shortcode"
+msgstr ""
+
+#: maxgalleria-lite.php:193
+msgid "Date"
+msgstr ""
+
+#: maxgalleria-lite.php:289
+msgid "Gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:290
+msgid "Add New"
+msgstr ""
+
+#: maxgalleria-lite.php:291
+msgid "Add New Gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:292
+msgid "Edit Gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:293 mg-meta.php:19
+msgid "New Gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:294
+msgid "View Gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:295
+msgid "Search Galleries"
+msgstr ""
+
+#: maxgalleria-lite.php:296
+msgid "No galleries found"
+msgstr ""
+
+#: maxgalleria-lite.php:297
+msgid "No galleries found in trash"
+msgstr ""
+
+#: maxgalleria-lite.php:309
+msgid "gallery"
+msgstr ""
+
+#: maxgalleria-lite.php:366
+msgid "Next >"
+msgstr ""
+
+#: maxgalleria-lite.php:367
+msgid "< Prev"
+msgstr ""
+
+#: maxgalleria-lite.php:368 meta/new-gallery-type.php:58
+#: meta/new-gallery-type.php:60
+msgid "Image"
+msgstr ""
+
+#: maxgalleria-lite.php:369
+msgid "of"
+msgstr ""
+
+#: maxgalleria-lite.php:370 mg-image-gallery.php:107
+msgid "Close"
+msgstr ""
+
+#: maxgalleria-lite.php:371
+msgid ""
+"This feature requires inline frames. You have iframes disabled or your "
+"browser does not support them."
+msgstr ""
+
+#: maxgallery.php:172 meta/image-gallery-layout.php:8
+msgid "Image Tiles"
+msgstr ""
+
+#: mg-admin.php:9 admin/nextgen-importer.php:80
+msgid "MaxGalleria: NextGEN Importer"
+msgstr ""
+
+#: mg-admin.php:10
+msgid "NextGEN Importer"
+msgstr ""
+
+#: mg-admin.php:17 admin/full-version.php:7
+msgid "MaxGalleria: Full Version"
+msgstr ""
+
+#: mg-admin.php:18 admin/full-version.php:19 admin/full-version.php:40
+msgid "Full Version"
+msgstr ""
+
+#: mg-admin.php:25 admin/support.php:16
+msgid "MaxGalleria: Support"
+msgstr ""
+
+#: mg-admin.php:26 admin/support.php:28
+msgid "Support"
+msgstr ""
+
+#: mg-image-gallery.php:252
+msgid "Added"
+msgstr ""
+
+#: mg-image-gallery.php:284
+msgid "Included the image in this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:310
+msgid "Included 1 image in this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:314
+#, php-format
+msgid "Included %d images in this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:332
+msgid "Excluded the image from this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:358
+msgid "Excluded 1 image from this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:362
+#, php-format
+msgid "Excluded %d images from this gallery."
+msgstr ""
+
+#: mg-image-gallery.php:384
+msgid ""
+"Removed the image from this gallery. To delete it permanently, use the Media "
+"Library."
+msgstr ""
+
+#: mg-image-gallery.php:414
+msgid ""
+"Removed 1 image from this gallery. To delete it permanently, use the Media "
+"Library."
+msgstr ""
+
+#: mg-image-gallery.php:418
+#, php-format
+msgid ""
+"Removed %d images from this gallery. To delete them permanently, use the "
+"Media Library."
+msgstr ""
+
+#: mg-meta.php:23
+msgid "Shortcodes"
+msgstr ""
+
+#: mg-meta.php:24
+msgid "Layout"
+msgstr ""
+
+#: mg-meta.php:25
+msgid "Thumbnails"
+msgstr ""
+
+#: mg-meta.php:26
+msgid "Lightbox"
+msgstr ""
+
+#: mg-meta.php:27 meta/image-gallery-description.php:18
+msgid "Description"
+msgstr ""
+
+#: mg-meta.php:28
+msgid "Advanced"
+msgstr ""
+
+#: mg-meta.php:29 meta/image-gallery-images.php:23
+msgid "Images"
+msgstr ""
+
+#: mg-nextgen.php:106
+#, php-format
+msgid ""
+"%sSuccessfully imported %d of %d images from NextGEN into the \"%s%s%s\" "
+"gallery.%s"
+msgstr ""
+
+#: admin/full-version.php:10 admin/nextgen-importer.php:83
+#: admin/support.php:19
+msgid "Brought to you by"
+msgstr ""
+
+#: admin/full-version.php:12 admin/nextgen-importer.php:85
+#: admin/support.php:21
+#, php-format
+msgid "makers of %sMaxButtons%s and %sMaxInbound%s"
+msgstr ""
+
+#: admin/full-version.php:23
+msgid "Upgrade to the Full Version of MaxGalleria"
+msgstr ""
+
+#: admin/full-version.php:24
+msgid ""
+"If you've created at least one gallery with MaxGalleria, then you know what "
+"it provides: ease of use, a streamlined user experience, responsive design, "
+"and a NextGEN importer, to name a few things."
+msgstr ""
+
+#: admin/full-version.php:25
+#, php-format
+msgid ""
+"Now take your galleries further with the %sfull version of MaxGalleria%s, "
+"which includes all the current goodness and so much more:"
+msgstr ""
+
+#: admin/full-version.php:27
+msgid "Sliders and Carousels"
+msgstr ""
+
+#: admin/full-version.php:27
+msgid "Create not only image galleries, but sliders and carousels as well."
+msgstr ""
+
+#: admin/full-version.php:28
+msgid "More Image Gallery Templates"
+msgstr ""
+
+#: admin/full-version.php:28
+msgid ""
+"Go beyond the Image Tiles and use additional gallery layouts for your images."
+msgstr ""
+
+#: admin/full-version.php:29
+msgid "Support for Video Galleries"
+msgstr ""
+
+#: admin/full-version.php:29
+msgid "Create video galleries with their own gallery templates and skins."
+msgstr ""
+
+#: admin/full-version.php:30
+msgid "WordPress Media Library Integration"
+msgstr ""
+
+#: admin/full-version.php:30
+msgid "Add images to your galleries from the WordPress media library."
+msgstr ""
+
+#: admin/full-version.php:31
+msgid "Custom Styles and Scripts"
+msgstr ""
+
+#: admin/full-version.php:31
+msgid ""
+"Include your own styles and scripts to further customize your galleries."
+msgstr ""
+
+#: admin/full-version.php:32
+msgid "Bulk Edit Functionality"
+msgstr ""
+
+#: admin/full-version.php:32
+msgid "Edit the details for many images at once, instead of one at a time."
+msgstr ""
+
+#: admin/full-version.php:35
+msgid "Feature Comparison"
+msgstr ""
+
+#: admin/full-version.php:39
+msgid "MaxGalleria Lite"
+msgstr ""
+
+#: admin/full-version.php:43
+msgid "Add images from the WordPress media library"
+msgstr ""
+
+#: admin/full-version.php:48
+msgid "Bulk edit functionality"
+msgstr ""
+
+#: admin/full-version.php:53
+msgid "Custom styles and scripts"
+msgstr ""
+
+#: admin/full-version.php:58
+msgid "Responsive video galleries"
+msgstr ""
+
+#: admin/full-version.php:63
+msgid "Video Showcase template and skins"
+msgstr ""
+
+#: admin/full-version.php:68
+msgid "Video Tiles template and skins"
+msgstr ""
+
+#: admin/full-version.php:73
+msgid "Image Carousel template and skins"
+msgstr ""
+
+#: admin/full-version.php:78
+msgid "Image Slider template and skins"
+msgstr ""
+
+#: admin/full-version.php:83
+msgid "Image Showcase template and skins"
+msgstr ""
+
+#: admin/full-version.php:88
+msgid "Image Tiles template and skins"
+msgstr ""
+
+#: admin/full-version.php:93
+msgid "NextGEN gallery importer"
+msgstr ""
+
+#: admin/full-version.php:98
+msgid "Add images from your computer"
+msgstr ""
+
+#: admin/full-version.php:103
+msgid "Lightbox effects"
+msgstr ""
+
+#: admin/full-version.php:108
+msgid "Responsive image galleries"
+msgstr ""
+
+#: admin/full-version.php:113
+msgid "Include/exclude media from galleries"
+msgstr ""
+
+#: admin/full-version.php:118
+msgid "Adjustable thumbnail column layouts"
+msgstr ""
+
+#: admin/full-version.php:123
+msgid "Square, landscape, and portrait thumbnail shapes"
+msgstr ""
+
+#: admin/full-version.php:128
+msgid "HTML in thumbnail captions"
+msgstr ""
+
+#: admin/full-version.php:133
+msgid "Gallery descriptions"
+msgstr ""
+
+#: admin/full-version.php:138
+msgid "Drag-and-drop reordering of media"
+msgstr ""
+
+#: admin/full-version.php:143
+msgid "Shortcodes for galleries"
+msgstr ""
+
+#: admin/full-version.php:148
+msgid "Shortcodes for gallery thumbnails"
+msgstr ""
+
+#: admin/full-version.php:153
+msgid "Featured image support"
+msgstr ""
+
+#: admin/full-version.php:159
+msgid "Get Your Copy Today"
+msgstr ""
+
+#: admin/nextgen-importer.php:92
+msgid "Import"
+msgstr ""
+
+#: admin/nextgen-importer.php:107
+msgid ""
+"Please wait while the images are imported from NextGEN. This may take a few "
+"minutes, depending on how many images are being imported."
+msgstr ""
+
+#: admin/nextgen-importer.php:125
+msgid "Which NextGEN gallery do you want to import?"
+msgstr ""
+
+#: admin/nextgen-importer.php:136 admin/nextgen-importer.php:177
+#: tinymce/dialog.php:65
+msgid " (0 images)"
+msgstr ""
+
+#: admin/nextgen-importer.php:137 admin/nextgen-importer.php:178
+#: tinymce/dialog.php:66
+msgid " (1 image)"
+msgstr ""
+
+#: admin/nextgen-importer.php:138 admin/nextgen-importer.php:179
+#: tinymce/dialog.php:67
+#, php-format
+msgid " (%d images)"
+msgstr ""
+
+#: admin/nextgen-importer.php:151
+msgid "Where do you want to import it?"
+msgstr ""
+
+#: admin/nextgen-importer.php:157
+msgid "New MaxGalleria gallery"
+msgstr ""
+
+#: admin/nextgen-importer.php:159
+msgid "Enter gallery title"
+msgstr ""
+
+#: admin/nextgen-importer.php:164
+msgid "Existing MaxGalleria gallery"
+msgstr ""
+
+#: admin/nextgen-importer.php:193
+msgid "Import NextGEN Gallery"
+msgstr ""
+
+#: admin/nextgen-importer.php:201
+msgid "You do not have any NextGEN galleries."
+msgstr ""
+
+#: admin/nextgen-importer.php:204
+msgid "You do not have the NextGEN Gallery plugin installed."
+msgstr ""
+
+#: admin/support.php:32
+#, php-format
+msgid "All support is handled through the %sSupport Forums%s."
+msgstr ""
+
+#: admin/support.php:33
+msgid ""
+"You may be asked to provide the information below to help troubleshoot your "
+"issue."
+msgstr ""
+
+#: meta/image-edit.php:40 meta/image-gallery-images.php:148
+msgid "Edit Image"
+msgstr ""
+
+#: meta/image-edit.php:81
+msgid "Alternate Text"
+msgstr ""
+
+#: meta/image-edit.php:90 meta/image-gallery-images.php:339
+msgid "Caption"
+msgstr ""
+
+#: meta/image-edit.php:99 meta/image-gallery-images.php:351
+msgid "Link"
+msgstr ""
+
+#: meta/image-edit.php:117
+msgid "Save Changes"
+msgstr ""
+
+#: meta/image-edit.php:120 tinymce/dialog.php:81
+msgid "Cancel"
+msgstr ""
+
+#: meta/image-gallery-advanced.php:13
+msgid "Reset"
+msgstr ""
+
+#: meta/image-gallery-advanced.php:15
+msgid ""
+"Reset all gallery options to their default values. This action cannot be "
+"undone."
+msgstr ""
+
+#: meta/image-gallery-advanced.php:17
+msgid "Yes, I understand"
+msgstr ""
+
+#: meta/image-gallery-description.php:5
+msgid "Above Gallery"
+msgstr ""
+
+#: meta/image-gallery-description.php:6
+msgid "Below Gallery"
+msgstr ""
+
+#: meta/image-gallery-description.php:23 meta/image-gallery-lightbox.php:54
+#: meta/image-gallery-thumbnails.php:114
+msgid "Enabled"
+msgstr ""
+
+#: meta/image-gallery-description.php:31
+msgid "Location"
+msgstr ""
+
+#: meta/image-gallery-description.php:44
+msgid "Text"
+msgstr ""
+
+#: meta/image-gallery-description.php:45
+msgid "HTML is allowed"
+msgstr ""
+
+#: meta/image-gallery-images.php:48 meta/image-gallery-images.php:251
+msgid "Add Images"
+msgstr ""
+
+#: meta/image-gallery-images.php:153
+msgid "Are you sure you want to remove this image from the gallery?"
+msgstr ""
+
+#: meta/image-gallery-images.php:178
+msgid "Are you sure you want to exclude this image from the gallery?"
+msgstr ""
+
+#: meta/image-gallery-images.php:203
+msgid "Are you sure you want to include this image in the gallery?"
+msgstr ""
+
+#: meta/image-gallery-images.php:255
+msgid "Source"
+msgstr ""
+
+#: meta/image-gallery-images.php:260
+msgid "My Computer"
+msgstr ""
+
+#: meta/image-gallery-images.php:261
+msgid "Media Library"
+msgstr ""
+
+#: meta/image-gallery-images.php:261
+#, php-format
+msgid "* Available in the %sfull version%s"
+msgstr ""
+
+#: meta/image-gallery-images.php:268
+msgid "Bulk Actions"
+msgstr ""
+
+#: meta/image-gallery-images.php:269 meta/image-gallery-images.php:325
+msgid "Exclude"
+msgstr ""
+
+#: meta/image-gallery-images.php:270 meta/image-gallery-images.php:323
+msgid "Include"
+msgstr ""
+
+#: meta/image-gallery-images.php:271 meta/image-gallery-images.php:320
+msgid "Remove"
+msgstr ""
+
+#: meta/image-gallery-images.php:273
+msgid "Apply"
+msgstr ""
+
+#: meta/image-gallery-images.php:276
+msgid "List"
+msgstr ""
+
+#: meta/image-gallery-images.php:277
+msgid "Rows"
+msgstr ""
+
+#: meta/image-gallery-images.php:278
+msgid "Grid"
+msgstr ""
+
+#: meta/image-gallery-images.php:285
+msgid "No images have been added to this gallery."
+msgstr ""
+
+#: meta/image-gallery-images.php:294
+msgid "Reorder"
+msgstr ""
+
+#: meta/image-gallery-images.php:319
+msgid "Edit"
+msgstr ""
+
+#: meta/image-gallery-images.php:335
+msgid "Alt Text"
+msgstr ""
+
+#: meta/image-gallery-images.php:343
+msgid "Meta"
+msgstr ""
+
+#: meta/image-gallery-layout.php:69
+msgid "Skin"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:5 meta/image-gallery-thumbnails.php:11
+msgid "Below Image"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:6 meta/image-gallery-thumbnails.php:12
+msgid "Bottom of Image"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:10
+msgid "Full"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:11
+msgid "Custom"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:46
+msgid ""
+"These settings apply only if the thumbnail click option is set to open a "
+"lightbox image."
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:49 meta/image-gallery-thumbnails.php:109
+msgid "Captions"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:62 meta/image-gallery-thumbnails.php:122
+msgid "Position"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:76 meta/image-gallery-lightbox.php:81
+msgid "Image Size"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:94
+msgid "Custom Width"
+msgstr ""
+
+#: meta/image-gallery-lightbox.php:102
+msgid "Custom Height"
+msgstr ""
+
+#: meta/image-gallery-shortcodes.php:1
+msgid "Use either of the following shortcodes to display this gallery:"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:5
+msgid "Landscape"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:6
+msgid "Portrait"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:7
+msgid "Square"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:16
+msgid "Lightbox Image"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:17
+msgid "Image Page"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:18
+msgid "Image Link"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:19
+msgid "Original Image"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:86
+msgid "Columns"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:96
+msgid "Shape"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:136
+msgid "Click"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:141
+msgid "Thumb Click Should Open"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:159
+msgid "Open in New Window"
+msgstr ""
+
+#: meta/image-gallery-thumbnails.php:165
+msgid "Does not apply if Lightbox Image is selected."
+msgstr ""
+
+#: meta/new-gallery-type.php:53
+msgid "What type of gallery do you want to create?"
+msgstr ""
+
+#: meta/new-gallery-type.php:63
+msgid "Video"
+msgstr ""
+
+#: meta/new-gallery-type.php:65
+msgid "Video *"
+msgstr ""
+
+#: meta/new-gallery-type.php:70
+#, php-format
+msgid "* Video galleries available in the %sfull version%s"
+msgstr ""
+
+#: tinymce/dialog.php:20
+msgid "Insert Image Gallery"
+msgstr ""
+
+#: tinymce/dialog.php:51
+msgid ""
+"Select an image gallery from the list below. The shortcode will be inserted "
+"into the content editor at the location of the cursor."
+msgstr ""
+
+#: tinymce/dialog.php:55
+msgid "-- Select Gallery--"
+msgstr ""
+
+#: tinymce/dialog.php:56
+msgid "Image Galleries"
+msgstr ""
+
+#: tinymce/dialog.php:78
+msgid "Insert Gallery"
+msgstr ""

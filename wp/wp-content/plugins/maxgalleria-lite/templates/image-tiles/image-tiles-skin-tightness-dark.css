@@ -1,0 +1,38 @@
+@import url("image-tiles-nopad.css");
+
+.mg-image-tiles .mg-thumbs .caption-bottom-container {
+	position: absolute !important;
+	bottom: 0px !important;
+	left: 1px !important;
+	width: 98.9% !important;
+	background: rgba(0, 0, 0, 0.7) !important;
+	border: none !important;
+	padding: 0px !important;
+}
+.mg-image-tiles .mg-thumbs .caption.bottom {
+	padding: 2px 4px 2px 4px !important;
+	margin: 0px !important;
+	color: #ffffff !important;
+	text-shadow: 1px 1px 0px #000000 !important;
+}
+.mg-image-tiles .mg-thumbs .caption.below {
+	padding: 2px 4px 2px 4px !important;
+	margin: 0px 0px 10px 0px !important;
+}
+.mg-image-tiles .mg-thumbs ul li div {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	padding: 0% !important;
+	background-color: #333333 !important;
+	border-style: solid !important;
+	border-width: 2px !important;
+	border-color: #333333 !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+}
+.mg-image-tiles .mg-thumbs ul li div:hover {
+	box-shadow: 0px 0px 0px #333333 !important;
+	-moz-box-shadow: 0px 0px 0px #333333 !important;
+	-webkit-box-shadow: 0px 0px 0px #333333 !important;
+}

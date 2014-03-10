@@ -1,0 +1,134 @@
+/*
+* Author: Anita Leung
+* Description: Personalized styles for plugins
+*/
+
+/* TOC+ */
+
+div#toc_container {
+	padding: 0;
+	background: none;
+	border: none !important;
+}
+
+#toc_container p.toc_title {
+	text-align: left;
+	color: #555;
+}
+
+#toc_container p.toc_title + ul.toc_list {
+	margin-left: 4em;
+}
+
+#toc_container a:hover {
+	text-decoration: inherit;
+}
+
+span.toc_toggle a {
+	padding: 0.3em 0.8em;
+	background: #DADADA;
+	color: #fefefe;
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+span.toc_toggle a:hover {
+	background: #C9C7C7;
+}
+
+/* bbPress */
+
+div.bbp-breadcrumb, 
+div.bbp-topic-tags,
+#bbpress-forums, 
+#bbpress-forums ul.bbp-lead-topic, 
+#bbpress-forums ul.bbp-topics, 
+#bbpress-forums ul.bbp-forums, 
+#bbpress-forums ul.bbp-replies, 
+#bbpress-forums ul.bbp-search-results {
+	font-size: inherit;
+}
+
+#bbpress-forums .bbp-forum-info .bbp-forum-content, 
+#bbpress-forums p.bbp-topic-meta {
+	font-size: 0.8em;
+}
+
+/* login form */
+
+.bbp-login-form {
+	margin-top: 1em;
+}
+
+.bbp-login-form label {
+	width: auto;
+	color: #888;
+	line-height: 3em;
+}
+
+.bbp-login-form .bbp-username input, .bbp-login-form .bbp-email input, .bbp-login-form .bbp-password input {
+	background: #222;
+	border: none;
+	border-radius: 3px;
+	margin-bottom: 0;
+	padding: 1.2em 1em;
+	color: #fafafa;
+	font-size: 1.2em;
+}
+
+.bbp-login-form .bbp-email {
+	margin: 0 0 1em 0;
+}
+
+.bbp-login-form .bbp-submit-wrapper {
+	width: 100%;
+}
+
+button.user-submit, button.user-submit:active {
+	display: block;
+	width: 100%;
+	background: #ee3b5b;
+}
+
+button.user-submit:hover {
+	background: #ff3b5b;
+	transition: background 0.8s;
+}
+
+p.logged-in {
+	color: #888;
+	margin-top: 3.9em;
+}
+
+/* forum */
+
+#subscription-toggle {
+	margin-left: 0.4em;
+}
+
+/* hide login notice */
+.bbp-template-notice {
+	display: none;
+}
+
+
+
+/* MaxGalleria Lite */
+
+#gallery-titles h1 {
+	line-height: 1em;
+	padding: 0 0 1em 1em;
+	border-left: 5px solid #ee3b5b;
+	margin-bottom: -0.7em;
+}
+
+.mg-image-tiles {
+	border-left: 5px solid #ee3b5b;
+	padding: 0 0 0.2em 2em;
+	margin-bottom: 1em;
+}
+
+.mg-image-tiles li {
+	list-style-type: none;
+}
+
