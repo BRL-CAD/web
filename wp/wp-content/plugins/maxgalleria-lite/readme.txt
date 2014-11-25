@@ -2,12 +2,14 @@
 Contributors: maxfoundry, arcware, johnbhartley
 Tags: gallery, galleries, responsive, image, images, photo, photos, picture, pictures, thumbnail, thumbnails, nextgen, nextgen-gallery
 Requires at least: 3.4
-Tested up to: 3.8
-Stable tag: 1.1.2
+Tested up to: 3.8.1
+Stable tag: 1.1.4
 
 Create great-looking responsive image galleries with ease.
 
 == Description ==
+
+**IMPORTANT! THIS PLUGIN IS NO LONGER MAINTAINED OR SUPPORTED. PLEASE USE THE FULL MAXGALLERIA INSTEAD, LOCATED FOR FREE IN THE PLUGIN REPOSITORY AT [http://wordpress.org/plugins/maxgalleria/](http://wordpress.org/plugins/maxgalleria/).**
 
 WordPress users deserve a gallery plugin that doesn't frustrate them as they use it - they want a gallery plugin that is actually a joy to use. Other gallery plugins claim to be the best simply because they've been around the longest and have the most downloads. But we know better. MaxGalleria helps change the game by giving users a streamlined experience for creating and managing responsive WordPress galleries that look great on any device.
 
@@ -34,7 +36,7 @@ Frustrated with NextGEN and looking for an alternative? You're not alone. MaxGal
 
 = Upgrade to the Full Version =
 
-The lite version of MaxGalleria is fully functional and without limitations, but you can take your WordPress galleries further with the [full version of MaxGalleria](http://maxgalleria.com/), which provides all of the above plus much more:
+The lite version of MaxGalleria is fully functional and without limitations, but you can take your WordPress galleries further with the [full version of MaxGalleria](http://wordpress.org/plugins/maxgalleria/), which provides all of the above plus much more:
 
 * **Sliders and Carousels** - Create not only image galleries, but sliders and carousels as well.
 * **More Image Gallery Templates** - Go beyond the Image Tiles and use additional gallery layouts for your images.
@@ -74,6 +76,12 @@ For manual installation:
 
 == Changelog ==
 
+= 1.1.4 =
+* THIS PLUGIN IS NO LONGER MAINTAINED OR SUPPORTED. PLEASE USE THE FULL MAXGALLERIA INSTEAD, LOCATED FOR FREE IN THE PLUGIN REPOSITORY AT [http://wordpress.org/plugins/maxgalleria/](http://wordpress.org/plugins/maxgalleria/).
+
+= 1.1.3 =
+* Fixed javascript conflict issue that was causing things to disappear in the admin.
+
 = 1.1.2 =
 * Minor UI and style changes to better support WP 3.8.
 
@@ -92,5 +100,5 @@ For manual installation:
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-Nothing to see here. Move along, move along.
+= 1.1.4 =
+THIS PLUGIN IS NO LONGER MAINTAINED OR SUPPORTED. PLEASE USE THE FULL MAXGALLERIA INSTEAD, LOCATED FOR FREE IN THE PLUGIN REPOSITORY AT http://wordpress.org/plugins/maxgalleria/.

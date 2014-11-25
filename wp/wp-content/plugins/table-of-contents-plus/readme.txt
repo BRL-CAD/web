@@ -3,8 +3,8 @@ Contributors: conjur3r
 Donate link: 
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 3.7.1
-Stable tag: 1311
+Tested up to: 3.9.1
+Stable tag: 1408
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,9 +28,12 @@ Custom post types are supported, however, auto insertion works only when the_con
 = Available Languages =
 * Australian English (default)
 * Dutch - [Renee](http://101themes.com/)
+* French - Jean-Michel Duriez
+* German - [Ben](http://blog.bmarwell.de/)
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - [icedream](http://www.tesfans.org/)
 * Slovak - Boris Gereg
+* Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
 
 Translations are more than welcome. If you have any advice in making it easier to translate, please let me know.
 
@@ -72,6 +75,7 @@ Lets you generate the table of contents at the preferred position.  Useful for s
 * "no_label": true/false, shows or hides the title
 * "wrapping": text, either "left" or "right"
 * "heading_levels": numbers, this lets you select the heading levels you want included in the table of contents.  Separate multiple levels with a comma.  Example: include headings 3, 4 and 5 but exclude the others with `heading_levels="3,4,5"`
+* "class": text, enter CSS classes to be added to the container. Separate multiple classes with a space.
 
 = [no_toc] =
 Allows you to disable the table of contents for the current post, page, or custom post type.
@@ -108,6 +112,34 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+
+= 1408 =
+* Released: 1 August 2014
+* Added a human German translation courtesy [Ben](http://blog.bmarwell.de/)
+* Added "class" attribute to the TOC shortcode to allow for custom CSS classes to be added to the container.  Thanks to Joe for [suggesting it](http://dublue.com/plugins/toc/comment-page-7/#comment-2803)
+
+= 1407 =
+* Released: 5 July 2014
+* Added Ukrainian translation courtesy [Michael Yunat](http://www.iphostmonitor.com/)
+* Added French translation courtesy Jean-Michel Duriez
+* Empty headings are now ignored, as suggested by [archon810](http://wordpress.org/support/topic/patch-ignore-empty-tags)
+* Removed German translation, may have been machine translated, [ref](http://wordpress.org/support/topic/excluding-headlines-special-characters)
+* Fixed: Special chars in TOC+ > Settings > Exclude Headings no longer get mangled on save.  Thanks to N-Z for [reporting it](http://wordpress.org/support/topic/excluding-headlines-special-characters).
+
+= 1404 =
+* Released: 18 April 2014
+* Bump WordPress support to 3.9
+* Fixed: Strip HTML tags from post titles for sitemap_posts so those items do not appear under a < heading. Thanks to [Rose](http://dublue.com/plugins/toc/comment-page-6/#comment-2311) for reporting it.
+* Fictitious: This release was powered by three blind mice.
+
+= 1402 =
+* Released: 19 February 2014
+* Added German translation courtesy Cord Peter
+* Modify toc_get_index API function to also reset minimum number of headings to 0.
+* Removing the TOC+ widget from the sidebar no longer requires you to uncheck the 'Show the table of contents only in the sidebar' option. It will be reset on removal.
+* Delay count of headings until disqualified have been removed. Thanks to [Simone di Saintjust](http://dublue.com/plugins/toc/comment-page-6/#comment-2190) for raising it.
+* Using the TOC+ widget, you can now limit the display to selected post types. Thanks to [Pete Markovic](http://dublue.com/plugins/toc/comment-page-6/#comment-2248) for the idea.
+* Updated translation file (extra options added).
 
 = 1311 =
 * Released: 10 November 2013

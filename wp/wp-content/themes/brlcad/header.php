@@ -22,77 +22,42 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<div class="h-container">
-
         <!-- the circular logo that also works as menu toggle -->
-
 		<div class="id_logo" id='logo'>
-
-            <span class="circle" href="#"> 
-
-                <img src="wp-content/themes/BRL-CAD/images/logo_70.png" width="40px" height="40px"/>
-
-            </span> 
-
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <span class="circle" href="#"> 
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_70.png" width="40px" height="40px"/>
+                </span> 
+            </a>
         </div>
 
-        
-
         <!-- header code starts here -->
-
 		<header class="head">
-
 			 <nav class="navbar"> 
-
 				<ul class="navigation id_main-nav" id="main-nav">				
-
-					<li><a href="">
-
-                        <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/gallery.png" />
-
+					<li><a href="<?php echo esc_url( home_url( '../gallery/' ) ); ?>">
+                        <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/gallery.png" />
                         Gallery</a></li>
-
-                    <li><a href="">
-
-                        <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/wiki.png" />
-
+                    <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">
+                        <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/wiki.png" />
                         Blog</a></li>
-
-                    <li><a href="">
-
-                        <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/contribute.png" />
-
+                    <li><a href="<?php echo esc_url( home_url( '../wiki/' ) ); ?>">
+                        <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/contribute.png" />
                         Community</a></li> 
-
-                    <li><a href="">
-
-                        <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/documentation.png" />
-
+                    <li><a href="<?php echo esc_url( home_url( '../wiki/Documentation' ) ); ?>">
+                        <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/documentation.png" />
                         Documentation</a></li>
-
-                    <li><a href="/wp/download/"> 
-
-                        <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/download-2.png" />
-
+                    <li><a href="<?php echo esc_url( home_url( '/download/' ) ); ?>"> 
+                        <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/download-2.png" />
                         Download</a></li>
-
                     <li class="selected">
-
-                        <a href="#about">
-
-                             <img class = "icon" src="wp-content/themes/BRL-CAD/images/icons/home.png" />
-
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>#about">
+                             <img class = "icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/home.png" />
                             About
-
                         </a>
-
                     </li>
-
-                    
-
 				</ul>
-
 			</nav>
-
 		</header>
 	</div>
 	<div id="content" class="site-content">

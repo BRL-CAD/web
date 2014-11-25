@@ -65,11 +65,49 @@ class ModernTemplate extends MonoBookTemplate {
 ?>
 
 	<!-- heading -->
-	<div id="mw_header"><h1 id="firstHeading" lang="<?php
+	<div id="mw_header"><div id="header-square"> </div><h1 id="firstHeading" lang="<?php
 		$this->data['pageLanguage'] = $this->getSkin()->getTitle()->getPageViewLanguage()->getCode();
 		$this->html( 'pageLanguage' );
 	?>"><span dir="auto"><?php $this->html('title') ?></span></h1></div>
-
+    	<div class="h-container">
+	<div class="id_logo" id='logo'>
+        <a href="<?php echo $wgScriptPath . "../wp" ;  ?>">
+            <span class="circle" href="#"> 
+                <img width="40px" height="40px" src=<?php echo $this->getSkin()->getSkinStylePath( 'logo_70.png'); ?>  />
+            </span> 
+        </a>
+    </div>
+	
+	<header class="head">
+			 <nav class="navbar"> 
+				<ul class="navigation id_main-nav" id="main-nav">					
+                    <li><a href="<?php echo $wgScriptPath . "../gallery" ; ?>">
+                        <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'gallery.png'); ?>  />
+                        Gallery</a></li>
+                    <li><a href="<?php echo $wgScriptPath . "../wp/blog" ?>">
+                        <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'wiki.png'); ?>  />
+                        Blog</a></li>
+                    <li><a href="<?php echo $wgScriptPath ?>">
+                        <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'contribute.png'); ?>  />
+                        Community</a></li> 
+                    <li><a href="<?php echo $wgScriptPath . "../wiki/Documentation" ?>">
+                        <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'documentation.png'); ?>  />
+                        Documentation</a></li>
+                    <li><a href="<?php echo $wgScriptPath . "../wp/Download" ?>"> 
+                        <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'download-2.png'); ?>  />
+                        Download</a></li>
+                    <li class="selected">
+                        <a href="<?php echo $wgScriptPath . "../wp/" ?>#about">
+                             <img class = "icon" src=<?php echo $this->getSkin()->getSkinStylePath( 'home.png'); ?>  />
+                            About
+                        </a>
+                    </li>
+				</ul>
+				   
+			</nav>
+		</header>
+	</div>
+    
 	<div id="mw_main">
 	<div id="mw_contentwrapper">
 	<!-- navigation portlet -->

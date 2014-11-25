@@ -2,8 +2,8 @@
 /*
 Plugin Name: MaxGalleria Lite
 Plugin URI: http://maxgalleria.com
-Description: Create great-looking responsive image galleries with ease. This is the lite version; the full version <a href="http://maxgalleria.com/?ref=mglite">can be found here</a>.
-Version: 1.1.2
+Description: THIS PLUGIN IS NO LONGER MAINTAINED OR SUPPORTED. PLEASE USE THE FULL MAXGALLERIA INSTEAD, LOCATED FOR FREE IN THE PLUGIN REPOSITORY AT <a href="http://wordpress.org/plugins/maxgalleria/">http://wordpress.org/plugins/maxgalleria/</a>.
+Version: 1.1.4
 Author: Max Foundry
 Author URI: http://maxfoundry.com
 
@@ -135,8 +135,8 @@ class MaxGalleriaLite {
 		}
 		else {
 			echo '<script type="text/javascript">';
-			echo 'jQuery(document).ready(function() {';
-			echo '	jQuery("tr#post-' . $post->ID . '").hide();';
+			echo 'jQuery.noconflict(document).ready(function() {';
+			echo '	jQuery.noconflict("tr#post-' . $post->ID . '").hide();';
 			echo '});';
 			echo '</script>';
 		}
@@ -283,6 +283,16 @@ class MaxGalleriaLite {
 		load_plugin_textdomain('maxgalleria-lite', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 	}
 	
+	function notice_show() {
+		if (current_user_can('install_plugins')) {
+			echo '<div class="error">';
+			echo '	<p>';
+			printf(__('MAXGALLERIA LITE IS NO LONGER MAINTAINED OR SUPPORTED. PLEASE USE THE FULL MAXGALLERIA INSTEAD, LOCATED FOR FREE IN THE PLUGIN REPOSITORY AT %shttp://wordpress.org/plugins/maxgalleria/%s.', 'maxgalleria-lite'), '<a href="http://wordpress.org/plugins/maxgalleria/" target="_blank">', '</a>');
+			echo '	</p>';
+			echo '</div>';
+		}
+	}
+	
 	function register_gallery_post_type() {
 		$labels = array(
 			'name' => __('Galleries', 'maxgalleria-lite'),
@@ -322,7 +332,7 @@ class MaxGalleriaLite {
 	
 	function set_global_constants() {	
 		define('MAXGALLERIA_LITE_VERSION_KEY', 'maxgalleria_lite_version');
-		define('MAXGALLERIA_LITE_VERSION_NUM', '1.1.2');
+		define('MAXGALLERIA_LITE_VERSION_NUM', '1.1.4');
 		define('MAXGALLERIA_LITE_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
 		define('MAXGALLERIA_LITE_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . MAXGALLERIA_LITE_PLUGIN_NAME);
 		define('MAXGALLERIA_LITE_PLUGIN_URL', WP_PLUGIN_URL . '/' . MAXGALLERIA_LITE_PLUGIN_NAME);
@@ -347,6 +357,7 @@ class MaxGalleriaLite {
 	function setup_hooks() {
 		add_action('init', array($this, 'load_textdomain'));
 		add_action('init', array($this, 'register_gallery_post_type'));
+		add_action('admin_notices', array($this, 'notice_show'));
 		add_filter('plugin_action_links', array($this, 'create_plugin_action_links'), 10, 2);
 		add_action('admin_print_scripts', array($this, 'enqueue_admin_print_scripts'));
 		add_action('admin_print_styles', array($this, 'enqueue_admin_print_styles'));
