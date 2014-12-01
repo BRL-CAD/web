@@ -5,7 +5,6 @@
  * @package brlcad
  */
 ?>
-<div id="content-side2">
 <div class="row">
 
 	<div id="secondary" class="widget-area" role="complementary">
@@ -34,5 +33,5 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
- </div>
+
 </div>
