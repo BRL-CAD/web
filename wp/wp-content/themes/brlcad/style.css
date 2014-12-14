@@ -144,6 +144,7 @@ a#logo {
 	background: url("img/logo.png") no-repeat center center;
 	width: 53px;
 	height: 68px;
+	
 	margin-right: 25px;
 	margin-left: 25px;
 
@@ -429,7 +430,7 @@ aside.menu ul.sub-menu {
 
 article.post {
 	border-right: 5px solid #ee3b5b;
-	padding: 0 1em 0 1.8em;
+	padding:5em 5em 0 0;
 }
 
 article.sticky {

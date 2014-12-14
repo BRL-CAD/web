@@ -6,7 +6,6 @@
  */
 
 get_header(); ?>
-	
 	<header id="masthead">
 
 		<div class="row">

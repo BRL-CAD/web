@@ -499,17 +499,19 @@ a:active {
 text-align:justify;
 width:100%;
 }
-#content-side{
-padding:10% 5% 5% 5%;
+#content-side .row{
 float:left;
-width:70%;
-}
-#content-side2{
-padding-top:15%;
-float:left;
-width:20%;
+width:75%;
 }
 
+#content-side2 .row{
+padding:0 5em 0 0em;
+float:left;
+max-width:25%;
+}
+#content h1{
+font-size:25px;
+}
 
 .sticky {
 }
@@ -544,18 +546,6 @@ width:20%;
 
 	.main-navigation ul {
 	display: none;
-	}
-	#content{
-	width:100%;
-	overflow:hidden;		
-	}
-	#content-side{
-	margin-top:20%;
-	width:100%;	
-	}
-	#content-side2{
-	margin-top:20%;
-	width:100%;	
 	}
 }
 
