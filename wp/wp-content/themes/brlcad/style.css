@@ -129,6 +129,7 @@ nav#site-navigation {
 	border: 1px solid #222;
 	background: #222;
 	position: fixed;
+	margin-bottom:10%;
 	z-index: 100;
 	box-shadow:         	0px 2px 5px rgba(50, 50, 50, 0.4);
 		-webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.4);
@@ -143,7 +144,10 @@ a#logo {
 	background: url("img/logo.png") no-repeat center center;
 	width: 53px;
 	height: 68px;
-	margin-right: 24px;
+	
+	margin-right: 25px;
+	margin-left: 25px;
+
 }
 
 ul.nav-menu li:first-child a,
@@ -425,8 +429,8 @@ aside.menu ul.sub-menu {
 /* - - - - - blog - - - - - - - - - - - - - - - - */
 
 article.post {
-	border-left: 5px solid #ee3b5b;
-	padding: 0 0 0 1.8em;
+	border-right: 5px solid #ee3b5b;
+	padding:5em 5em 0 0;
 }
 
 article.sticky {
