@@ -24,7 +24,7 @@ require_once( "includes/DefaultSettings.php" );
 # ini_set( 'memory_limit', '20M' );
 
 include_once ($IP . '/extensions/di/iwDrupal.php');
-# include_once ($IP . '/skins/brlcad/brlcad.php');
+include_once ($IP . '/skins/brlcad/brlcad.php');
 # include_once ($IP . '/skins/Brlcadnew.php');
 
 
@@ -120,7 +120,7 @@ $wgProxyKey = "1f8506f970a52aae750b9981693c104e3e23c2082405952f695b1f1867bcd494"
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook':
-$wgDefaultSkin = 'modern';
+$wgDefaultSkin = 'brlcad';
 
 # logo for certain error pages
 $wgLogo = '../images/logo/BRL-CAD_256x212.png';
