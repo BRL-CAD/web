@@ -1,0 +1,804 @@
+/* 
+    Created on : Dec 16, 2014, 9:13:13 PM
+    Author     : Utkarsh
+*/
+/**Basic Styling**/
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    color: #2c3e50;
+    font-family: Segoe UI, Open Sans, Roboto, sans-serif, Arial;
+    font-size: 20px;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color: #b32c44;
+}
+a:hover{
+    color: #000;
+    transition: ease-in .2s color;
+    -webkit-transition: ease-in .2s color;
+    -moz-transition: ease-in .2s color;
+    -o-transition: ease-in .2s color;
+    -ms-transition: ease-in .2s color;
+}
+/**Text Selection**/
+ ::selection {
+    background-color: #f1f1f1;
+    color: #000;
+ }
+::-moz-selection {
+   background-color: #352e7e;
+   color: #fff;
+}
+::-o-selection {
+   background-color: #352e7e;
+   color: #fff;
+}
+::-ms-selection {
+   background-color: #352e7e;
+   color: #fff;
+}
+::-webkit-selection {
+   background-color: #352e7e;
+   color: #fff;
+}
+/**Scroll Bar**/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+::-webkit-scrollbar-thumb {
+    background: #a1a1a1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #a1a1a1; 
+}
+/**Navbar**/
+.header{
+    background: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    text-transform: uppercase;
+}
+.header table{
+    border-spacing: 0px 0px;
+    font-size: 22px;
+    margin: 0px auto;
+}
+.home{
+    width: 100%;
+    height: auto;
+    min-width: 64px;
+    max-width: 70%;
+    margin-top: 15px;
+    border-radius: 50%;
+    padding: 2px;
+    background: #000;  /* #f64747; */
+}
+.menu{
+    text-align: center;
+    width: 10%;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.menu:hover{
+    color: #fff;
+    background: #000; /* d91a5d; */
+}
+
+/**First**/
+.about{
+    font-size: 23px;
+    background: #2d2d2d;
+    text-align: center;
+    height: 300px;
+}
+.main-h1{
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
+    color: #2d2d2d;  /* #2c3e50; */
+    margin-top: 20px;
+}
+.brl{
+    position: relative;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
+    color: #d0245e; /*d91a5d; */
+    margin-top: 20px;
+}
+.dash{
+    position: relative;
+    top: -8px;
+    left: -5px;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
+    color: #888;
+    margin-top: 20px;
+}
+.cad{
+    position: relative;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
+    color: #fff;
+    margin-top: 20px;
+}
+.ossm{
+    position: relative;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 25px;
+    color: #fff;
+    top: -16px;
+}
+.pad{
+    padding-top: 20px;
+    height: 180px;
+    width: 180px;
+    color:#999;       
+    transition: padding 0.2s linear; /* vendorless fallback */
+    -o-transition: color 0.5s linear; /* opera */
+    -ms-transition: color 0.5s linear; /* IE 10 */
+    -moz-transition: color 0.5s linear; /* Firefox */
+    -webkit-transition: padding 0.2s linear; /*safari and chrome */
+}
+.pad:hover{
+    padding-top: 10px;
+}
+.main-intro{
+    font-family: Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 30px;
+}
+.wrapper-main{
+    width: 60%;
+    margin: 0px auto;
+    padding-top: 40px;
+}
+.icon-table{
+    width: 90%;
+    margin: 10px auto;
+    margin-top: 40px;
+    border-spacing: 10px 0px;
+}
+.intro1{
+    text-align: center;
+    vertical-align: top;
+    width: 34%;
+}
+.intro2{
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
+}
+.intro3{
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
+}
+.intro-topic{
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+}
+.intro-main{
+    font-weight: lighter;
+    margin: 5px;
+}
+.what-r{
+    margin: 10px auto;
+    margin-top: 380px;
+    background: #000;
+/*     background: #f64747; */
+    color: #fff;
+    padding: 40px 90px 40px 90px;
+    text-align: center;
+    font-size: 24px;
+}
+.what-p{
+    font-weight: lighter;
+    margin: 15px;
+}
+.articles{
+    text-align: center;
+    padding: 70px 50px 70px 70px;
+}
+.article-table{
+    border-spacing: 20px 20px;
+    margin: 10px auto;
+}
+.article-table img{
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    -o-border-radius: 250px;
+    -ms-border-radius: 250px;
+}
+.why-us{
+    background: url("img/intro-background.gif");
+    padding: 60px;
+}
+.double{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    -o-columns: 2;
+    -ms-columns: 2;
+}
+/**Last**/
+.last{
+    padding: 20px 120px 80px 120px;
+    background: #fff;
+    text-align: center;
+}
+.whole-con{
+    width: 100%;
+    margin: 10px auto;
+    margin-top: 20px;
+    border-spacing: 10px 10px;
+}
+.con1{
+    vertical-align: top;
+    width: 50%;
+}
+.con2{
+    vertical-align: top;
+    width: 50%;
+}
+.message{
+    width: 90%;
+    outline-color: #d0245e;
+/*    outline-color: #f64747;*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 20px;
+    font-family: Open Sans, Arial, sans-serif;
+    font-size: 22px;
+    max-width: 90%;
+    min-width: 90%;
+    height: 100px;
+    resize: none;
+    height: 180px;
+    border: none;
+    border: 1px solid #999;
+}
+.inputs{
+    border: 1px solid #999;
+    width: 100%;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 20px;
+    font-family: Open Sans, Arial, sans-serif;
+    font-size: 22px;
+    max-width: 90%;
+    min-width: 90%;
+    margin: 0px 0px 10px 0px;
+}
+.submits{
+    border: 2px solid #d0245e;
+/*#f64747; */
+    width: 100%;
+    background: #d0245e;
+/*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 15px;
+    font-size: 22px;
+    width: 93%;
+    margin: 10px auto;
+    margin-top: 0px;
+}
+.submits:hover{
+    background: #fff;
+    color: #d0245e;
+/*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+.social{
+    width: auto;
+    background: #d0245e;
+/*    background: #f64747;*/
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+.links{
+    margin-top: 30px;
+}
+.links li{
+    display: inline;
+    margin: 10px;
+}
+.links li img{
+    height: 50px;
+    width: auto;
+}
+.footer{
+    background: #3a3a3a;
+    color: #fff;
+    padding: 70px 200px 70px 200px;
+    text-align: center;
+}
+/**Other**/
+.nots-opts1{
+    border: 2px solid #d0245e;
+/*#f64747; */
+    background: #d0245e;
+/*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
+.nots-opts1:hover{
+    background: #fff;
+    color: #d0245e;
+/*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+.nots-opts2{
+    border: 2px solid #d0245e;
+/* #f64747; */
+    background: #f64747;
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
+.nots-opts2:hover{
+    background: #fff;
+    color: #d0245e;
+/*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+.nots-opts3{
+    border: 2px solid #d0245e;
+/*#f64747;*/
+    background: #d0245e;
+/*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
+.nots-opts3:hover{
+    background: #fff;
+    color: #d0245e;
+/*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+.nots-opts4{
+    border: 2px solid #d0245e;
+/* #f64747; */
+    background: #d0245e;
+/*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+/*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
+.nots-opts4:hover{
+    background: #fff;
+    color: #d0245e;
+/*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+
+#tessellactation{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+}
+
+            #dialogoverflow{
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                background: url("img/bg.png");
+            }
+            #dialogbox{
+                opacity:1;
+                display: none;
+                position: fixed;
+                background: #fff;
+                color: #444;
+                border: 1px solid #1a1a1a;
+                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -o-border-radius: 3px;
+                -ms-border-radius: 3px;
+                width: 750px;
+                z-index: 10;
+            }
+            #dialogbox > div > #dialogboxhead{
+                text-align: center;
+                font-weight: normal;
+                font-size: 25px;
+                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                padding: 10px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #666;
+            }
+            #dialogbox > div > #dialogboxbody{
+                font-weight: normal;
+                padding: 10px;
+                margin: 0px 0px 0px 0px;
+                padding: 20px 20px 20px 20px;
+                font-size: 90%;
+                height: 300px;
+                overflow-y: scroll;
+            }
+            #dialogbox > div > #dialogboxfoot{
+                padding: 10px;
+                font-size: 90%;
+                border-top: 1px solid #666;
+            }
+            #dialogoverflow2{
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                background: url("img/bg.png");
+            }
+            #dialogbox2{
+                opacity:1;
+                display: none;
+                position: fixed;
+                background: #fff;
+                color: #444;
+                border: 1px solid #1a1a1a;
+                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -o-border-radius: 3px;
+                -ms-border-radius: 3px;
+                width: 750px;
+                z-index: 10;
+            }
+            #dialogbox2 > div > #dialogboxhead2{
+                text-align: center;
+                font-weight: normal;
+                font-size: 25px;
+                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                padding: 10px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #666;
+            }
+            #dialogbox2 > div > #dialogboxbody2{
+                font-weight: normal;
+                padding: 10px;
+                margin: 0px 0px 0px 0px;
+                padding: 20px 20px 20px 20px;
+                font-size: 90%;
+                height: 300px;
+                overflow-y: scroll;
+            }
+            #dialogbox2 > div > #dialogboxfoot2{
+                padding: 10px;
+                font-size: 90%;
+                border-top: 1px solid #666;
+            }
+            #dialogoverflow3{
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                background: url("img/bg.png");
+            }
+            #dialogbox3{ 
+                opacity:1;
+                display: none;
+                position: fixed;
+                background: #fff;
+                color: #444;
+                border: 1px solid #1a1a1a;
+                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -o-border-radius: 3px;
+                -ms-border-radius: 3px;
+                width: 750px;
+                z-index: 10;
+            }
+            #dialogbox3 > div > #dialogboxhead3{
+                text-align: center;
+                font-weight: normal;
+                font-size: 25px;
+                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                padding: 10px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #666;
+            }
+            #dialogbox3 > div > #dialogboxbody3{
+                font-weight: normal;
+                padding: 10px;
+                margin: 0px 0px 0px 0px;
+                padding: 20px 20px 20px 20px;
+                font-size: 90%;
+                height: 300px;
+                overflow-y: scroll;
+            }
+            #dialogbox3 > div > #dialogboxfoot3{
+                padding: 10px;
+                font-size: 90%;
+                border-top: 1px solid #666;
+            }
+            #dialogoverflow4{
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                background: url("img/bg.png");
+            }
+            #dialogbox4{ 
+                opacity:1;
+                display: none;
+                position: fixed;
+                background: #fff;
+                color: #444;
+                border: 1px solid #1a1a1a;
+                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -o-border-radius: 3px;
+                -ms-border-radius: 3px;
+                width: 750px;
+                z-index: 10;
+            }
+            #dialogbox4 > div > #dialogboxhead4{
+                text-align: center;
+                font-weight: normal;
+                font-size: 25px;
+                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                padding: 10px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #666;
+            }
+            #dialogbox4 > div > #dialogboxbody4{
+                font-weight: normal;
+                padding: 10px;
+                margin: 0px 0px 0px 0px;
+                padding: 20px 20px 20px 20px;
+                font-size: 90%;
+                height: 300px;
+                overflow-y: scroll;
+            }
+            #dialogbox4 > div > #dialogboxfoot4{
+                padding: 10px;
+                font-size: 90%;
+                border-top: 1px solid #666;
+            }
+            #dialogoverflow5{
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                background: url("img/bg.png");
+            }
+            #dialogbox5{
+                opacity:1;
+                display: none;
+                position: fixed;
+                background: #fff;
+                color: #444;
+                border: 1px solid #1a1a1a;
+                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -o-border-radius: 3px;
+                -ms-border-radius: 3px;
+                width: 550px;
+                z-index: 10;
+            }
+            #dialogbox5 > div > #dialogboxhead5{
+                text-align: center;
+                font-weight: normal;
+                font-size: 25px;
+                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                padding: 10px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #666;
+            }
+            #dialogbox5 > div > #dialogboxbody5{
+                font-weight: normal;
+                padding: 10px;
+                margin: 0px 0px 0px 0px;
+                padding: 20px 20px 20px 20px;
+                font-size: 90%;
+                height: 150px;
+                overflow-y: scroll;
+            }
+            #dialogbox5 > div > #dialogboxfoot5{
+                padding: 10px;
+                font-size: 90%;
+                border-top: 1px solid #666;
+            }
+           @media screen and (max-width: 700px) and (min-width: 100px){
+                body{
+                    font-size: 18px;
+                }
+                .header{
+                    display: none;
+                }
+                .about{
+                    padding: 10px;
+                    background: #2d2d2d;
+/*                    background: url("img/intro-background.gif"); */
+                    text-align: center;
+                    height: 200px;
+                }
+                .main-h1{
+                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #2c3e50;
+                    margin-top: 20px;
+                }
+                .brl{
+                    position: relative;
+                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #d0245e;
+                    margin-top: 20px;
+                }
+                .dash{
+                    position: relative;
+                    top: -8px;
+                    left: -5px;
+                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #888;
+                    margin-top: 20px;
+                }
+                .cad{
+                    position: relative;
+                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #fff;
+                    margin-top: 20px;
+                }
+                .ossm{
+                    position: relative;
+                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 12px;
+                    color: #fff;
+                    top: -6px;
+                }
+                .main-intro{
+                    font-size: 17px;
+                }
+                .pad{
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 0px;
+                }
+                .intro-topic{
+                    font-size: 17px;
+                }
+                .intro-main{
+                    font-size: 70%;
+                }
+                .who-r{
+                    margin-top: 450px;
+                    font-size: 16px;
+                    padding: 20px 20px 20px 20px;
+                }
+                .articles{
+                    display: none;
+                }
+                .why-us{
+                    padding: 10px 10px 10px 10px;
+                }
+                .last{
+                    display: none;
+                }
+                .links li img{
+                    width: 30px;
+                    height: auto;
+                }
+                .footer{
+                    padding: 20px 20px 20px 20px;
+                }
+            }
