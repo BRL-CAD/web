@@ -118,6 +118,8 @@ add_action('wp_enqueue_scripts', 'sp_load_jquery');
 
 function brlcad_scripts() {
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.min.css' );
+	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap-3.3.5/dist/css/bootstrap.css' );
 	
 	wp_enqueue_style( 'brl-cadbase', get_template_directory_uri() . '/css/base.css' );
 
@@ -126,6 +128,8 @@ function brlcad_scripts() {
 	wp_enqueue_style( 'brl-plugins', get_template_directory_uri() . '/css/plugins.css' );
 
 	wp_enqueue_style( 'brlcad-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20131224', true );
 
 	wp_enqueue_script( 'brlcad-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '20131224', true );
 
