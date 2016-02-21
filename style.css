@@ -129,10 +129,10 @@ a:hover{
     color: #fff;
     margin-top: 20px;
 }
-.ossm{
+.byline{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 32px;
     color: #fff;
     top: -16px;
 }
@@ -759,7 +759,7 @@ a:hover{
                     color: #fff;
                     margin-top: 20px;
                 }
-                .ossm{
+                .byline{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                     font-size: 12px;
