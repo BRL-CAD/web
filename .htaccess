@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteRule ^wiki/?(.*)$ /w/index.php?title=$1 [L,QSA]
 
-Options MultiViews
+# Options MultiViews
