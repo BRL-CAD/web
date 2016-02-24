@@ -15,15 +15,7 @@ a{
     color: #2c3e50;
 }
 a:hover{
-    color: #000;
-    transition: ease-in .2s color;
-    -webkit-transition: ease-in .2s color;
-    -moz-transition: ease-in .2s color;
-    -o-transition: ease-in .2s color;
-    -ms-transition: ease-in .2s color;
-}
-a.menu:hover{
-    color: #fff;
+    color:#d0245e;
     transition: ease-in .2s color;
     -webkit-transition: ease-in .2s color;
     -moz-transition: ease-in .2s color;
@@ -84,18 +76,20 @@ a.menu:hover{
     margin-top: 15px;
     border-radius: 50%;
     padding: 2px;
-    background: #000;  /* #f64747; */
+    background: #000;
 }
 .menu{
     text-align: center;
     width: 10%;
     padding-top: 10px;
-    cursor: pointer;
+/*    cursor: pointer; */
 }
+
 .menu:hover{
     color: #fff;
-    background: #000; /* d91a5d; */
+    background: #000;
 }
+
 
 /**First**/
 .about{
