@@ -12,7 +12,7 @@
             function menu_download() {
                 $('html, body').animate({
                     scrollTop: $(".download").offset().top
-                }, 500);
+                }, 1000);
             }
             function menu_news() {
                 $('html, body').animate({
@@ -22,27 +22,27 @@
             function menu_about() {
                 $('html, body').animate({
                     scrollTop: $(".about").offset().top
-                }, 1500);
-            }
-            function menu_docs() {
-                $('html, body').animate({
-                    scrollTop: $(".docs").offset().top
-                }, 2000);
-            }
-            function menu_support() {
-                $('html, body').animate({
-                    scrollTop: $(".support").offset().top
-                }, 2500);
-            }
-            function menu_gallery() {
-                $('html, body').animate({
-                    scrollTop: $(".gallery").offset().top
-                }, 3000);
+                }, 1000);
             }
             function menu_home() {
                 $('html, body').animate({
                     scrollTop: $(".home").offset().top
-                }, 500);
+                }, 1000);
+            }
+            function menu_docs() {
+                $('html, body').animate({
+                    scrollTop: $(".docs").offset().top
+                }, 1000);
+            }
+            function menu_support() {
+                $('html, body').animate({
+                    scrollTop: $(".support").offset().top
+                }, 1000);
+            }
+            function menu_gallery() {
+                $('html, body').animate({
+                    scrollTop: $(".gallery").offset().top
+                }, 1000);
             }
             
             
@@ -65,8 +65,8 @@
                 };
             }
              
-                        //2nd Messages
-var Alert2 = new CustomAlert2();
+            //2nd Messages
+            var Alert2 = new CustomAlert2();
             function CustomAlert2(){
                 this.render2 = function(){
                     var winW = window.innerWidth;
@@ -87,7 +87,7 @@ var Alert2 = new CustomAlert2();
             
             
             //3rd Requests
-var Alert3 = new CustomAlert3();
+            var Alert3 = new CustomAlert3();
             function CustomAlert3(){
                 this.render3 = function(){
                     var winW = window.innerWidth;
@@ -106,7 +106,7 @@ var Alert3 = new CustomAlert3();
                 };
             }
          
-var Alert4 = new CustomAlert4();
+            var Alert4 = new CustomAlert4();
             function CustomAlert4(){
                 this.render4 = function(){
                     var winW = window.innerWidth;
@@ -151,25 +151,25 @@ var Alert4 = new CustomAlert4();
                 <table width="93%">
                     <tr>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_download()">download</div>
+                            <div onclick="menu_download()"><a href="http://brlcad.org/d/download/" class="menu">download</a></div>
                         </td>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_news()">news</div>
+                            <div onclick="menu_news()"><a href="http://brlcad.org/d/" class="menu">news</a></div>
                         </td>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_about()">about</div>
+                            <div onclick="menu_about()"><a href="http://brlcad.org/d/about" class="menu">about</a></div>
                         </td>
                         <td valign="middle" class="menu">
-                            <img onclick="menu_home()" src="img/logo_color.png" alt="Home" class="home">
+                            <a href="" class="menu"><img onclick="menu_home()" src="img/logo_color.png" alt="Home" class="home"></a>
                         </td>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_docs()">docs</div>
+                            <div onclick="menu_docs()"><a href="http://brlcad.org/wiki/" class="menu">docs</a></div>
                         </td>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_support()">support</div>
+                            <div onclick="menu_support()"><a href="https://sourceforge.net/projects/brlcad/support" class="menu">support</a></div>
                         </td>
                         <td valign="middle" class="menu">
-                            <div onclick="menu_gallery()">gallery</div>
+                            <div onclick="menu_gallery()"><a href="http://brlcad.org/gallery/" class="menu">gallery</a></div>
                         </td>
                     </tr>
                 </table>
@@ -195,7 +195,7 @@ var Alert4 = new CustomAlert4();
                         <img src="img/icon-love.png" class="pad" alt="Join Us!">
                         <h2 class="intro-topic">Join Us!</h2>
                         <p class="intro-main">
-                          Help make a better CAD system, make modeling fun.  No experience necessary.  <br /><a href="https://www.flossmanuals.net/contributors-guide-to-brl-cad/" class="nots-opts1">Learn More</a>
+                          Help make a better CAD system, make modeling fun.  No experience necessary.  <br/><a href="https://www.flossmanuals.net/contributors-guide-to-brl-cad/" class="nots-opts1">Learn More</a>
                         </p>
                     </td>
                     <td class="intro1">

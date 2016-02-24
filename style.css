@@ -1,7 +1,3 @@
-/* 
-    Created on : Dec 16, 2014, 9:13:13 PM
-    Author     : Utkarsh
-*/
 /**Basic Styling**/
 *{
     margin: 0px;
@@ -16,10 +12,18 @@ body{
 }
 a{
     text-decoration: none;
-    color: #b32c44;
+    color: #2c3e50;
 }
 a:hover{
     color: #000;
+    transition: ease-in .2s color;
+    -webkit-transition: ease-in .2s color;
+    -moz-transition: ease-in .2s color;
+    -o-transition: ease-in .2s color;
+    -ms-transition: ease-in .2s color;
+}
+a.menu:hover{
+    color: #fff;
     transition: ease-in .2s color;
     -webkit-transition: ease-in .2s color;
     -moz-transition: ease-in .2s color;
