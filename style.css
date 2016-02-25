@@ -374,10 +374,9 @@ a.menu{
 .social{
     width: auto;
     background: #d0245e;
-/*    background: #f64747;*/
     color: #fff;
     text-align: center;
-    padding: 50px;
+    padding: 10px;
 }
 .links{
     margin-top: 30px;
