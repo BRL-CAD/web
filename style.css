@@ -778,6 +778,9 @@ a.menu{
                     text-align: center;
                     height: 200px;
                 }
+                .tessellactation-container{
+                    display: none;
+                }
                 .main-h1{
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                     font-size: 40px;
