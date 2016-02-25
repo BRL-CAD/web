@@ -1,6 +1,6 @@
 (function() {
 
-  var top, width, height, largeHeader, canvas, ctx, points, target = true;
+  var top, width, height, largeHeader, canvas, ctx, points, mouse = true;
   var animateHeader = true;
 
   // Main
@@ -9,22 +9,22 @@
   addListeners();
 
   function initHeader() {
-    largeHeader = document.getElementById('header');
+    largeHeader = document.getElementById('about');
     canvas = document.getElementById('tessellactation');
 
-    top = largeHeader.clientHeight+'px';
-    width = largeHeader.clientWidth;
-    height = canvas.height;
-    target = {x: width/2, y: height/2};
+    height = largeHeader.clientHeight;
+    width = window.innerWidth;
+
+    mouse = {x: 48 + canvas.offsetLeft, y: 48 + canvas.offsetTop};
 
     canvas.width = width;
-    canvas.style.top = top;
-    canvas.style.left = 0+'px';
-    canvas.style.postion = "absolute";
-    /*          canvas.height = largeHeader.style.height+'px'; */
-    /*          canvas.height=height+'px';*/
+    canvas.height = height;
 
     ctx = canvas.getContext('2d');
+
+    var pos = {x: canvas.width / 2, y: 0};
+    var logo = new Circle(pos,10.0,'rgba(255,255,255,0.5)');
+    logo.draw();
 
     // create points
     points = [];
@@ -37,7 +37,7 @@
       }
     }
 
-    // for each point find the 5 closest points
+    // for each point find the 3 closest points
     for(var i = 0; i < points.length; i++) {
       var closest = [];
       var p1 = points[i];
@@ -45,7 +45,7 @@
         var p2 = points[j]
           if(!(p1 == p2)) {
             var placed = false;
-            for(var k = 0; k < 5; k++) {
+            for(var k = 0; k < 3; k++) {
               if(!placed) {
                 if(closest[k] == undefined) {
                   closest[k] = p2;
@@ -54,7 +54,7 @@
               }
             }
 
-            for(var k = 0; k < 5; k++) {
+            for(var k = 0; k < 3; k++) {
               if(!placed) {
                 if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
                   closest[k] = p2;
@@ -93,8 +93,8 @@
       posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
       posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
-    target.x = posx;
-    target.y = posy;
+    mouse.x = posx;
+    mouse.y = posy;
   }
 
   function scrollCheck() {
@@ -103,15 +103,11 @@
   }
 
   function resize() {
-    top = largeHeader.clientHeight+'px';
-    width = largeHeader.clientWidth;
-    height = canvas.height;
-    target = {x: width/2, y: height/2};
+    height = largeHeader.clientHeight;
+    width = window.innerWidth;
 
+    canvas.height = height;
     canvas.width = width;
-    canvas.style.top = top;
-    canvas.style.left = 0+'px';
-    canvas.style.postion = "absolute";
   }
 
   // animation
@@ -125,6 +121,12 @@
   function animate() {
     if(animateHeader) {
       ctx.clearRect(0,0,width,height);
+
+      var pos = {x: width / 2, y: height / 2};
+      Circle(pos, 100.0, 'rgba(255,255,255,0.5)');
+
+      var target = {x: mouse.x - canvas.offsetLeft, y: mouse.y - canvas.offsetTop};
+
       for(var i in points) {
         // detect points in range
         if(Math.abs(getDistance(target, points[i])) < 4000) {
