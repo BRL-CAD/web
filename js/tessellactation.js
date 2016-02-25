@@ -1,6 +1,6 @@
 (function() {
 
-  var top, width, height, largeHeader, canvas, ctx, points, mouse = true;
+  var top, width, height, canvas, ctx, points, mouse = true;
   var animateHeader = true;
 
   // Main
@@ -9,10 +9,16 @@
   addListeners();
 
   function initHeader() {
-    largeHeader = document.getElementById('about');
     canvas = document.getElementById('tessellactation');
 
-    height = largeHeader.clientHeight;
+    /* The portion of about in which this should run is always going
+     * to be 350px tall.  Setting this statically to 350px is in this
+     * case better than calculating it from another element, since the
+     * only relevant property is the (position: absolute) y-coordinate
+     * of the background ::after div.  In the long run, it may be a
+     * good idea to modify the site to have a better-sized container
+     * for this, and to build all sizes dynamically and scalably. */
+    height = 350;
     width = window.innerWidth;
 
     mouse = {x: 48 + canvas.offsetLeft, y: 48 + canvas.offsetTop};
@@ -103,7 +109,6 @@
   }
 
   function resize() {
-    height = largeHeader.clientHeight;
     width = window.innerWidth;
 
     canvas.height = height;
