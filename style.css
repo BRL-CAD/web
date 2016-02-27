@@ -852,3 +852,119 @@ a.menu{
                     padding: 20px 20px 20px 20px;
                 }
             }
+
+/**************
+New Navigtaion
+***************/
+
+.id_logo {
+  height: 75px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  z-index: 1100;
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: transparent;
+  display: inline-block;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.circle img {
+  margin-top: -5px;
+}
+
+.head {
+  min-height: 50px;
+  background: #222222;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 3px #222222;
+  -moz-box-shadow: 0px 2px 3px #222222;
+  box-shadow: 0px 2px 3px #222222;
+}
+.head a {
+  color: #ececec;
+}
+.navbar {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+.navbar .navigation li {
+  float: right;
+  text-align:center;
+  width: 16%;
+  line-height: 50px;
+  font-size: 16px;
+  border-bottom: 2px solid #222222;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.navbar .navigation li:hover {
+  border-bottom: 2px solid #ee3b5b;
+}
+
+.navbar .navigation li a {
+  display: block;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navbar .navigation li {
+    font-size: 14px;
+    width: 136px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .navbar .navigation li {
+    font-size: 14px;
+    width: 33%;
+  }
+
+  .navbar .navigation {
+    float: right;
+    width: 80%;
+  }
+
+  .id_logo {
+    top: 25px;
+    left: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar .navigation li {
+    display: none;
+  }
+
+  .head {
+    position: relative;
+  }
+}
+
