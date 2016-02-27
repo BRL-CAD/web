@@ -931,6 +931,11 @@ New Navigtaion
 .navbar .navigation li:hover {
   border-bottom: 2px solid #ee3b5b;
 }
+
+.navbar .navigation li a {
+  display: block;
+}
+
 @media only screen and (max-width: 1100px) {
   .navbar .navigation li {
     font-size: 14px;
@@ -942,34 +947,22 @@ New Navigtaion
     font-size: 14px;
     width: 33%;
   }
-}
-@media only screen and (max-width: 600px) {
-  .navbar .navigation li {
-    display: none;
-  }
-}
-.navbar .navigation li a {
-  display: block;
-}
-@media only screen and (max-width: 920px) {
+
   .navbar .navigation {
     float: right;
     width: 80%;
   }
-}
 
-@media only screen and (max-width: 920px) {
   .id_logo {
     top: 25px;
     left: 10px;
   }
 }
 @media only screen and (max-width: 600px) {
-  .id_logo {
+  .navbar .navigation li {
     display: none;
   }
-}
-@media only screen and (max-width: 600px) {
+
   .head {
     position: relative;
   }
