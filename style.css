@@ -192,8 +192,8 @@ a.menu{
 }
 .pad{
     padding-top: 20px;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     color:#999;       
     transition: padding 0.2s linear; /* vendorless fallback */
     -o-transition: color 0.5s linear; /* opera */
@@ -216,7 +216,7 @@ a.menu{
 .icon-table{
     width: 90%;
     margin: 10px auto;
-    margin-top: 40px;
+    margin-top:120px;
     border-spacing: 10px 0px;
 }
 .intro1{
@@ -236,16 +236,19 @@ a.menu{
 }
 .intro-topic{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 32px;
+    font-size:28px;
     font-weight: lighter;
+}
+.intro-topic-big{
+	font-size:32px;
 }
 .intro-main{
     font-weight: lighter;
     margin: 5px;
+    font-size:18px;
 }
 .what-r{
-    margin: 10px auto;
-    margin-top: 380px;
+    margin-top: 450px;
     background: #000;
 /*     background: #f64747; */
     color: #fff;
@@ -255,6 +258,7 @@ a.menu{
 }
 .what-p{
     font-weight: lighter;
+    font-size:20px;
     margin: 15px;
 }
 .articles{
@@ -266,8 +270,8 @@ a.menu{
     margin: 10px auto;
 }
 .article-table img{
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     cursor: pointer;
     border-radius: 250px;
     -webkit-border-radius: 250px;
@@ -285,6 +289,9 @@ a.menu{
     -moz-columns: 2;
     -o-columns: 2;
     -ms-columns: 2;
+}
+.double li{
+	margin-bottom:30px;
 }
 /**Last**/
 .last{
@@ -410,9 +417,16 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
+    display:block;
+    width:200px;
+    height:35px;
+    line-height:35px;
+    margin:auto;
+    margin-top:10px;
+    text-align:center;
 }
 .nots-opts1:hover{
     background: #fff;
@@ -823,12 +837,6 @@ a.menu{
                     width: 100px;
                     height: 100px;
                     margin-top: 0px;
-                }
-                .intro-topic{
-                    font-size: 17px;
-                }
-                .intro-main{
-                    font-size: 70%;
                 }
                 .who-r{
                     margin-top: 450px;
