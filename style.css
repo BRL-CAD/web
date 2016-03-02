@@ -776,6 +776,13 @@ a.menu{
                 font-size: 90%;
                 border-top: 1px solid #666;
             }
+	    @media screen and (max-width: 500px){
+		    .what-r{
+			    padding:40px 40px 40px 40px;
+			    text-align:left;
+		    }
+
+	    }
 	    @media screen and (max-width: 700px) and (min-width:601px){
 		 .wrapper-main{
 			margin-top:50px;
@@ -793,7 +800,7 @@ a.menu{
                     background: #2d2d2d;
 /*                    background: url("img/intro-background.gif"); */
                     text-align: center;
-                    height: 200px;
+                    height: 250px;
                 }
                 .tessellactation-container{
                     display: none;
@@ -829,6 +836,7 @@ a.menu{
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                     color: #fff;
                     top: -6px;
+		    font-size:1.11rem;
                 }
                 .main-intro{
                 }
