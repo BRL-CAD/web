@@ -6,13 +6,14 @@
 }
 
 html{
-	font-size:18px;
+	font-size:21px;
+	line-height:1.5;
 }
 
 body{
     color: #2c3e50;
     font-family: Segoe UI, Open Sans, Roboto, sans-serif, Arial;
-    font-size: 1.11rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 a{
@@ -123,7 +124,7 @@ a.menu{
     font-size: 1.278rem;
     background: #2d2d2d;
     text-align: center;
-    height: 300px;
+    height: 350px;
 }
 .tessellactation-container{
     /* FIXME: figure out how to position the canvas beneath the intro1 and header/menu elements */
@@ -191,8 +192,8 @@ a.menu{
 }
 .pad{
     padding-top: 20px;
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 180px;
     color:#999;       
     transition: padding 0.2s linear; /* vendorless fallback */
     -o-transition: color 0.5s linear; /* opera */
@@ -225,24 +226,25 @@ a.menu{
 }
 
 .intro1{
+    box-sizing:border-box;
+    padding:0px 10px;
     text-align: center;
     width:33%;
     min-width:300px;
     float:left;
     margin:auto;
+    margin-top:-70px;
 }
 .intro-topic{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size:1.556rem;
+    font-size:2rem;
     font-weight: lighter;
-}
-.intro-topic-big{
-	font-size:1.778rem;
 }
 .intro-main{
     font-weight: lighter;
     margin: 5px;
     font-size:1rem;
+    color:#333;
 }
 .what-r{
     margin-top: 20px;
@@ -781,7 +783,7 @@ a.menu{
 	    }
            @media screen and (max-width: 700px) and (min-width: 100px){
                 html{
-                    font-size: 14px;
+                    font-size: 18px;
                 }
                 .header{
                     display: none;
@@ -950,6 +952,7 @@ New Navigtaion
   .intro1{
 	  float:none;
 	  width:60%;
+	  margin-top:0px;
   }
   .navbar .navigation li {
     font-size: 14px;
