@@ -4,10 +4,16 @@
     padding: 0px;
     list-style: none;
 }
+
+html{
+	font-size:21px;
+	line-height:1.5;
+}
+
 body{
     color: #2c3e50;
     font-family: Segoe UI, Open Sans, Roboto, sans-serif, Arial;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: normal;
 }
 a{
@@ -66,7 +72,7 @@ a:hover{
 }
 .header table{
     border-spacing: 0px 0px;
-    font-size: 24px;
+    font-size: 1.33rem;
     margin: 0px auto;
 }
 .logo{
@@ -115,33 +121,31 @@ a.menu{
 .about{
     left: 64px;
     padding: 25px;
-    font-size: 23px;
+    font-size: 1.278rem;
     background: #2d2d2d;
     text-align: center;
-    height: 300px;
+    height: 350px;
 }
 .tessellactation-container{
     /* FIXME: figure out how to position the canvas beneath the intro1 and header/menu elements */
 }
 #tessellactation{
     position: absolute;
-    top: 50pt;
+    top: 0px;
     left: 0px;
     width: 100%;
     height: 350px;
 }
 .main-h1{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 100px;
+    font-size: 5.556rem;
     color: #2d2d2d;  /* #2c3e50; */
     margin-top: 20px;
 }
 .brl{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 100px;
     color: #d0245e; /*d91a5d; */
-    margin-top: 20px;
 
     text-shadow: 0px 0px 4px #282828,
     -1px -1px 0 #282828,
@@ -154,9 +158,7 @@ a.menu{
     top: -8px;
     left: -5px;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 100px;
     color: #888;
-    margin-top: 20px;
 
     text-shadow: 0px 0px 4px #111,
     -1px -1px 0 #111,
@@ -167,9 +169,7 @@ a.menu{
 .cad{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 100px;
     color: #fff;
-    margin-top: 20px;
 
     text-shadow: 0px 0px 4px #111,
     -1px -1px 0 #111,
@@ -180,7 +180,7 @@ a.menu{
 .byline{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 32px;
+    font-size: 1.778rem;
     color: #fff;
     top: -16px;
 
@@ -206,7 +206,7 @@ a.menu{
 }
 .main-intro{
     font-family: Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 30px;
+    font-size: 1.67rem;
 }
 .wrapper-main{
     width: 60%;
@@ -214,47 +214,50 @@ a.menu{
     padding-top: 40px;
 }
 .icon-table{
-    width: 90%;
+    max-width:1200px;
     margin: 10px auto;
-    margin-top: 40px;
     border-spacing: 10px 0px;
 }
+
+.icon-table:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
 .intro1{
+    box-sizing:border-box;
+    padding:0px 10px;
     text-align: center;
-    vertical-align: top;
-    width: 33%;
-}
-.intro2{
-    text-align: center;
-    vertical-align: top;
-    width: 33%;
-}
-.intro3{
-    text-align: center;
-    vertical-align: top;
-    width: 33%;
+    width:33%;
+    min-width:300px;
+    float:left;
+    margin:auto;
+    margin-top:-70px;
 }
 .intro-topic{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 32px;
+    font-size:2rem;
     font-weight: lighter;
 }
 .intro-main{
     font-weight: lighter;
     margin: 5px;
+    font-size:1rem;
+    color:#333;
 }
 .what-r{
-    margin: 10px auto;
-    margin-top: 380px;
+    margin-top: 20px;
     background: #000;
 /*     background: #f64747; */
     color: #fff;
     padding: 40px 90px 40px 90px;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.33rem;
 }
 .what-p{
     font-weight: lighter;
+    font-size:1.11rem;
     margin: 15px;
 }
 .articles{
@@ -266,8 +269,8 @@ a.menu{
     margin: 10px auto;
 }
 .article-table img{
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     cursor: pointer;
     border-radius: 250px;
     -webkit-border-radius: 250px;
@@ -285,6 +288,9 @@ a.menu{
     -moz-columns: 2;
     -o-columns: 2;
     -ms-columns: 2;
+}
+.double li{
+	margin-bottom:30px;
 }
 /**Last**/
 .last{
@@ -316,7 +322,7 @@ a.menu{
     -o-border-radius: 5px;
     padding: 20px;
     font-family: Open Sans, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 1.22rem;
     max-width: 90%;
     min-width: 90%;
     height: 100px;
@@ -336,7 +342,7 @@ a.menu{
     -o-border-radius: 5px;
     padding: 20px;
     font-family: Open Sans, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 1.22rem;
     max-width: 90%;
     min-width: 90%;
     margin: 0px 0px 10px 0px;
@@ -356,7 +362,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 15px;
-    font-size: 22px;
+    font-size: 1.22rem;
     width: 93%;
     margin: 10px auto;
     margin-top: 0px;
@@ -410,9 +416,16 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 0.88rem;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
+    display:block;
+    width:200px;
+    height:35px;
+    line-height:35px;
+    margin:auto;
+    margin-top:20px;
+    text-align:center;
 }
 .nots-opts1:hover{
     background: #fff;
@@ -437,7 +450,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 0.78rem;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -465,7 +478,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 0.78rem;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -493,7 +506,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 0.78rem;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -539,7 +552,7 @@ a.menu{
             #dialogbox > div > #dialogboxhead{
                 text-align: center;
                 font-weight: normal;
-                font-size: 25px;
+                font-size: 1.39rem;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -641,7 +654,7 @@ a.menu{
             #dialogbox3 > div > #dialogboxhead3{
                 text-align: center;
                 font-weight: normal;
-                font-size: 25px;
+                font-size: 1.39rem;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -692,7 +705,7 @@ a.menu{
             #dialogbox4 > div > #dialogboxhead4{
                 text-align: center;
                 font-weight: normal;
-                font-size: 25px;
+                font-size: 1.39rem;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -743,7 +756,7 @@ a.menu{
             #dialogbox5 > div > #dialogboxhead5{
                 text-align: center;
                 font-weight: normal;
-                font-size: 25px;
+                font-size: 1.39rem;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -763,8 +776,20 @@ a.menu{
                 font-size: 90%;
                 border-top: 1px solid #666;
             }
+	    @media screen and (max-width: 500px){
+		    .what-r{
+			    padding:40px 40px 40px 40px;
+			    text-align:left;
+		    }
+
+	    }
+	    @media screen and (max-width: 700px) and (min-width:601px){
+		 .wrapper-main{
+			margin-top:50px;
+		}
+	    }
            @media screen and (max-width: 700px) and (min-width: 100px){
-                body{
+                html{
                     font-size: 18px;
                 }
                 .header{
@@ -775,21 +800,20 @@ a.menu{
                     background: #2d2d2d;
 /*                    background: url("img/intro-background.gif"); */
                     text-align: center;
-                    height: 200px;
+                    height: 250px;
                 }
                 .tessellactation-container{
                     display: none;
                 }
                 .main-h1{
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 40px;
+                    font-size: 2.85rem;
                     color: #2c3e50;
                     margin-top: 20px;
                 }
                 .brl{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 40px;
                     color: #d0245e;
                     margin-top: 20px;
                 }
@@ -798,41 +822,31 @@ a.menu{
                     top: -8px;
                     left: -5px;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 40px;
                     color: #888;
                     margin-top: 20px;
                 }
                 .cad{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 40px;
                     color: #fff;
                     margin-top: 20px;
                 }
                 .byline{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 12px;
                     color: #fff;
                     top: -6px;
+		    font-size:1.11rem;
                 }
                 .main-intro{
-                    font-size: 17px;
                 }
                 .pad{
                     width: 100px;
                     height: 100px;
                     margin-top: 0px;
                 }
-                .intro-topic{
-                    font-size: 17px;
-                }
-                .intro-main{
-                    font-size: 70%;
-                }
                 .who-r{
                     margin-top: 450px;
-                    font-size: 16px;
                     padding: 20px 20px 20px 20px;
                 }
                 .articles{
@@ -943,6 +957,11 @@ New Navigtaion
   }
 }
 @media only screen and (max-width: 920px) {
+  .intro1{
+	  float:none;
+	  width:60%;
+	  margin-top:0px;
+  }
   .navbar .navigation li {
     font-size: 14px;
     width: 33%;
