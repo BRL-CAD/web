@@ -872,17 +872,14 @@ New Navigtaion
 ***************/
 
 .id_logo {
-  height: 75px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 20px;
-  z-index: 1100;
+  height: 50px;
+  margin-left: 20px;
+  float: left;
 }
 
 .circle {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: transparent;
   display: inline-block;
@@ -900,7 +897,7 @@ New Navigtaion
   transition-timing-function: ease-in;
 }
 .circle img {
-  margin-top: -5px;
+  margin-top: 0px;
 }
 
 .head {
@@ -933,10 +930,10 @@ New Navigtaion
   -moz-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
@@ -949,18 +946,39 @@ New Navigtaion
 .navbar .navigation li a {
   display: block;
 }
+#nav-button {
+  display: none;
+  position: absolute;
+  right:0;
+  line-height: 50px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: 20px;
+  cursor: pointer;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none;   
+  -khtml-user-select: none;    
+  -moz-user-select: none;      
+  -ms-user-select: none;      
+  user-select: none; 
+}
 
+/* Desktop */
 @media only screen and (max-width: 1100px) {
   .navbar .navigation li {
     font-size: 14px;
     width: 136px;
   }
 }
+
+/* Tablet */
 @media only screen and (max-width: 920px) {
   .intro1{
-	  float:none;
-	  width:60%;
-	  margin-top:0px;
+	float:none;
+	width:60%;
+	margin-top:0px;
   }
   .navbar .navigation li {
     font-size: 14px;
@@ -977,13 +995,28 @@ New Navigtaion
     left: 10px;
   }
 }
+
+/* Mobile */
 @media only screen and (max-width: 600px) {
-  .navbar .navigation li {
+  #nav-button {
+    display: block;
+  }
+  .navbar {
     display: none;
+  }
+  
+  .navbar .navigation {
+    float: right;
+    width: 100%;
+  }
+  
+  .navbar .navigation li {
+    font-size: 18px;
+    width: 100%;
   }
 
   .head {
-    position: relative;
+    /*position: relative;*/
   }
 }
 
