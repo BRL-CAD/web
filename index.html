@@ -7,155 +7,7 @@
     <title>BRL-CAD: Open Source Solid Modeling</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
-    <script type="text/javascript" src="js/jquery.js"></script>
 
-    <script>
-        function menu_download() {
-          $('html, body').animate({
-              scrollTop: $(".download").offset().top
-          }, 1000);
-      }
-      function menu_news() {
-          $('html, body').animate({
-              scrollTop: $(".news").offset().top
-          }, 1000);
-      }
-      function menu_about() {
-          $('html, body').animate({
-              scrollTop: $(".about").offset().top
-          }, 1000);
-      }
-      function menu_home() {
-          $('html, body').animate({
-              scrollTop: $(".home").offset().top
-          }, 2000);
-      }
-      function menu_docs() {
-          $('html, body').animate({
-              scrollTop: $(".docs").offset().top
-          }, 1000);
-      }
-      function menu_support() {
-          $('html, body').animate({
-              scrollTop: $(".support").offset().top
-          }, 1000);
-      }
-      function menu_gallery() {
-          $('html, body').animate({
-              scrollTop: $(".gallery").offset().top
-          }, 1000);
-      }
-
-
-      var Alert1 = new CustomAlert();
-      function CustomAlert(){
-          this.render1 = function(){
-              var winW = window.innerWidth;
-              var winH = window.innerHeight;
-              var dialogoverflow = document.getElementById('dialogoverflow');
-              var dialogbox = document.getElementById('dialogbox');
-              $("#dialogoverflow").fadeIn("100");
-              dialogoverflow.style.height = winH+"px";
-              dialogbox.style.left = (winW/2) - (750 * .5)+"px" ;
-              dialogbox.style.top = "75px" ;
-              $("#dialogbox").slideDown("100");
-          };
-          this.ok = function(){
-              $("#dialogbox").slideUp("100");
-              $("#dialogoverflow").fadeOut("100");
-          };
-      }
-
-
-      //2nd Messages
-      var Alert2 = new CustomAlert2();
-      function CustomAlert2(){
-          this.render2 = function(){
-              var winW = window.innerWidth;
-              var winH = window.innerHeight;
-              var dialogoverflow2 = document.getElementById('dialogoverflow2');
-              var dialogbox2 = document.getElementById('dialogbox2');
-              $("#dialogoverflow2").fadeIn("100");
-              dialogoverflow2.style.height = winH+"px";
-              dialogbox2.style.left = (winW/2) - (750 * .5)+"px" ;
-              dialogbox2.style.top = "75px" ;
-              $("#dialogbox2").slideDown("100");
-          };
-          this.ok2 = function(){
-              $("#dialogbox2").slideUp("100");
-              $("#dialogoverflow2").fadeOut("100");
-          };
-      }
-
-
-      //3rd Requests
-      var Alert3 = new CustomAlert3();
-      function CustomAlert3(){
-          this.render3 = function(){
-              var winW = window.innerWidth;
-              var winH = window.innerHeight;
-              var dialogoverflow3 = document.getElementById('dialogoverflow3');
-              var dialogbox3 = document.getElementById('dialogbox3');
-              $("#dialogoverflow3").fadeIn("100");
-              dialogoverflow3.style.height = winH+"px";
-              dialogbox3.style.left = (winW/2) - (750 * .5)+"px" ;
-              dialogbox3.style.top = "75px" ;
-              $("#dialogbox3").slideDown("100");
-          };
-          this.ok3 = function(){
-              $("#dialogbox3").slideUp("100");
-              $("#dialogoverflow3").fadeOut("100");
-          };
-      }
-
-
-      var Alert4 = new CustomAlert4();
-      function CustomAlert4(){
-          this.render4 = function(){
-              var winW = window.innerWidth;
-              var winH = window.innerHeight;
-              var dialogoverflow4 = document.getElementById('dialogoverflow4');
-              var dialogbox4 = document.getElementById('dialogbox4');
-              $("#dialogoverflow4").fadeIn("100");
-              dialogoverflow4.style.height = winH+"px";
-              dialogbox4.style.left = (winW/2) - (750 * .5)+"px" ;
-              dialogbox4.style.top = "75px" ;
-              $("#dialogbox4").slideDown("100");
-          };
-          this.ok4 = function(){
-              $("#dialogbox4").slideUp("100");
-              $("#dialogoverflow4").fadeOut("100");
-          };
-      }
-
-
-      var Alert5 = new CustomAlert5();
-      function CustomAlert5(){
-          this.render5 = function(){
-              var winW = window.innerWidth;
-              var winH = window.innerHeight;
-              var dialogoverflow5 = document.getElementById('dialogoverflow5');
-              var dialogbox5 = document.getElementById('dialogbox5');
-              $("#dialogoverflow5").fadeIn("100");
-              dialogoverflow5.style.height = winH+"px";
-              dialogbox5.style.left = (winW/2) - (550 * .5)+"px" ;
-              dialogbox5.style.top = "75px" ;
-              $("#dialogbox5").slideDown("100");
-          };
-          this.ok5 = function(){
-              $("#dialogbox5").slideUp("100");
-              $("#dialogoverflow5").fadeOut("100");
-          };
-      }
-      
-      function toggleMenu(){
-          if( $(".navbar").css('display') == 'none') {
-              $(".navbar").css("display","block");
-          }else{
-              $(".navbar").css("display","none");  
-          }
-      }
-    </script>
 </head>
 
 <body>
@@ -163,7 +15,7 @@
     <!-- header code starts here -->
     <header class="head">
         <div class="id_logo" id='logo'>
-            <span class="circle" href="#"> 
+            <span class="circle" href="#">
                 <img src="img/logo_color.png" width="50px" height="50px"/>
             </span>
         </div>
@@ -178,7 +30,7 @@
                         News</a></li>
                 <li><a href="http://brlcad.org/wiki/">
                         Documentation</a></li>
-                <li><a href="http://brlcad.org/d/download"> 
+                <li><a href="http://brlcad.org/d/download">
                         Download</a></li>
                 <li>
                     <a href="http://brlcad.org/d/about">
@@ -203,9 +55,11 @@
             <h2 class="byline">Think&nbsp;•&nbsp;Invent&nbsp;•&nbsp;Create</h2>
             <!-- <h2 class="ossm">Open&nbsp;Source&nbsp;Solid&nbsp;Modeling</h2> -->
         </div>
+
     </div>
 
     <div class="icon-table">
+    <div class="container">
         <div class="intro1">
             <img src="img/icon-open.png" class="pad" alt="Open Source">
             <h2 class="intro-topic">Open Source!</h2>
@@ -227,19 +81,23 @@
                 Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.
             </p>
         </div>
+        </div>
     </div>
     <a href="https://www.flossmanuals.net/contributors-guide-to-brl-cad/" class="nots-opts1">Learn&nbsp;More</a>
 
     <div class="what-r">
+      <div class="container">
         <h2 class="intro-topic">What is BRL&#8209;CAD?</h2>
         <p class="what-p">
             BRL-CAD is a powerful open source cross-platform solid modeling system that includes interactive geometry editing, high-performance
             ray-tracing for rendering and geometric analysis, a system performance analysis benchmark suite, geometry libraries
             for application developers, and more than 30 years of active development.
         </p>
+        </div>
     </div>
 
     <div class="why-us">
+      <div class="container">
         <h1 class="main-h1" style="font-size: 3.33rem; margin-bottom: 40px;">Highlights</h1>
         <ul class="double">
             <li>
@@ -273,6 +131,7 @@
                 </p>
             </li>
         </ul><a href="http://brlcad.org/d/about" class="nots-opts1">Learn&nbsp;More</a>
+      </div>
     </div>
     <div class="articles">
         <div class="article-table">
@@ -303,7 +162,7 @@
     </div>
 -->
     <div class="social">
-        <h1 class="main-h1" style="font-size: 1.55rem; color: #fff;">view us on social media!</h1>
+        <h1 class="main-h1" style="font-size: 1.55rem; color: #fff;">Follow us on social media!</h1>
         <ul class="links">
             <li>
                 <a target="blank" href="https://www.facebook.com/pages/BRL-CAD/387112738872"><img src="img/facebook.png" alt="ICON"></a>
@@ -321,6 +180,12 @@
                 <a target="blank" href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="img/youtube.png" alt="ICON"></a>
             </li>
         </ul>
+        <h2>Subscribe to Mailing List</h2>
+        <form action="https://lists.sourceforge.net/lists/subscribe/brlcad-news" id="mail-subscribe">
+          <label class="message-mail">Succesfuly subscribed to mailing list.</label>
+          <input type="email" class="input-mail" name="email" placeholder="Your e-mail" required/>
+          <input type="submit" class="submit-mail" value="Subscribe"/>
+        </form>
     </div>
     <div class="footer">
         <p class="main-h1" style="font-size: 24px; color: #fff; margin-top: 0px">BRL-CAD &COPY; 2016</p>
@@ -447,6 +312,8 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/landing.js"></script>
     <script src="js/rAF.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
