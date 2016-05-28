@@ -1,0 +1,106 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* General styles */
+body,html
+{
+    margin: 0;
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container
+{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, a
+{
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+/* Main navigation style */
+nav#navbar
+{
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    line-height: 50px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+#nav-logo
+{
+    float: left;
+    background: url("../img/logo-circle.svg") no-repeat center center;
+    background-size: 45px 45px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+ul.nav-list
+{
+    font-size: 10pt;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li
+{
+    transition: background-color .1s;
+    height: 50px;
+}
+nav ul li a
+{
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 12.5px;
+}
+nav ul li a:hover
+{
+    background-color: #454545;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
+{
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    color: white;
+}
+.active
+{
+    border-bottom: 4px solid #D0245E; 
+}
+
+/* Section 1 */
+.section1
+{
+    padding-top: 50px;
+    height: 350px;  
+    background: #363636 
+}
+.section1 .container
+{
+    height: 350px;
+    background: url("../img/gear-bg-white.png") no-repeat;
+    background-position: right center;
+    background-size: auto 120%;
+}
+.section1 h1
+{
+    color: #D0245E;
+}
+.section1 h4
+{
+    color: #FFF;
+}
