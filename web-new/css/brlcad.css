@@ -17,17 +17,28 @@ body,html
     padding-left: 20px;
     padding-right: 20px;
 }
+.black-text
+{
+    color: #252525 !important;
+}
 
 
 /* Typography */
-h1, h2, h3, h4, h5, h6, a
+h1, h2, h3, h4, h5, h6, a, .btn
 {
+    color: #252525;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
+a:hover
+{
+    color: #D0245E;
+}
+
 
 /* Main navigation style */
 nav#navbar
 {
+    z-index: 999;
     box-sizing: border-box;
     height: 50px;
     width: 100%;
@@ -68,6 +79,7 @@ nav ul li a
 }
 nav ul li a:hover
 {
+    color: #FFF;
     background-color: #454545;
 }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
@@ -76,6 +88,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
     line-height: 50px;
     width: 50px;
     color: white;
+}
+ul.slide-nav li a:hover
+{
+    color: black !important;
 }
 .active
 {
@@ -99,8 +115,153 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
 .section1 h1
 {
     color: #D0245E;
+    margin-bottom: 0;
+    margin-top: 50px;
+    margin-left: -5px;
 }
-.section1 h4
+.section1 h5
 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.13em;
     color: #FFF;
+}
+.btn-download
+{
+    background-color: #39B54A;
+}
+
+
+/* Section 2 */
+.section2
+{
+    border-top: 10px solid rgba(0,0,0,0.1);
+}
+.section2 h5
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.collection
+{
+    border: 0;
+}
+.collection .collection-item
+{
+    padding-left: 0;
+}
+.collection-item .title
+{
+    color: #252525;
+}
+.collection-item p
+{
+    color: gray;
+    margin: 5px 0px 5px 0px;
+}
+.collection-item .secondary-content
+{
+    color: #252525;
+    font-size: 0.8em;
+}
+.useful-links
+{
+    margin-top: 10px;
+}
+.useful-links a
+{
+    font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.useful-links li
+{
+    padding-bottom: 15px;
+}
+
+/* Section 3 */
+.section3
+{
+    background-color: #D0245E;
+    border-top: 10px solid rgba(0,0,0,0.1);
+}
+.promo-image
+{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.section3 .darker
+{
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+.promo-wrapper
+{
+    padding: 40px 0 40px 0;
+}
+
+/* Section 4 */
+.section4
+{
+    margin-top: -20px;
+    background-color: #F3F3F3;
+    border-top: 10px solid rgba(0,0,0,0.1);
+}
+.section4 .card
+{
+    float: left;
+    padding: 0px;
+    margin: 12px;
+    width: calc(50% - 24px);
+}
+.section4 .card-image
+{
+    height: 200px;
+}
+
+/* Section 5 */
+.section5
+{
+    margin: -20px 0 0 0;
+    background-color: #D0245E;
+    border-top: 10px solid rgba(0,0,0,0.1);
+    padding: 20px 0 40px 0;
+}
+.input-field label 
+{
+     color: rgba(255,255,255,0.9);
+}
+.input-field input[type=email]:focus + label 
+{
+     color: #fff;
+}
+.input-field input[type=email]:focus 
+{
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+}
+.input-field .prefix.active
+{
+     color: #fff;
+}
+
+/* Footer */
+.page-footer
+{
+    margin-top: -20px !important;
+    background-color: #363636 !important;
+    border-top: 10px solid rgba(0,0,0,0.1);
+}
+.footer-copyright
+{
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.page-footer .social img
+{
+    height: 50px;
+    opacity: 0.7;
+}
+.page-footer .social img:hover
+{
+    opacity: 1;
 }
