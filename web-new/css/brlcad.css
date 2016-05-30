@@ -205,6 +205,7 @@ ul.slide-nav li a:hover
     margin-top: -20px;
     background-color: #F3F3F3;
     border-top: 10px solid rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 .section4 .card
 {
@@ -216,6 +217,16 @@ ul.slide-nav li a:hover
 .section4 .card-image
 {
     height: 200px;
+}
+.section4 .card-image img
+{
+    margin-top: -10%;
+}
+@media (max-width: 600px) {
+    .section4 .card
+    {
+        width: calc(100% - 24px);
+    }
 }
 
 /* Section 5 */
@@ -258,6 +269,7 @@ ul.slide-nav li a:hover
 }
 .page-footer .social img
 {
+
     height: 50px;
     opacity: 0.7;
 }
