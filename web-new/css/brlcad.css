@@ -78,20 +78,30 @@ nav ul li a:hover
     color: #FFF;
     background-color: #454545;
 }
-nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
+nav
 {
     height: 50px;
     line-height: 50px;
     width: 50px;
-    color: white;
-}
-ul.slide-nav li a:hover
-{
-    color: black !important;
+    color: #FFF;
 }
 .active
 {
     border-bottom: 4px solid #D0245E; 
+}
+.side-nav li a:hover {
+    color: black;   
+}
+nav a.button-collapse i
+{
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    width: 50px;
+}
+nav a.button-collapse:hover
+{
+    color: #FFF;
 }
 
 /* Section 1 */
@@ -232,7 +242,7 @@ ul.slide-nav li a:hover
 /* Section 5 */
 .section5
 {
-    margin: -20px 0 0 0;
+    margin: -20px 0 20px 0;
     background-color: #D0245E;
     border-top: 10px solid rgba(0,0,0,0.1);
     padding: 20px 0 40px 0;
@@ -276,4 +286,8 @@ ul.slide-nav li a:hover
 .page-footer .social img:hover
 {
     opacity: 1;
+}
+.page-footer ul
+{
+    margin-top: 0;
 }
