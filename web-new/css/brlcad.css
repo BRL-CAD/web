@@ -13,10 +13,6 @@ body,html
     padding-left: 20px;
     padding-right: 20px;
 }
-.black-text
-{
-    color: #252525 !important;
-}
 
 
 /* Typography */
@@ -82,7 +78,6 @@ nav
 {
     height: 50px;
     line-height: 50px;
-    width: 50px;
     color: #FFF;
 }
 .active
@@ -98,6 +93,7 @@ nav a.button-collapse i
     font-size: 24px;
     text-align: center;
     width: 50px;
+    margin-left: -15px;
 }
 nav a.button-collapse:hover
 {
