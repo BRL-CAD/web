@@ -199,6 +199,10 @@ nav a.button-collapse:hover
 {
     padding: 40px 0 40px 0;
 }
+.section3 .row
+{
+    margin-bottom: 0px;
+}
 .section3 .promo-image img
 {
     border-radius: 50%;
@@ -208,7 +212,6 @@ nav a.button-collapse:hover
 /* Section 4 */
 .section4
 {
-    margin-top: -20px;
     background-color: #F3F3F3;
     border-top: 10px solid rgba(0,0,0,0.1);
     padding-bottom: 20px;
@@ -238,7 +241,6 @@ nav a.button-collapse:hover
 /* Section 5 */
 .section5
 {
-    margin: -20px 0 0 0;
     background-color: #D0245E;
     border-top: 10px solid rgba(0,0,0,0.1);
     padding: 20px 0 40px 0;
