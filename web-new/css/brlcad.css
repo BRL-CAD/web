@@ -15,7 +15,7 @@ body,html
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6, a, .btn
+h1, h2, h3, h4, h5, h6, a, .btn, .card-title
 {
     color: #252525;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6, a, .btn
 a:hover
 {
     color: #D0245E;
+}
+.pink-text
+{
+    color: #D0245E !important;
 }
 
 
@@ -312,7 +316,7 @@ footer.page-footer .footer-copyright
 /* Content */
 .content
 {
-    padding: 20px 0 20px 0;
+    padding: 20px 0 50px 0;
     border-top: 10px solid rgba(0,0,0,0.1);   
     min-height: calc(100vh - 300px);
 }
@@ -349,3 +353,19 @@ footer.page-footer .footer-copyright
 {
     padding: 10px 40px 10px 40px;
 }
+
+/* News */
+.news-item h3
+{
+    margin-bottom: 5px;
+}
+.news-item .date
+{
+    color: rgba(0, 0, 0, 0.5);
+}
+.card-date
+{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 48px;
+}
+
