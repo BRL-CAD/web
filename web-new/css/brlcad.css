@@ -262,6 +262,10 @@ nav a.button-collapse:hover
 {
      color: #fff;
 }
+.message-mail
+{
+    display: none;
+}
 
 /* Footer */
 footer.page-footer
@@ -331,8 +335,17 @@ footer.page-footer .footer-copyright
     font-size: 18px;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
-.downloads li
+.downloads .other-downloads a
 {
+    display: block;
     padding: 10px 40px 10px 40px;
     border-top: 1px solid rgba(160,160,160,0.2);
+}
+.downloads .row
+{
+    margin-bottom: 0;
+}
+.collection.with-header .collection-header
+{
+    padding: 10px 40px 10px 40px;
 }
