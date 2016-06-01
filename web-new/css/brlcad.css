@@ -29,6 +29,12 @@ a:hover
     color: #D0245E !important;
 }
 
+/* Waves */
+.waves-effect .waves-ripple 
+{
+      background-color: rgba(208, 36, 94, 0.2);
+}
+          
 
 /* Main navigation style */
 nav#navbar
