@@ -358,6 +358,11 @@ footer.page-footer .footer-copyright
 .collection.with-header .collection-header
 {
     padding: 10px 40px 10px 40px;
+    border: 0;
+}
+.downloads .collection
+{
+    border: 0;
 }
 
 /* News */
