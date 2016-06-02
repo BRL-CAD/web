@@ -112,13 +112,13 @@ nav a.button-collapse:hover
 /* Section 1 */
 .section1
 {
-    padding-top: 50px;
-    height: 350px;  
+    margin-top: 50px;
+    height: 300px;  
     background: #363636 
 }
 .section1 .container
 {
-    height: 350px;
+    height: 300px;
     background: url("../img/gear-bg-white.png") no-repeat;
     background-position: right center;
     background-size: auto 120%;
