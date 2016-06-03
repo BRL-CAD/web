@@ -15,7 +15,7 @@ body,html
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6, a, .btn, .card-title
+h1, h2, h3, h4, h5, h6, .btn, .card-title
 {
     color: #252525;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -141,6 +141,10 @@ nav a.button-collapse:hover
 {
     background-color: #39B54A;
 }
+.section1 i.material-icons
+{
+    margin-right: 5px;
+}
 
 
 /* Section 2 */
@@ -187,6 +191,12 @@ nav a.button-collapse:hover
 .section2 .useful-links li
 {
     padding-bottom: 15px;
+}
+.section2 i.material-icons
+{
+    margin-right: 10px;
+    float: left;
+    line-height: 67px;
 }
 
 /* Section 3 */
@@ -318,6 +328,14 @@ footer.page-footer .footer-copyright
     color: #FFF;
     font-size: 36px;
 }
+.header i.material-icons
+{
+    color: #FFF;
+    float: left;
+    font-size: 36px;
+    line-height: 100px;
+    margin-right: 10px;
+}
 
 /* Content */
 .content
@@ -333,10 +351,13 @@ footer.page-footer .footer-copyright
     display: block;
     margin: auto;
 }
-.downloads .card-action a
+.downloads a
 {
-    color: #000 !important;
-    margin: 0 !important;
+    color: #000;
+}
+.downloads a:hover
+{
+    color: #D0245E; 
 }
 .downloads .card .card-action
 {
@@ -363,6 +384,12 @@ footer.page-footer .footer-copyright
 .downloads .collection
 {
     border: 0;
+}
+.other-downloads i
+{
+    float: left;
+    line-height: 2em;
+    margin-right: 10px;
 }
 
 /* News */
