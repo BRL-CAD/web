@@ -32,7 +32,7 @@ a:hover
 /* Waves */
 .waves-effect .waves-ripple 
 {
-      background-color: rgba(208, 36, 94, 0.2);
+    background-color: rgba(208, 36, 94, 0.2);
 }
           
 
@@ -62,7 +62,6 @@ nav#navbar
 ul.nav-list
 {
     font-size: 10pt;
-    overflow: hidden;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -143,7 +142,7 @@ nav a.button-collapse:hover
 }
 .section1 i.material-icons
 {
-    margin-right: 5px;
+    width: 8px;
 }
 
 
@@ -194,9 +193,8 @@ nav a.button-collapse:hover
 }
 .section2 i.material-icons
 {
+    vertical-align: bottom;
     margin-right: 10px;
-    float: left;
-    line-height: 67px;
 }
 
 /* Section 3 */
@@ -299,6 +297,7 @@ footer.page-footer .footer-copyright
     height: auto;
     line-height: 24px;
     padding: 10px 0 10px 0;
+    font-size: 12px;
     background-color: rgba(0, 0, 0, 0.1);
 }
 .page-footer .social img
