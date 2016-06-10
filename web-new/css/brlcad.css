@@ -400,6 +400,10 @@ footer.page-footer .footer-copyright
 {
     color: rgba(0, 0, 0, 0.5);
 }
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating)
+{
+    margin-right: 0px;
+}
 .card-date
 {
     color: rgba(0, 0, 0, 0.5);
