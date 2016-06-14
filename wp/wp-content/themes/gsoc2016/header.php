@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php wp_title()?><?php bloginfo('name'); ?></title>
+    <title>
+        <?php if (is_front_page()){echo "Home";} ?>
+        <?php wp_title(''); ?> — <?php bloginfo('name'); ?>
+    </title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
@@ -26,21 +29,21 @@
                     <div id="nav-logo"></div>BRL-CAD</a>
             </div>
             <ul class="right nav-list hide-on-med-and-down">
-                <li><a class="waves-effect waves-light active" href="index.html">HOME</a></li>
-                <li><a class="waves-effect waves-light" href="download.html">DOWNLOAD</a></li>
-                <li><a class="waves-effect waves-light" href="about.html">ABOUT</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/" ? "active " : " "; ?>" href="<?php echo site_url();?>/">HOME</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/download/" ? "active " : " "; ?>"" href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/about/" ? "active " : " "; ?>"" href="<?php echo site_url();?>/about/">ABOUT</a></li>
                 <li><a class="waves-effect waves-light" href="http://brlcad.org/wiki/Documentation">DOCUMENTATION</a></li>
-                <li><a class="waves-effect waves-light" href="news.html">NEWS</a></li>
-                <li><a class="waves-effect waves-light" href="getinvolved.html">GET INVOLVED</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/news/" ? "active " : " "; ?>" href="<?php echo site_url();?>/news/">NEWS</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/get-involved/" ? "active " : " "; ?>" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>
             </ul>
             <!-- Slide out navigation -->
             <ul id="slide-out" class="side-nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="download.html">DOWNLOAD</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="<?php echo site_url();?>/">HOME</a></li>
+                <li><a href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
+                <li><a href="<?php echo site_url();?>/about/">ABOUT</a></li>
                 <li><a href="http://brlcad.org/wiki/Documentation">DOCUMENTATION</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="getinvolved.html">GET INVOLVED</a></li>
+                <li><a href="<?php echo site_url();?>/news/">NEWS</a></li>
+                <li><a href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>
             </ul>
 
         </div>
