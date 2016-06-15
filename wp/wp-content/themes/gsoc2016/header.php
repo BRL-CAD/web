@@ -8,7 +8,7 @@
         <?php wp_title(''); ?> — <?php bloginfo('name'); ?>
     </title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
