@@ -2,12 +2,13 @@
 
 <div class="header">
 	<div class="container">
-		<h1>404 Page not found</h1>
+		<h1>Oops!</h1>
 	</div>
 </div>
 <div class="content">
 	<div class="container">
-		Page not found
+		<h3>This page does not exist</h3>
+		<p>Try checking the URL for errors.</p><a href="<?php echo site_url(); ?>">Return to Home</a>
 	</div>
 </div>
 

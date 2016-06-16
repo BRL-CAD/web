@@ -12,7 +12,7 @@
 	</div>
 	<div class="content news-item">
 		<div class="container">
-			<h3><?php the_title(); ?></h3>
+			<h1 class="news-title"><?php the_title(); ?></h1>
 			<span class="date"><?php the_time( 'j M y' ); ?></span>
 			<p>
 				<?php the_content(); ?>
