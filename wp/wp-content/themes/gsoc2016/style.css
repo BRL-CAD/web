@@ -383,6 +383,10 @@ footer.page-footer .footer-copyright
     font-size: 18px;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
+.downloads .card .card-content
+{
+    height: 144px;
+}
 .downloads .other-downloads a
 {
     display: block;
