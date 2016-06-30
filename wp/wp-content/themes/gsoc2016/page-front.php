@@ -68,8 +68,8 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="row promo-wrapper">
-                    <div class="col s12 m3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo1.png" alt=""></div>
-                    <div class="col s10 offset-s1 m7 offset-m2">
+                    <div class="col s12 m12 l3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo1.png" alt=""></div>
+                    <div class="col s10 offset-s1 m10 offset-m1 l7 offset-l2">
                         <h4 class="white-text">OPEN SOURCE</h4>
                         <p class="grey-text text-lighten-4">100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
                     </div>
@@ -81,8 +81,8 @@
         <div class="container">
             <div class="col s12 m8 offset-m2">
                 <div class="row promo-wrapper">
-                    <div class="col s12 m3 promo-image right"><img src="<?php bloginfo('template_url');?>/img/promo2.png" alt=""></div>
-                    <div class="col s10 m7 offset-s1">
+                    <div class="col s12 m12 l3 promo-image right"><img src="<?php bloginfo('template_url');?>/img/promo2.png" alt=""></div>
+                    <div class="col s10 offset-s1 m10 offset-m1 l7">
                         <h4 class="white-text">JOIN US</h4>
                         <p class="grey-text text-lighten-4">Help make a better CAD system, make modeling fun. No experience necessary. </p>
                         <a href="<?php echo site_url();?>/get-involved/" class="btn-flat white-text waves-effect waves-light">GET INVOLVED</a>
@@ -95,8 +95,8 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="row promo-wrapper">
-                    <div class="col s12 m3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo3.png" alt=""></div>
-                    <div class="col s10 offset-s1 m7 offset-m2">
+                    <div class="col s12 m12 l3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo3.png" alt=""></div>
+                    <div class="col s10 offset-s1 m10 offset-m1 l7 offset-l2">
                         <h4 class="white-text">SOLID MODELING</h4>
                         <p class="grey-text text-lighten-4">Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
                     </div>
