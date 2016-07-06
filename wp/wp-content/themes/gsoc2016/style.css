@@ -85,10 +85,13 @@ nav ul li
 }
 nav ul li a
 {
-    top: -1px;
     box-sizing: border-box;
     height: 50px;
     font-size: 12.5px;
+}
+nav ul li a.waves-effect
+{
+    vertical-align: bottom;
 }
 nav ul li a:hover
 {
