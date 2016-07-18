@@ -21,8 +21,6 @@
                 <a href="https://twitter.com/brl_cad"><img src="<?php bloginfo('template_url');?>/img/twitter.png" alt=""></a>
                 <a href="https://www.facebook.com/BRL-CAD-387112738872/"><img src="<?php bloginfo('template_url');?>/img/facebook.png" alt=""></a>
                 <a href="https://plus.google.com/s/brl%20-%20cad"><img src="<?php bloginfo('template_url');?>/img/google.png" alt=""></a>
-                <a href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="<?php bloginfo('template_url');?>/img/youtube.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/brlcad"><img src="<?php bloginfo('template_url');?>/img/linkedin.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -36,6 +34,11 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/brlcad.js"></script>
+<script src="<?php bloginfo('template_url');?>/js/TweenLite.min.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/rAF.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/EasePack.min.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/tessellactation.js" ></script>
+
 </body>
 
 </html>

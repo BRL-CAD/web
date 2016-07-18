@@ -2,14 +2,55 @@
 
 <?php get_header(); ?>
 <!-- Section 1 | HEADER -->
-<div class="section1">
+<div class="section1" id="about">
+    <canvas id="tessellactation"></canvas>
     <div class="container">
-        <div class="row ">
-            <div class="col l4 m12 s12 center">
+        <div class="row section1-top">
+            
+            <div class="section1-left col l6 m6 s12 center">
+                <div class="section1-left-content">
                 <h1>BRL-CAD</h1>
                 <h5>OPEN SOURCE SOLID MODELING</h5>
                 <a class="btn green white-text waves-effect waves-light" href="<?php echo site_url();?>/download/"><i class="material-icons left">get_app</i>DOWNLOAD</a>
                 <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/about/">ABOUT</a>
+                </div>
+            </div>
+            <div class="col l6 m6 hide-on-small-only"><img src="<?php bloginfo('template_url');?>/img/gear-bg-black.png"></img></div>
+        </div>
+        <div class="row section1-bottom">
+            <div class="col m4 s12">
+                <div class="row">
+                    <div class="col l12 m12 s4">
+                        <img src="<?php bloginfo('template_url');?>/img/promo1.png" alt="">
+                    </div>
+                    <div class="col l12 m12 s8 center">
+                        <h4>Open source</h4>
+                        <p>100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col m4 s12">
+                <div class="row">
+                    <div class="col l12 m12 s4 push-s8">
+                        <img src="<?php bloginfo('template_url');?>/img/promo2.png" alt="">
+                    </div>
+                    <div class="col l12 m12 s8 pull-s4 center">
+                        <h4>Join us</h4>
+                        <p>Help make a better CAD system, make modeling fun. No experience necessary. </p>
+                        <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col m4 s12">
+                <div class="row">
+                    <div class="col l12 m12 s4">
+                        <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">
+                    </div>
+                    <div class="col l12 m12 s8 center">
+                        <h4>Solid modeling</h4>
+                        <p>Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -55,50 +96,6 @@
                             <li><a href="#">Google Summer of Code</a></li>
                             <li><a href="#">Googe Code-In</a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Section 3 | ABOUT-->
-<div class="section3">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m8 offset-m2">
-                <div class="row promo-wrapper">
-                    <div class="col s12 m12 l3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo1.png" alt=""></div>
-                    <div class="col s10 offset-s1 m10 offset-m1 l7 offset-l2">
-                        <h4 class="white-text">OPEN SOURCE</h4>
-                        <p class="grey-text text-lighten-4">100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row darker">
-        <div class="container">
-            <div class="col s12 m8 offset-m2">
-                <div class="row promo-wrapper">
-                    <div class="col s12 m12 l3 promo-image right"><img src="<?php bloginfo('template_url');?>/img/promo2.png" alt=""></div>
-                    <div class="col s10 offset-s1 m10 offset-m1 l7">
-                        <h4 class="white-text">JOIN US</h4>
-                        <p class="grey-text text-lighten-4">Help make a better CAD system, make modeling fun. No experience necessary. </p>
-                        <a href="<?php echo site_url();?>/get-involved/" class="btn-flat white-text waves-effect waves-light">GET INVOLVED</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m8 offset-m2">
-                <div class="row promo-wrapper">
-                    <div class="col s12 m12 l3 promo-image"><img src="<?php bloginfo('template_url');?>/img/promo3.png" alt=""></div>
-                    <div class="col s10 offset-s1 m10 offset-m1 l7 offset-l2">
-                        <h4 class="white-text">SOLID MODELING</h4>
-                        <p class="grey-text text-lighten-4">Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
                     </div>
                 </div>
             </div>

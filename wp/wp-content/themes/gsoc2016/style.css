@@ -24,6 +24,10 @@ body,html
     padding-left: 20px;
     padding-right: 20px;
 }
+.row
+{
+    margin-bottom: 0;
+}
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, .btn, .card-title
@@ -43,7 +47,7 @@ a:hover
 /* Waves */
 .waves-effect .waves-ripple 
 {
-    background-color: rgba(208, 36, 94, 0.2);
+    /*background-color: rgba(208, 36, 94, 0.2);*/
 }
           
 
@@ -130,29 +134,31 @@ nav a.button-collapse:hover
 .section1
 {
     margin-top: 50px;
-    height: 300px;  
-    background: #363636 
+
 }
-.section1 .container
+
+.section1-top
 {
-    height: 300px;
-    background: url("img/gear-bg-white.png") no-repeat;
-    background-position: right center;
-    background-size: auto 120%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .section1 h1
 {
-    color: #D0245E;
+    color: #252525;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 200;
     margin-bottom: 0;
-    margin-top: 50px;
+    margin-top: 0;
     margin-left: -5px;
 }
 .section1 h5
 {
+       font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.13em;
-    color: #FFF;
+    color: #252525;
+
 }
 .btn-download
 {
@@ -162,12 +168,50 @@ nav a.button-collapse:hover
 {
     width: 8px;
 }
+#tessellactation
+{
+    position: absolute;
+    z-index: -1;
+    width:100%;
+}
 
+.section1-top img
+{
+    height: 300px;
+}
+.section1-left
+{
+    position: relative;
+    height: 300px;
+}
+.section1-left-content
+{
+    margin: 70px auto;
+}
+.section1-bottom
+{
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section1-bottom img
+{
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    max-width: 150px;
+}
+.section1-bottom>.col
+{
+    padding: 20px;
+}
 
 /* Section 2 */
 .section2
 {
-    border-top: 10px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 .section2 h5
 {
@@ -253,7 +297,7 @@ nav a.button-collapse:hover
 .section4
 {
     background-color: #F3F3F3;
-    border-top: 10px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 20px;
 }
 .section4 .card
@@ -282,7 +326,7 @@ nav a.button-collapse:hover
 .section5
 {
     background-color: #D0245E;
-    border-top: 10px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
     padding: 20px 0 40px 0;
 }
 .section5 .input-field label 
@@ -312,7 +356,7 @@ footer.page-footer
 {
     margin-top: 0px;
     background-color: #363636;
-    border-top: 10px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 footer.page-footer .footer-copyright
 {
