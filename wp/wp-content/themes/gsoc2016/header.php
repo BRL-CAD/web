@@ -25,13 +25,14 @@
         <div class="container">
             <div class="left">
                 <a href="#" data-activates="slide-out" class="left hide-on-large button-collapse"><i class="material-icons">menu</i></a>
-                <a class="white-text" href="<?php echo site_url(); ?>">
-                    <div id="nav-logo"></div>BRL-CAD</a>
+                <a class="white-text logo-link" href="<?php echo site_url(); ?>">
+                    <div id="nav-logo"></div>BRL-CAD
+                </a>
             </div>
             <ul class="right nav-list hide-on-med-and-down">
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/" ? "active " : " "; ?>" href="<?php echo site_url();?>/">HOME</a></li>
-                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/download/" ? "active " : " "; ?>"" href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
-                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/about/" ? "active " : " "; ?>"" href="<?php echo site_url();?>/about/">ABOUT</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/download/" ? "active " : " "; ?>" href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/about/" ? "active " : " "; ?>" href="<?php echo site_url();?>/about/">ABOUT</a></li>
                 <li><a class="waves-effect waves-light" href="http://docs.esde.name/">DOCUMENTATION</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/news/" ? "active " : " "; ?>" href="<?php echo site_url();?>/news/">NEWS</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/get-involved/" ? "active " : " "; ?>" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>

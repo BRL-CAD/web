@@ -167,10 +167,17 @@
     <div class="container center-align">
         <h4 class="white-text">Join our mailing list</h4>
         <div class="row" style="margin-bottom: 0px;">
-            <form class="col m6 offset-m3 s12" action="https://lists.sourceforge.net/lists/subscribe/brlcad-news" id="mail-subscribe">
-                <span class="message-mail white-text">Subscribed successfully</span>
+            <form class="col m6 offset-m3 s12" action="" id="mail-subscribe">
+                <span class="message-mail white-text">Check your email to confirm subscription</span>
                 <div class="row left-align">
-                    <div class="input-field col s12 ">
+                    <div class="input-field col s4">
+                        <select>
+                        <option>brlcad-news</option>
+                        <option>brlcad-users</option>
+                        <option>brlcad-devel</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s8">
                         <input name="email" class="white-text" id="email" type="email" class="validate" required>
                         <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
@@ -182,5 +189,8 @@
     </div>
 </div>
 
-
+<script src="<?php bloginfo('template_url');?>/js/TweenLite.min.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/rAF.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/EasePack.min.js" ></script>
+<script src="<?php bloginfo('template_url');?>/js/tessellactation.js" ></script>
 <?php get_footer(); ?>
