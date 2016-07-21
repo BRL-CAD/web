@@ -17,40 +17,22 @@
             </div>
             <div class="col l6 m6 hide-on-small-only"><img src="<?php bloginfo('template_url');?>/img/gear-bg-black.png"></img></div>
         </div>
-        <div class="row section1-bottom">
+        <div class="row section1-bottom center">
             <div class="col m4 s12">
-                <div class="row">
-                    <div class="col l12 m12 s4">
                         <img src="<?php bloginfo('template_url');?>/img/promo1.png" alt="">
-                    </div>
-                    <div class="col l12 m12 s8 center">
                         <h4>Open source</h4>
                         <p>100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
-                    </div>
-                </div>
             </div>
             <div class="col m4 s12">
-                <div class="row">
-                    <div class="col l12 m12 s4 push-s8">
                         <img src="<?php bloginfo('template_url');?>/img/promo2.png" alt="">
-                    </div>
-                    <div class="col l12 m12 s8 pull-s4 center">
                         <h4>Join us</h4>
                         <p>Help make a better CAD system, make modeling fun. No experience necessary. </p>
                         <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
-                    </div>
-                </div>
             </div>
             <div class="col m4 s12">
-                <div class="row">
-                    <div class="col l12 m12 s4">
                         <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">
-                    </div>
-                    <div class="col l12 m12 s8 center">
                         <h4>Solid modeling</h4>
                         <p>Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
