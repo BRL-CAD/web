@@ -153,6 +153,7 @@ nav a.button-collapse:hover
 footer.page-footer
 {
     margin-top: 0px;
+    padding-top: 0;
     background-color: #363636;
     border-top: 10px solid rgba(0,0,0,0.1);
 }

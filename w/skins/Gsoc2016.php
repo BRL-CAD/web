@@ -77,12 +77,12 @@ class Gsoc2016Template extends BaseTemplate {
             </div>
             <!-- Navigation list -->
             <ul class="right nav-list hide-on-med-and-down">
-                <li><a class="waves-effect waves-light " href="http://live.esde.name/">HOME</a></li>
-                <li><a class="waves-effect waves-light " href="http://live.esde.name/download/">DOWNLOAD</a></li>
-                <li><a class="waves-effect waves-light " href="http://live.esde.name/about/">ABOUT</a></li>
+                <li><a class="waves-effect waves-light " href="/">HOME</a></li>
+                <li><a class="waves-effect waves-light " href="/download/">DOWNLOAD</a></li>
+                <li><a class="waves-effect waves-light " href="/about/">ABOUT</a></li>
                 <li><a class="waves-effect waves-light active" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] );?>">DOCUMENTATION</a></li>
-                <li><a class="waves-effect waves-light " href="http://live.esde.name/news/">NEWS</a></li>
-                <li><a class="waves-effect waves-light " href="http://live.esde.name/get-involved/">GET INVOLVED</a></li>
+                <li><a class="waves-effect waves-light " href="/news/">NEWS</a></li>
+                <li><a class="waves-effect waves-light " href="/get-involved/">GET INVOLVED</a></li>
             </ul>
             <!-- Slide out navigation -->
             <ul id="slide-out" class="side-nav">
@@ -164,31 +164,20 @@ class Gsoc2016Template extends BaseTemplate {
     <!-- Footer -->
     <footer class="page-footer">
         <div class="container">
-            <div class="row">
-                <div class="col l2 s6">
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
-                        <li><a class="grey-text text-lighten-3" href="/about/">About</a></li>
-                        <li><a class="grey-text text-lighten-3" href="/download/">Download</a></li>
-                        <li><a class="grey-text text-lighten-3" href="/news/">News</a></li>
-                    </ul>
-                </div>
-                <div class="col l2 s6">
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="/get-involved/">Get involved</a></li>
-                        <li><a class="grey-text text-lighten-3" href="http://brlcad.org/wiki/Documentation">Documentation</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#">OGV</a></li>
-                    </ul>
-                </div>
-                <div class="col m12 l4 right social">
-                    <a href="https://twitter.com/brl_cad"><img src="<?php echo $this->getSkin()->getSkinStylePath( 'twitter.png'); ?>" alt=""></a>
-                    <a href="https://www.facebook.com/BRL-CAD-387112738872/"><img src="<?php echo $this->getSkin()->getSkinStylePath( 'facebook.png'); ?>" alt=""></a>
-                    <a href="https://plus.google.com/s/brl%20-%20cad"><img src="<?php echo $this->getSkin()->getSkinStylePath( 'google.png'); ?>" alt=""></a>
-                    <a href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="<?php echo $this->getSkin()->getSkinStylePath( 'youtube.png'); ?>" alt=""></a>
-                    <a href="https://www.linkedin.com/in/brlcad"><img src="<?php echo $this->getSkin()->getSkinStylePath( 'linkedin.png'); ?>" alt=""></a>
-                </div>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <h5 class="white-text">Chat with us</h5>
+                <p class="grey-text text-lighten-2">The IRC channel serves as a real-time avenue for interacting with other BRL-CAD users and developers around the world.</p>
+                <a href="http://webchat.freenode.net/?channels=#brlcad" class="btn white black-text waves-effect">IRC Channel</a>
+            </div>
+            <div class="col s12 m4 l4">
+                <h5 class="white-text">Connect</h5>
+                <a class="github-button" href="https://github.com/BRL-CAD" data-style="mega" data-count-href="/BRL-CAD/followers" data-count-api="/users/BRL-CAD#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @BRL-CAD on GitHub">Follow @BRL-CAD</a><br>
+                <a href="https://twitter.com/BRL_CAD" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @BRL_CAD</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBRL-CAD-387112738872%2F&width=73&layout=button_count&action=like&show_faces=false&share=false&height=21&appId" width="100" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
             </div>
         </div>
+    </div>
         <div class="footer-copyright">
             <div class="container">
                 BRL-CAD © 2016 All trademarks referenced in here are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.
