@@ -17,6 +17,12 @@
             </div>
             <div class="col l6 m6 hide-on-small-only"><img src="<?php bloginfo('template_url');?>/img/gear-bg-black.png"></img></div>
         </div>
+        <div class="row section1-middle center">
+            <div class="col s12 m6 offset-m3">
+            <h3>What is BRL-CAD</h3>
+            BRL-CAD is a powerful open source cross-platform solid modeling system that includes interactive geometry editing, high-performance ray-tracing for rendering and geometric analysis, a system performance analysis benchmark suite, geometry libraries for application developers, and more than   30 years of active development.
+            </div>
+        </div>
         <div class="row section1-bottom center">
             <div class="col m4 s12">
                         <img src="<?php bloginfo('template_url');?>/img/promo1.png" alt="">
@@ -27,7 +33,7 @@
                         <img src="<?php bloginfo('template_url');?>/img/promo2.png" alt="">
                         <h4>Join us</h4>
                         <p>Help make a better CAD system, make modeling fun. No experience necessary. </p>
-                        <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
+                        <a class="btn pink white-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
             </div>
             <div class="col m4 s12">
                         <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">

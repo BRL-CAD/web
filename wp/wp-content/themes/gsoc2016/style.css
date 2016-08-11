@@ -191,15 +191,16 @@ nav a.logo-link:hover
 .section1-left
 {
     position: relative;
-    height: 300px;
+    height: auto;
 }
 .section1-left-content
 {
     margin: 70px auto;
+    margin-bottom: 10px;
 }
 .section1-bottom
 {
-    border-top: 1px solid #eee;
+
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -215,6 +216,11 @@ nav a.logo-link:hover
 .section1-bottom>.col
 {
     padding: 20px;
+}
+.section1-middle
+{
+        border-top: 1px solid #eee;
+    padding: 30px;
 }
 
 /* Section 2 */
