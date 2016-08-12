@@ -11,6 +11,9 @@
     <div class="content downloads">
         <div class="container">
             <div class="row">
+                <div id="detect" class="col s12">
+
+                </div>
                 <div class="col s6 m3">
                     <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/">
                         <div class="card waves-effect waves-pink waves-block">
@@ -42,7 +45,7 @@
                                 <img src="<?php bloginfo('template_url');?>/img/macos.png" alt="">
                             </div>
                             <div class="card-action center">
-                                Mac
+                                macOS
                             </div>
                         </div>
                     </a>
@@ -93,5 +96,20 @@
             </div>
         </div>
     </div>
+    <script>
+    // OS Detect
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+        document.getElementById("detect").innerHTML = "<h5>Download BRL-CAD for Windows</h5><a class='btn green white-text waves-effect waves-light' href='https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/'>Download</a>"
+    }
+    else if (navigator.appVersion.indexOf("Mac")!=-1) {
+        document.getElementById("detect").innerHTML = "<h5>Download BRL-CAD for macOS</h5><a class='btn green white-text waves-effect waves-light' href='https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/'>Download</a>"
+    }
+    else if (navigator.appVersion.indexOf("Linux")!=-1) {
+        document.getElementById("detect").innerHTML = "<h5>Download BRL-CAD for Linux</h5><a class='btn green white-text waves-effect waves-light' href='https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/'>Download</a>"
+    }
+    else {
+        document.getElementById("detect").style.display = "none";
+    }  
+    </script>
 
 <?php get_footer(); ?>
