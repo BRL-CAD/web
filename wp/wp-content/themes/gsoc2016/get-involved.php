@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                             <li class="waves-effect waves-block">
-                                <a href="https://developers.google.com/open-source/gsoc/">
+                                <a href="http://brlcad.org/wiki/Google_Summer_of_Code">
                                 Google Summer of Code
                                 </a>
                             </li>

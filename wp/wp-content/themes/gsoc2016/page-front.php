@@ -10,17 +10,40 @@
             <div class="section1-left col l6 m6 s12 center">
                 <div class="section1-left-content">
                 <h1>BRL-CAD</h1>
-                <h5>OPEN SOURCE SOLID MODELING</h5>
-                <a class="btn green white-text waves-effect waves-light" href="<?php echo site_url();?>/download/"><i class="material-icons left">get_app</i>DOWNLOAD</a>
-                <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/about/">ABOUT</a>
+                <h5>Think • Invent • Create</h5>
+                <a class="btn green white-text waves-effect waves-light" href="<?php echo site_url();?>/download/"><i class="material-icons left">get_app</i>DOWNLOAD 7.26.0</a>
+                <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/news/release-7-26-0/">Release notes</a>
                 </div>
             </div>
             <div class="col l6 m6 hide-on-small-only"><img src="<?php bloginfo('template_url');?>/img/gear-bg-black.png"></img></div>
         </div>
-        <div class="row section1-middle center">
-            <div class="col s12 m6 offset-m3">
-            <h3>What is BRL-CAD</h3>
+    </div>
+</div>
+
+<div>
+    <div class="container">
+
+
+        <div class="row section1-middle">
+            <div class="col s12 m6" style="margin-bottom: 20px;">
+            <h5>Open source solid modelling</h5>
             BRL-CAD is a powerful open source cross-platform solid modeling system that includes interactive geometry editing, high-performance ray-tracing for rendering and geometric analysis, a system performance analysis benchmark suite, geometry libraries for application developers, and more than   30 years of active development.
+            </div>
+            <div class="col s12 m6">
+                <a href="<?php echo site_url();?>/news/">
+                    <h5><i class="material-icons black-text" style="margin-right: 20px;">rss_feed</i>Latest news</h5>
+                </a>
+                <ul class="collection">
+                    <?php
+                            $args = array( 'numberposts' => '3' );
+                            $recent_posts = wp_get_recent_posts( $args );
+                            foreach( $recent_posts as $recent ){
+                                echo '<li class="collection-item"><span class="secondary-content">'.mysql2date('j M Y', $recent["post_date"]).'</span>
+                                      <a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>
+                                      <p>'.wp_trim_words($recent["post_content"],5,"...").'</p></li> ';
+                            }
+                        ?>
+                </ul>
             </div>
         </div>
         <div class="row section1-bottom center">
@@ -39,53 +62,6 @@
                         <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">
                         <h4>Solid modeling</h4>
                         <p>Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Section 2 | NEWS AND LINKS -->
-<div class="section2">
-    <div class="container">
-        <div class="row">
-            <div class="col m5 s12">
-                <a href="<?php echo site_url();?>/news/">
-                    <h5><i class="material-icons black-text">rss_feed</i>Latest news</h5>
-                </a>
-                <ul class="collection">
-                    <?php
-                            $args = array( 'numberposts' => '3' );
-                            $recent_posts = wp_get_recent_posts( $args );
-                            foreach( $recent_posts as $recent ){
-                                echo '<li class="collection-item"><span class="secondary-content">'.mysql2date('j M Y', $recent["post_date"]).'</span>
-                                      <a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>
-                                      <p>'.wp_trim_words($recent["post_content"],5,"...").'</p></li> ';
-                            }
-                        ?>
-                </ul>
-            </div>
-            <div class="col m6 push-m1 s12">
-                <h5><i class="material-icons">link</i>Useful links</h5>
-                <div class="row">
-                    <div class="col s12 m5">
-                        <ul class="useful-links">
-                            <li><a href="http://brlcad.org/wiki/Overview">Getting started</a></li>
-                            <li><a href="http://brlcad.org/wiki/FAQ">FAQ</a></li>
-                            <li><a href="https://github.com/BRL-CAD">GitHub</a></li>
-                            <li><a href="https://sourceforge.net/projects/brlcad/">SourceForge</a></li>
-                            <li><a href="https://sourceforge.net/projects/brlcad/support">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m5 push-m1">
-                        <ul class=" useful-links">
-                            <li><a href="#">Online Geometry Viewer</a></li>
-                            <li><a href="#">BRL-CAD Gallery</a></li>
-                            <li><a href="#">Model Repository</a></li>
-                            <li><a href="#">Google Summer of Code</a></li>
-                            <li><a href="#">Googe Code-In</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -160,9 +136,9 @@
                 <div class="row left-align">
                     <div class="input-field col s4">
                         <select>
-                        <option>brlcad-news</option>
-                        <option>brlcad-users</option>
-                        <option>brlcad-devel</option>
+                        <option>News</option>
+                        <option>Users</option>
+                        <option>Development</option>
                         </select>
                     </div>
                     <div class="input-field col s8">

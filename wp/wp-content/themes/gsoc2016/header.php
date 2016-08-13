@@ -24,7 +24,7 @@
     <nav id="navbar">
         <div class="container">
             <div>
-                <a href="#" data-activates="slide-out" class="left hide-on-large button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="slide-out" class="right hide-on-large button-collapse"><i class="material-icons">menu</i></a>
                 <a class="white-text logo-link left" href="<?php echo site_url(); ?>">
                     <div id="nav-logo"></div>BRL-CAD
                 </a>
