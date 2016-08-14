@@ -1,0 +1,374 @@
+/*
+Theme Name: BRL-CAD
+Theme URI: http://brlcad.org/
+Author: BRL-CAD Team
+Author URI: http://brlcad.org/
+Description: BRL-CAD website theme created as part of GSoC 2016 project
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+CONTENTS
+
+* General styles
+* Typography
+* Waves
+* Main navigation style
+* Footer 
+* Header 
+* Content 
+* Toolbar 
+* MediaWiki custom styles
+
+*/
+
+/* General styles */
+body,html
+{
+    margin: 0;
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container
+{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .btn, .card-title
+{
+    color: #252525;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+h1
+{
+    font-size: 2.2rem;
+}
+h2
+{
+    font-size: 1.8rem;
+}
+a:hover
+{
+    color: #D0245E;
+}
+.pink-text
+{
+    color: #D0245E !important;
+}
+
+/* Waves */
+.waves-effect .waves-ripple 
+{
+    background-color: rgba(208, 36, 94, 0.2);
+}
+          
+
+/* Main navigation style */
+nav#navbar
+{
+    z-index: 999;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    line-height: 50px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+#nav-logo
+{
+    float: left;
+    background: url("logo-circle.svg") no-repeat center center;
+    background-size: 45px 45px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+ul.nav-list
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li
+{
+    box-sizing: border-box;
+    transition: background-color .1s;
+    height: 50px;
+}
+nav ul li a
+{
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 12.5px;
+}
+nav ul li a.waves-effect
+{
+    vertical-align: bottom;
+}
+nav ul li a:hover
+{
+    color: #FFF;
+    background-color: #454545;
+}
+nav
+{
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    font-weight: 500;
+}
+nav .active
+{
+    border-bottom: 4px solid #D0245E; 
+}
+.side-nav li a:hover {
+    color: black;   
+}
+nav a.button-collapse i
+{
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    width: 50px;
+    margin-left: -15px;
+}
+nav a.button-collapse:hover
+{
+    color: #FFF;
+}
+
+/* Footer */
+footer.page-footer
+{
+    margin-top: 0px;
+    padding-top: 0;
+    background-color: #363636;
+    border-top: 10px solid rgba(0,0,0,0.1);
+}
+footer.page-footer .footer-copyright
+{
+    height: auto;
+    line-height: 24px;
+    padding: 10px 0 10px 0;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.page-footer .social img
+{
+    height: 50px;
+    opacity: 0.7;
+}
+.page-footer .social img:hover
+{
+    opacity: 1;
+}
+.page-footer ul
+{
+    margin-top: 0;
+}
+
+/* Header */
+.header
+{
+    height: 100px;
+}
+.header h1
+{
+    line-height: 100px;
+    font-size: 36px;
+    margin: 0px;
+}
+.header i.material-icons
+{
+    color: #252525;
+    float: left;
+    font-size: 36px;
+    line-height: 100px;
+    margin-right: 10px;
+}
+
+/* Content */
+.content
+{
+    padding: 0 0 50px 0;
+    border-top: 0px solid rgba(0,0,0,0.1);   
+    min-height: calc(100vh - 300px);
+}
+
+/* Toolbar */
+.toolbar
+{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+ul.toolbar-tabs
+{
+    height: 50px;
+    margin: 0;
+}
+ul.toolbar-tabs>ul
+{
+    height: 50px;
+    float: left;
+}
+ul.toolbar-tabs li
+{
+    height: 50px;
+    float: left;
+    line-height: 50px; 
+}
+ul.toolbar-tabs li a
+{
+    display: block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 50px;
+    font-size: 12.5px;
+    color: #252525;
+    vertical-align: bottom;
+}
+ul.toolbar-tabs li.selected
+{
+    border-bottom: 3px solid #D0245E;
+}
+ul.toolbar-tabs li:hover
+{
+    background-color: #eee;
+}
+ul.dropdown-content li a
+{
+    text-transform: none;
+}
+.toolbar input
+{
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    width: 170px !important;
+}
+.toolbar input[type=search]:focus
+{
+    box-shadow: none;
+    border-bottom: 3px solid #D0245E;
+}
+.toolbar .dropdown-content li>a
+{
+    line-height: 50px;
+}
+.usertabs>li>a
+{
+    color: #039be5 !important;
+}
+
+/* MediaWiki custom styles */
+textarea
+{
+    height: auto;
+}
+.mw-ui-container:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+div.mw-createacct-benefits-container 
+{
+    width: 45%;
+    float: right;
+}
+#toctitle h2
+{
+    display: inline;
+}
+select
+{
+    display: block;
+    height: auto;
+}
+#preftoc
+{
+    margin-top: 0;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#preftoc li a
+{
+    padding: 0 10px;
+    float: left;
+    line-height: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+#preftoc li.selected a
+{
+    border-bottom: 3px solid #D0245E;
+}
+#preftoc li a:hover
+{
+    background-color: #eee;
+}
+#preftoc li a:focus
+{
+    outline: none;
+}
+input[type=submit]
+{
+    text-transform: uppercase;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    color: #FFF;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    background-color: #D0245E;
+    padding: 0.4em 0.7em;
+    margin: 0.3em 0.5em;
+    transition-duration: 0.2s;
+}
+input[type=submit]:focus
+{
+    outline: none;
+}
+input[type=submit]:hover
+{
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+input[type=submit]:active
+{
+    box-shadow: none;
+}
+.editOptions
+{
+    background-color: #F8F8F8 !important;
+    border: 1px solid #E6E6E6 !important;
+}
+textarea
+{
+    margin-top: 2em !important;
+    border: 1px solid #E6E6E6;
+}
+.editCheckboxes label
+{
+    margin-right: 2em;
+}
+.content h1, .content h2, .content h3
+{
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 0.5em;
+}
