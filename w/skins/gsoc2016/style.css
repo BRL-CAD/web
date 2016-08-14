@@ -371,4 +371,12 @@ textarea
 {
     border-bottom: 1px solid #E6E6E6;
     padding-bottom: 0.5em;
+    font-size: 1.8em;
+}
+pre 
+{
+    padding: 1em;
+    color: #cfc;
+    background-color: #333;
+    line-height: 1.1em;
 }
