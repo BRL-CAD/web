@@ -380,3 +380,12 @@ pre
     background-color: #333;
     line-height: 1.1em;
 }
+#wpRemember
+{
+    opacity: 1;
+    position: initial;
+}
+.content input:not([type])
+{
+    display: block;
+}
