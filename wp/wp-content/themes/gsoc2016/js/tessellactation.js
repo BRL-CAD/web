@@ -165,7 +165,7 @@
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(p.closest[i].x, p.closest[i].y);
-      ctx.strokeStyle = 'rgba(198,33,89,'+p.active / 2+')';
+      ctx.strokeStyle = 'rgba(198,183,189,'+p.active +')';
       ctx.stroke();
     }
   }
