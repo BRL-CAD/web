@@ -14,7 +14,6 @@ CONTENTS
 
 * General styles
 * Typography
-* Waves
 * Main navigation style
 * Footer 
 * Header 
@@ -63,11 +62,6 @@ a:hover
     color: #D0245E !important;
 }
 
-/* Waves */
-.waves-effect .waves-ripple 
-{
-    background-color: rgba(208, 36, 94, 0.2);
-}
           
 
 /* Main navigation style */
@@ -163,7 +157,7 @@ footer.page-footer .footer-copyright
     line-height: 24px;
     padding: 10px 0 10px 0;
     font-size: 12px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
 }
 .page-footer .social img
 {
@@ -177,6 +171,19 @@ footer.page-footer .footer-copyright
 .page-footer ul
 {
     margin-top: 0;
+}
+.footer-links
+{
+    margin-top: 5px;
+}
+.footer-links a
+{
+    color: #ddd;
+    font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-links li
+{
+    padding-bottom: 5px;
 }
 
 /* Header */

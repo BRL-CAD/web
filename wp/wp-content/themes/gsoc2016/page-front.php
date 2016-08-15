@@ -6,8 +6,8 @@
     <canvas id="tessellactation"></canvas>
     <div class="container">
         <div class="row section1-top">
-            
-            <div class="section1-left col l6 m6 s12 center">
+            <div class="col m6 push-m6 s12 center"><img src="<?php bloginfo('template_url');?>/img/archer_screenshot.png"></img></div>
+            <div class="section1-left col m6 pull-m6 s12 center">
                 <div class="section1-left-content">
                 <h1>BRL-CAD</h1>
                 <h5>Think • Invent • Create</h5>
@@ -15,7 +15,6 @@
                 <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/news/release-7-26-0/">Release notes</a>
                 </div>
             </div>
-            <div class="col l6 m6 hide-on-small-only"><img src="<?php bloginfo('template_url');?>/img/gear-bg-black.png"></img></div>
         </div>
     </div>
 </div>

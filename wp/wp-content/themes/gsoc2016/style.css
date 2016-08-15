@@ -195,6 +195,16 @@ nav a.logo-link:hover
 {
     margin: 70px auto;
 }
+@media (max-width: 600px) {
+    .section1-left-content
+    {
+        margin: 20px;
+    }
+}
+.section1-left-content a 
+{
+    margin-bottom: 10px;
+}
 .section1-bottom
 {
     padding-top: 20px;
