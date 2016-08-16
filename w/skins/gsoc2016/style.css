@@ -226,6 +226,7 @@ ul.toolbar-tabs
 {
     height: 50px;
     margin: 0;
+    list-style-type: none;
 }
 ul.toolbar-tabs>ul
 {
@@ -395,4 +396,12 @@ pre
 .content input:not([type])
 {
     display: block;
+}
+ul
+{
+    list-style-type: inherit;
+}
+ul li 
+{
+    list-style-type: inherit;
 }
