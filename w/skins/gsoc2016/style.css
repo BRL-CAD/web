@@ -171,10 +171,7 @@ footer.page-footer .footer-copyright
 .page-footer ul
 {
     margin-top: 0;
-}
-.footer-links
-{
-    margin-top: 5px;
+    list-style-type: none;
 }
 .footer-links a
 {
