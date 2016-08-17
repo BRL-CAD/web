@@ -176,10 +176,10 @@ nav a.logo-link:hover
     position: absolute;
     width:100%;
 }
-
 .section1-top img
 {
-    height: 300px;
+    width: 100%;
+    max-width: 430px;
 }
 .section1-left
 {

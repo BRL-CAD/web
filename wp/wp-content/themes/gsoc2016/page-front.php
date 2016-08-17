@@ -6,8 +6,8 @@
     <canvas id="tessellactation"></canvas>
     <div class="container">
         <div class="row section1-top">
-            <div class="col m6 push-m6 s12 center"><img src="<?php bloginfo('template_url');?>/img/archer_screenshot.png"></img></div>
-            <div class="section1-left col m6 pull-m6 s12 center">
+            <div class="col l6 push-l6 m12 center"><img src="<?php bloginfo('template_url');?>/img/archer_screenshot.png"></img></div>
+            <div class="section1-left col l6 pull-l6 m12 center">
                 <div class="section1-left-content">
                 <h1>BRL-CAD</h1>
                 <h5>Think • Invent • Create</h5>
