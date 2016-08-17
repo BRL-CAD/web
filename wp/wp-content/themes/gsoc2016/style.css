@@ -1,12 +1,30 @@
 /*
 Theme Name: BRL-CAD
 Theme URI: http://brlcad.org/
-Author: BRL-CAD Team
+Author: Oleksandr Dubenko
 Author URI: http://brlcad.org/
 Description: BRL-CAD website theme created as part of GSoC 2016 project
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+CONTENTS
+
+* General styles
+* Typography
+* Main navigation style
+* Banner
+* Introduction
+* Highlights
+* Mailing lists
+* Footer 
+* Header 
+* Content 
+* Downloads
+* News
+
 */
 
 /* General styles */
@@ -133,20 +151,20 @@ nav a.logo-link:hover
     background-color: #454545;
 }
 
-/* Section 1 */
-.section1
+/* Banner */
+#banner
 {
     margin-top: 50px;
     border-bottom: 1px solid #eee;
     background: #000 url("img/backdrop.jpg") no-repeat -150px -150px;
 }
 
-.section1-top
+#banner-screenshot
 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.section1 h1
+#banner h1
 {
     color: #D0245E;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -155,12 +173,12 @@ nav a.logo-link:hover
     margin-top: 0;
 }
 @media (max-width: 350px) {
-    .section1 h1
+    #banner h1
     {
         font-size: 36px;
     }
 }
-.section1 h5
+#banner h5
 {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin-top: 0;
@@ -172,7 +190,7 @@ nav a.logo-link:hover
 {
     background-color: #39B54A;
 }
-.section1 i.material-icons
+#banner i.material-icons
 {
     width: 8px;
 }
@@ -181,37 +199,39 @@ nav a.logo-link:hover
     position: absolute;
     width:100%;
 }
-.section1-top img
+#banner-screenshot img
 {
     width: 100%;
     max-width: 430px;
 }
-.section1-left
+#banner-title
 {
     position: relative;
     height: auto;
 }
-.section1-left-content
+#banner-title-content
 {
     margin: 70px auto;
 }
 @media (max-width: 600px) {
-    .section1-left-content
+    #banner-title-content
     {
         margin: 20px;
     }
 }
-.section1-left-content a 
+#banner-title-content a 
 {
     margin-bottom: 10px;
 }
-.section1-bottom
+
+/* Introduction */
+#introduction-promo
 {
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid #eee;
 }
-.section1-bottom img
+#introduction-promo img
 {
     display: block;
     margin: auto;
@@ -220,11 +240,11 @@ nav a.logo-link:hover
     width: 100%;
     max-width: 150px;
 }
-.section1-bottom>.col
+#introduction-promo>.col
 {
     padding: 20px;
 }
-.section1-middle
+#introduction-about
 {
     padding: 20px 30px 10px 30px;
 }
@@ -254,105 +274,56 @@ nav a.logo-link:hover
     font-size: 0.8em;
 }
 
-/* Section 2 */
-.section2
-{
-    border-top: 1px solid rgba(0,0,0,0.1);
-}
-.section2 h5
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-i.material-icons
-{
-    vertical-align: bottom;
-}
-
-/* Section 3 */
-.section3
-{
-    background-color: #D0245E;
-    border-top: 10px solid rgba(0,0,0,0.1);
-}
-.section3 .promo-image
-{
-    display: flex;
-    justify-content: center;
-    padding: 10px 0px 10px 0px;
-}
-.section3 .darker
-{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.section3 .promo-wrapper
-{
-    padding: 40px 0 40px 0;
-}
-.section3 .row
-{
-    margin-bottom: 0px;
-}
-.section3 .promo-image img
-{
-    border-radius: 50%;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
-}
-.section3 a
-{
-    font-weight: 700;
-}
-
-/* Section 4 */
-.section4
+/* Highlights */
+#highlights
 {
     background-color: #F3F3F3;
     border-top: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 20px;
 }
-.section4 .card
+#highlights .card
 {
     float: left;
     padding: 0px;
     margin: 12px;
     width: calc(50% - 24px);
 }
-.section4 .card-image
+#highlights .card-image
 {
     height: 200px;
 }
-.section4 .card-image img
+#highlights .card-image img
 {
     margin-top: -10%;
 }
 @media (max-width: 600px) {
-    .section4 .card
+    #highlights .card
     {
         width: calc(100% - 24px);
     }
 }
 
-/* Section 5 */
-.section5
+/* Mailing lists */
+#mail
 {
     background-color: #D0245E;
     border-top: 1px solid rgba(0,0,0,0.1);
     padding: 20px 0 40px 0;
 }
-.section5 .input-field label 
+#mail .input-field label 
 {
      color: rgba(255,255,255,0.9);
 }
-.section5 .input-field input[type=email]:focus + label 
+#mail .input-field input[type=email]:focus + label 
 {
      color: #fff;
 }
-.section5 .input-field input[type=email]:focus 
+#mail .input-field input[type=email]:focus 
 {
      border-bottom: 1px solid #fff;
      box-shadow: 0 1px 0 0 #fff;
 }
-.section5 .input-field .prefix.active
+#mail .input-field .prefix.active
 {
      color: #fff;
 }
@@ -429,7 +400,6 @@ footer.page-footer .footer-copyright
 /* Header */
 .header
 {
-    /*background-color: #363636;*/
     height: 100px;
     margin-top: 50px;
 }

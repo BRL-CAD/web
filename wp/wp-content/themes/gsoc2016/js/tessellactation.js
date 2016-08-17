@@ -9,7 +9,7 @@
   addListeners();
 
   function initHeader() {
-    largeHeader = document.getElementById('about');
+    largeHeader = document.getElementById('banner');
     canvas = document.getElementById('tessellactation');
 
     height = largeHeader.clientHeight;

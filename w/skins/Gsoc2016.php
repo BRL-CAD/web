@@ -156,10 +156,8 @@ class Gsoc2016Template extends BaseTemplate {
     <div class="content">
         <div class="container">
             <?php $this->html( 'bodytext' ) ?>
-
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="page-footer">

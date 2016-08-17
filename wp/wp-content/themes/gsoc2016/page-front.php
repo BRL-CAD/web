@@ -1,32 +1,34 @@
 <?php /* Template Name: Front page */ ?>
 
 <?php get_header(); ?>
-<!-- Section 1 | HEADER -->
-<div class="section1" id="about">
+<!-- Banner -->
+<div id="banner">
     <canvas id="tessellactation"></canvas>
     <div class="container">
-        <div class="row section1-top">
-            <div class="col l6 push-l6 s12 center"><img src="<?php bloginfo('template_url');?>/img/archer_screenshot.png"></img></div>
-            <div class="section1-left col l6 pull-l6 s12 center">
-                <div class="section1-left-content">
-                <h1>BRL-CAD</h1>
-                <h5>Think • Invent • Create</h5>
-                <a class="btn green white-text waves-effect waves-light" href="<?php echo site_url();?>/download/"><i class="material-icons left">get_app</i>DOWNLOAD 7.26.0</a>
-                <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/news/release-7-26-0/">Release notes</a>
+        <div class="row" id="banner-screenshot">
+            <div class="col l6 push-l6 s12 center">
+                <img src="<?php bloginfo('template_url');?>/img/archer_screenshot.png"></img>
+            </div>
+            <div class="col l6 pull-l6 s12 center" id="banner-title">
+                <div id="banner-title-content">
+                    <h1>BRL-CAD</h1>
+                    <h5>Think • Invent • Create</h5>
+                    <a class="btn green white-text waves-effect waves-light" href="<?php echo site_url();?>/download/"><i class="material-icons left">get_app</i>DOWNLOAD 7.26.0</a>
+                    <a class="btn white black-text waves-effect" href="<?php echo site_url();?>/news/release-7-26-0/">Release notes</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div>
+<!-- Introduction -->
+<div id="introduction">
     <div class="container">
-
-
-        <div class="row section1-middle">
+        <div class="row" id="introduction-about">
             <div class="col s12 m6" style="margin-bottom: 20px;">
-            <h5>Open source solid modelling</h5>
-            BRL-CAD is a powerful open source cross-platform solid modeling system that includes interactive geometry editing, high-performance ray-tracing for rendering and geometric analysis, a system performance analysis benchmark suite, geometry libraries for application developers, and more than   30 years of active development.
+                <h5>Open source solid modelling</h5>
+                BRL-CAD is a powerful open source cross-platform solid modeling system that includes interactive geometry editing, high-performance ray-tracing for rendering and geometric analysis, a system performance analysis benchmark suite, geometry
+                libraries for application developers, and more than 30 years of active development.
             </div>
             <div class="col s12 m6">
                 <a href="<?php echo site_url();?>/news/">
@@ -45,29 +47,29 @@
                 </ul>
             </div>
         </div>
-        <div class="row section1-bottom center">
+        <div class="row center" id="introduction-promo">
             <div class="col m4 s12">
-                        <img src="<?php bloginfo('template_url');?>/img/promo1.png" alt="">
-                        <h4>Open source</h4>
-                        <p>100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
+                <img src="<?php bloginfo('template_url');?>/img/promo1.png" alt="">
+                <h4>Open source</h4>
+                <p>100% FREE with people all over the world contributing their thoughts. Escape vendor lock-in, for any purpose, forever.</p>
             </div>
             <div class="col m4 s12">
-                        <img src="<?php bloginfo('template_url');?>/img/promo2.png" alt="">
-                        <h4>Join us</h4>
-                        <p>Help make a better CAD system, make modeling fun. No experience necessary. </p>
-                        <a class="btn pink white-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
+                <img src="<?php bloginfo('template_url');?>/img/promo2.png" alt="">
+                <h4>Join us</h4>
+                <p>Help make a better CAD system, make modeling fun. No experience necessary. </p>
+                <a class="btn pink white-text waves-effect" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a>
             </div>
             <div class="col m4 s12">
-                        <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">
-                        <h4>Solid modeling</h4>
-                        <p>Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
+                <img src="<?php bloginfo('template_url');?>/img/promo3.png" alt="">
+                <h4>Solid modeling</h4>
+                <p>Hybrid CSG and B-REP kernel with innovative methods for unambiguous 3D geometry. Verification, validation, performant.</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Section 4 | HIGHLIGHTS -->
-<div class="section4">
+<!-- Highlights -->
+<div id="highlights">
     <div class="container">
         <h4>Highlights</h4>
         <div class="row">
@@ -125,8 +127,8 @@
     </div>
 </div>
 
-<!-- Section 5 | MAILING LIST -->
-<div class="section5">
+<!-- Mailing list -->
+<div id="mail">
     <div class="container center-align">
         <h4 class="white-text">Join our mailing list</h4>
         <div class="row" style="margin-bottom: 0px;">
@@ -152,8 +154,9 @@
     </div>
 </div>
 
-<script src="<?php bloginfo('template_url');?>/js/TweenLite.min.js" ></script>
-<script src="<?php bloginfo('template_url');?>/js/rAF.js" ></script>
-<script src="<?php bloginfo('template_url');?>/js/EasePack.min.js" ></script>
-<script src="<?php bloginfo('template_url');?>/js/tessellactation.js" ></script>
+<!-- Tessellactation -->
+<script src="<?php bloginfo('template_url');?>/js/TweenLite.min.js"></script>
+<script src="<?php bloginfo('template_url');?>/js/rAF.js"></script>
+<script src="<?php bloginfo('template_url');?>/js/EasePack.min.js"></script>
+<script src="<?php bloginfo('template_url');?>/js/tessellactation.js"></script>
 <?php get_footer(); ?>

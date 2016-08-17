@@ -12,7 +12,6 @@
         <div class="container">
             <div class="row">
                 <div id="detect" class="col s12">
-
                 </div>
                 <div class="col s6 m3">
                     <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/">
