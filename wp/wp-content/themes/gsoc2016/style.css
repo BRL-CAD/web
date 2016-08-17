@@ -151,9 +151,14 @@ nav a.logo-link:hover
     color: #D0245E;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 72px;
     margin-bottom: 0;
     margin-top: 0;
+}
+@media (max-width: 350px) {
+    .section1 h1
+    {
+        font-size: 36px;
+    }
 }
 .section1 h5
 {
