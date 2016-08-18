@@ -33,7 +33,7 @@
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/" ? "active " : " "; ?>" href="<?php echo site_url();?>/">HOME</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/download/" ? "active " : " "; ?>" href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/about/" ? "active " : " "; ?>" href="<?php echo site_url();?>/about/">ABOUT</a></li>
-                <li><a class="waves-effect waves-light" href="http://docs.esde.name/">DOCUMENTATION</a></li>
+                <li><a class="waves-effect waves-light" href="http://brlcad.org/wiki/">DOCUMENTATION</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/news/" ? "active " : " "; ?>" href="<?php echo site_url();?>/news/">NEWS</a></li>
                 <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/get-involved/" ? "active " : " "; ?>" href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>
             </ul>
@@ -42,7 +42,7 @@
                 <li><a href="<?php echo site_url();?>/">HOME</a></li>
                 <li><a href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
                 <li><a href="<?php echo site_url();?>/about/">ABOUT</a></li>
-                <li><a href="http://docs.esde.name/">DOCUMENTATION</a></li>
+                <li><a href="http://brlcad.org/wiki/">DOCUMENTATION</a></li>
                 <li><a href="<?php echo site_url();?>/news/">NEWS</a></li>
                 <li><a href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>
             </ul>
