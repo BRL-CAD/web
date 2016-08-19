@@ -156,7 +156,7 @@
 
 <!-- Tessellactation -->
 <script src="<?php bloginfo('template_url');?>/js/TweenLite.min.js"></script>
-<script src="<?php bloginfo('template_url');?>/js/rAF.js"></script>
+<script src="<?php bloginfo('template_url');?>/js/rAF.min.js"></script>
 <script src="<?php bloginfo('template_url');?>/js/EasePack.min.js"></script>
 <script src="<?php bloginfo('template_url');?>/js/tessellactation.js"></script>
 <?php get_footer(); ?>
