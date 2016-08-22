@@ -32,7 +32,7 @@
             </div>
             <div class="col s12 m6">
                 <a href="<?php echo site_url();?>/news/">
-                    <h5><i class="material-icons black-text" style="margin-right: 20px;">rss_feed</i>Latest news</h5>
+                    <h5><i class="material-icons black-text" style="float: left;margin-right: 5px;">rss_feed</i>Latest news</h5>
                 </a>
                 <ul class="collection">
                     <?php
