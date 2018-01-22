@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BRL-CAD: Open Source Solid Modeling</title>
+    <link rel="stylesheet" type="text/css" href="http://brlcad.org/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://brlcad.org/img/logo.ico" />
+    <script type="text/javascript" src="http://brlcad.org/js/jquery.js" ></script>
+    <script>
+      function menu_download() {
+          $('html, body').animate({
+              scrollTop: $(".download").offset().top
+          }, 1000);
+      }
+      function menu_news() {
+          $('html, body').animate({
+              scrollTop: $(".news").offset().top
+          }, 1000);
+      }
+      function menu_about() {
+          $('html, body').animate({
+              scrollTop: $(".about").offset().top
+          }, 1000);
+      }
+      function menu_home() {
+          $('html, body').animate({
+              scrollTop: $(".home").offset().top
+          }, 2000);
+      }
+      function menu_docs() {
+          $('html, body').animate({
+              scrollTop: $(".docs").offset().top
+          }, 1000);
+      }
+      function menu_support() {http://brlcad.org
+          $('html, body').animate({
+              scrollTop: $(".support").offset().top
+          }, 1000);
+      }
+      function menu_gallery() {
+          $('html, body').animate({
+              scrollTop: $(".gallery").offset().top
+          }, 1000);
+      }
+
+
+      var Alert1 = new CustomAlert();
+      function CustomAlert(){
+          this.render1 = function(){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverflow = document.getElementById('dialogoverflow');
+              var dialogbox = document.getElementById('dialogbox');
+              $("#dialogoverflow").fadeIn("100");
+              dialogoverflow.style.height = winH+"px";
+              dialogbox.style.left = (winW/2) - (750 * .5)+"px" ;
+              dialogbox.style.top = "75px" ;
+              $("#dialogbox").slideDown("100");
+          };
+          this.ok = function(){
+              $("#dialogbox").slideUp("100");
+              $("#dialogoverflow").fadeOut("100");
+          };
+      }
+
+
+      //2nd Messages
+      var Alert2 = new CustomAlert2();
+      function CustomAlert2(){
+          this.render2 = function(){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverflow2 = document.getElementById('dialogoverflow2');
+              var dialogbox2 = document.getElementById('dialogbox2');
+              $("#dialogoverflow2").fadeIn("100");
+              dialogoverflow2.style.height = winH+"px";
+              dialogbox2.style.left = (winW/2) - (750 * .5)+"px" ;
+              dialogbox2.style.top = "75px" ;
+              $("#dialogbox2").slideDown("100");
+          };
+          this.ok2 = function(){
+              $("#dialogbox2").slideUp("100");
+              $("#dialogoverflow2").fadeOut("100");
+          };
+      }
+
+
+      //3rd Requests
+      var Alert3 = new CustomAlert3();
+      function CustomAlert3(){
+          this.render3 = function(){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverflow3 = document.getElementById('dialogoverflow3');
+              var dialogbox3 = document.getElementById('dialogbox3');
+              $("#dialogoverflow3").fadeIn("100");
+              dialogoverflow3.style.height = winH+"px";
+              dialogbox3.style.left = (winW/2) - (750 * .5)+"px" ;
+              dialogbox3.style.top = "75px" ;
+              $("#dialogbox3").slideDown("100");
+          };
+          this.ok3 = function(){
+              $("#dialogbox3").slideUp("100");
+              $("#dialogoverflow3").fadeOut("100");
+          };
+      }
+
+
+      var Alert4 = new CustomAlert4();
+      function CustomAlert4(){
+          this.render4 = function(){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverflow4 = document.getElementById('dialogoverflow4');
+              var dialogbox4 = document.getElementById('dialogbox4');
+              $("#dialogoverflow4").fadeIn("100");
+              dialogoverflow4.style.height = winH+"px";
+              dialogbox4.style.left = (winW/2) - (750 * .5)+"px" ;
+              dialogbox4.style.top = "75px" ;
+              $("#dialogbox4").slideDown("100");
+          };
+          this.ok4 = function(){
+              $("#dialogbox4").slideUp("100");
+              $("#dialogoverflow4").fadeOut("100");
+          };
+      }
+
+
+      var Alert5 = new CustomAlert5();
+      function CustomAlert5(){
+          this.render5 = function(){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverflow5 = document.getElementById('dialogoverflow5');
+              var dialogbox5 = document.getElementById('dialogbox5');
+              $("#dialogoverflow5").fadeIn("100");
+              dialogoverflow5.style.height = winH+"px";
+              dialogbox5.style.left = (winW/2) - (550 * .5)+"px" ;
+              dialogbox5.style.top = "75px" ;
+              $("#dialogbox5").slideDown("100");
+          };
+          this.ok5 = function(){
+              $("#dialogbox5").slideUp("100");
+              $("#dialogoverflow5").fadeOut("100");
+          };
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <table class="menutable">
+        <tr>
+          <td valign="top" class="menu">
+            <div ><a href="http://brlcad.org/d/download/" class="menu">download</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="https://www.facebook.com/BRL-CAD-387112738872/" class="menu">news</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="http://brlcad.org/d/about" class="menu">about</a></div>
+          </td>
+          <td valign="top" class="logomenu">
+            <img onclick="menu_home()" src="http://brlcad.org/img/logo_color.png" alt="Home" class="logo">
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="http://brlcad.org/wiki/" class="menu">docs</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div onclick="menu_support()onclick="menu_docs()""><a href="https://sourceforge.net/projects/brlcad/support" class="menu">support</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="http://brlcad.org/gallery/" class="menu">gallery</a></div>
+            <!-- onclick="menu_gallery()" -->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="about" id="about">
+      <div class="tessellactation-container">
+        <canvas id="tessellactation"></canvas>
+      </div>
+      <div class="wrapper-main">
+        <h1 class="main-h1"><span class="brl">BRL</span><span class="dash">&#8209;</span><span class="cad">CAD</span></h1>
+        <h2 class="byline">Download from Sourceforge</h2>
+        <!-- <h2 class="ossm">Open&nbsp;Source&nbsp;Solid&nbsp;Modeling</h2> -->
+      </div>
+      <table class="icon-table" style="margin: auto; margin-top: 20px;">
+        <tr>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-open.png" class="pad" alt="Linux">
+            <h2 class="intro-topic">Linux</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-love.png" class="pad" alt="Windows">
+            <h2 class="intro-topic">Windows</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-3d.png" class="pad" alt="Mac">
+            <h2 class="intro-topic">Mac</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table class="icon-table" style="margin: auto; margin-top: 0px;">
+        <tr>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-open.png" class="pad" alt="Linux">
+            <h2 class="intro-topic">BSD</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-love.png" class="pad" alt="Windows">
+            <h2 class="intro-topic">IRIX</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-3d.png" class="pad" alt="Mac">
+            <h2 class="intro-topic">Solaris</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table class="icon-table" style="margin: auto; margin-top: 0px;">
+        <tr>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-open.png" class="pad" alt="Linux">
+            <h2 class="intro-topic">Extenal Plugins</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-love.png" class="pad" alt="Windows">
+            <h2 class="intro-topic">Runtime Libaries</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+          <td class="intro1">
+            <img src="http://brlcad.org/img/icon-3d.png" class="pad" alt="Mac">
+            <h2 class="intro-topic">Virtual Mashine</h2>
+            <p class="intro-main">
+
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="what-r" style="margin-top: 800px;">
+      <h2 class="intro-topic">Sourceforge</h2>
+      <p class="what-p">
+        Releases of BRL-CAD are hosted on Sourceforge.net
+        </br></br>
+        <a href="https://sourceforge.net/projects/brlcad/files/" class="nots-opts1">View all Downloads</a>
+      </p>
+    </div>
+    <div class="why-us">
+      <h1 class="main-h1">Support</h1>
+      <p class="what-p">
+        Getting help & more <a href="https://sourceforge.net/projects/brlcad/support" class="nots-opts1">here</a> at Sourceforge.
+      </p>
+      </br>
+      <h1 class="main-h1">GitHub</h1>
+      <p class="what-p">
+        View and develop the sourcecode of BRL-CAD on <a href="https://sourceforge.net/projects/brlcad/support" class="nots-opts1">GitHub</a>
+      </p>
+    </div>
+    <div class="social">
+      <h1 class="main-h1" style="font-size: 35px; color: #fff;">view us on social media!</h1>
+      <ul class="links">
+        <li><a target="blank" href="https://www.facebook.com/pages/BRL-CAD/387112738872"><img src="img/facebook.png" alt="ICON"></a></li>
+        <li><a target="blank" href="https://twitter.com/brl_cad"><img src="img/twitter.png" alt="ICON"></a></li>
+        <li><a target="blank" href="https://plus.google.com/s/brl%20-%20cad"><img src="img/google.png" alt="ICON"></a></li>
+        <li><a target="blank" href="https://www.linkedin.com/in/brlcad"><img src="img/linkedin.png" alt="ICON"></a></li>
+        <li><a target="blank" href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="img/youtube.png" alt="ICON"></a></li>
+      </ul>
+      <a href="https://bestpractices.coreinfrastructure.org/projects/66"><img src="https://bestpractices.coreinfrastructure.org/projects/66/badge"></a>
+    </div>
+    <div class="footer">
+      <h1 class="main-h1" style="font-size: 25px; color: #fff; margin-top: 0px">BRL-CAD &COPY; 2018</h1>
+      <p>All trademarks referenced herein are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.</p>
+    </div>
+    <script src="js/rAF.js"></script>
+    <script src="http://brlcad.org/js/TweenLite.min.js"></script>
+    <script src="http://brlcad.org/js/EasePack.min.js"></script>
+    <script type="text/javascript" src="http://brlcad.org/js/tessellactation.js" ></script>
+  </body>
+</html>
