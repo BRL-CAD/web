@@ -50,6 +50,7 @@ a:hover{
    color: #fff;
 }
 /**Scroll Bar**/
+/*
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -63,6 +64,7 @@ a:hover{
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: #a1a1a1;
 }
+*/
 /**Navbar**/
 .header{
     height: 50pt;
