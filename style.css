@@ -54,14 +54,14 @@ a:hover{
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 ::-webkit-scrollbar-thumb {
-    background: #a1a1a1;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #a1a1a1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #a1a1a1;
+	background: #a1a1a1; 
 }
 /**Navbar**/
 .header{
@@ -115,11 +115,7 @@ a.menu{
 .menu:hover{
     color: #fff;
 }
-.container{
-    width: 100%;
-    max-width: 1137px;
-    margin: 0 auto;
-}
+
 
 /**First**/
 .about{
@@ -199,21 +195,14 @@ a.menu{
     height: 180px;
     width: 180px;
     color:#999;       
+    transition: padding 0.2s linear; /* vendorless fallback */
+    -o-transition: color 0.5s linear; /* opera */
+    -ms-transition: color 0.5s linear; /* IE 10 */
+    -moz-transition: color 0.5s linear; /* Firefox */
+    -webkit-transition: padding 0.2s linear; /*safari and chrome */
 }
-.pad,
-.pad ~ * {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transition: transform 0.2s linear; /* vendorless fallback */
-    -o-transition: transform 0.2s linear; /* opera */
-    -ms-transition: transform 0.2s linear; /* IE 10 */
-    -moz-transition: transform 0.2s linear; /* Firefox */
-    -webkit-transition: transform 0.2s linear; /*safari and chrome */
-}
-
-.pad:hover,
-.pad:hover ~ *{
-    transform: translate(0, -10px);
+.pad:hover{
+    padding-top: 10px;
 }
 .main-intro{
     font-family: Segoe UI, Open Sans, Arial, sans-serif;
@@ -643,7 +632,7 @@ a.menu{
                 z-index: 10;
                 background: url("img/bg.png");
             }
-            #dialogbox3{
+            #dialogbox3{ 
                 opacity:1;
                 display: none;
                 position: fixed;
@@ -694,7 +683,7 @@ a.menu{
                 z-index: 10;
                 background: url("img/bg.png");
             }
-            #dialogbox4{
+            #dialogbox4{ 
                 opacity:1;
                 display: none;
                 position: fixed;
@@ -883,14 +872,17 @@ New Navigtaion
 ***************/
 
 .id_logo {
-  height: 50px;
-  margin-left: 20px;
-  float: left;
+  height: 75px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  z-index: 1100;
 }
 
 .circle {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background: transparent;
   display: inline-block;
@@ -908,7 +900,7 @@ New Navigtaion
   transition-timing-function: ease-in;
 }
 .circle img {
-  margin-top: 0px;
+  margin-top: -5px;
 }
 
 .head {
@@ -941,10 +933,10 @@ New Navigtaion
   -moz-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
@@ -957,77 +949,18 @@ New Navigtaion
 .navbar .navigation li a {
   display: block;
 }
-#nav-button {
-  display: none;
-  position: absolute;
-  right:0;
-  line-height: 50px;
-  color: white;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  margin-right: 20px;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/*Mail subsription*/
-.input-mail
-{
-  line-height: 35px;
-  background-color: #fff;
-  padding: 5px;
-  width: 250px;
-  border-radius: 5px;
-  border: 0;
-  margin-top: 20px;
-}
-.message-mail
-{
-  display: none;
-}
-.submit-mail
-{
-  border: 2px solid #fff;
-  color: #d0245e;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 0.88rem;
-  cursor: pointer;
-  display:block;
-  width:200px;
-  line-height:35px;
-  margin:auto;
-  margin-top:10px;
-  margin-bottom: 20px;
-  text-align:center;
-}
-.submit-mail:hover
-{
-  background-color: #d0245e;
-  color: #fff;
-}
-
-/* Desktop */
 @media only screen and (max-width: 1100px) {
   .navbar .navigation li {
     font-size: 14px;
     width: 136px;
   }
 }
-
-/* Tablet */
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 920px) {
   .intro1{
-	float:none;
-	width:60%;
-	margin-top:0px;
+	  float:none;
+	  width:60%;
+	  margin-top:0px;
   }
   .navbar .navigation li {
     font-size: 14px;
@@ -1043,33 +976,14 @@ New Navigtaion
     top: 25px;
     left: 10px;
   }
-  ul.double{
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    -o-columns: 1;
-    -ms-columns: 1;
-  }
-  #nav-button {
-    display: block;
-  }
-  .navbar {
+}
+@media only screen and (max-width: 600px) {
+  .navbar .navigation li {
     display: none;
   }
 
-  .navbar .navigation {
-    float: right;
-    width: 100%;
-  }
-
-  .navbar .navigation li {
-    font-size: 18px;
-    width: 100%;
+  .head {
+    position: relative;
   }
 }
 
-/* Mobile */
-@media only screen and (max-width: 780px) {
-
-
-}
