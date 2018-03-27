@@ -1,0 +1,524 @@
+/*
+Theme Name: BRL-CAD
+Theme URI: http://brlcad.org/
+Author: Oleksandr Dubenko
+Author URI: http://brlcad.org/
+Description: BRL-CAD website theme created as part of GSoC 2016 project
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+CONTENTS
+
+* General styles
+* Typography
+* Main navigation style
+* Banner
+* Introduction
+* Highlights
+* Mailing lists
+* Footer 
+* Header 
+* Content 
+* Downloads
+* News
+
+*/
+
+/* General styles */
+body,html
+{
+    margin: 0;
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container
+{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.row
+{
+    margin-bottom: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .btn, .card-title
+{
+    color: #252525;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+a:hover
+{
+    color: #D0245E;
+}
+.pink-text
+{
+    color: #D0245E !important;
+}
+
+          
+
+/* Main navigation style */
+nav#navbar
+{
+    z-index: 999;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    line-height: 50px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+#nav-logo
+{
+    float: left;
+    background: url("img/logo-circle.svg") no-repeat center center;
+    background-size: 45px 45px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+ul.nav-list
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li
+{
+    box-sizing: border-box;
+    transition: background-color .1s;
+    height: 50px;
+}
+nav ul li a
+{
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 12.5px;
+}
+nav ul li a.waves-effect
+{
+    vertical-align: bottom;
+}
+nav ul li a:hover
+{
+    color: #FFF;
+    background-color: #454545;
+}
+nav
+{
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    font-weight: 700;
+}
+nav .active
+{
+    border-bottom: 4px solid #D0245E; 
+}
+.side-nav li a:hover {
+    color: black;   
+}
+nav a.button-collapse i
+{
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    width: 50px;
+}
+nav a.button-collapse:hover
+{
+    color: #FFF;
+}
+nav a.logo-link
+{
+    display: block;
+    padding-right: 5px;
+}
+nav a.logo-link:hover
+{
+    background-color: #454545;
+}
+
+/* Banner */
+#banner
+{
+    margin-top: 50px;
+    border-bottom: 1px solid #eee;
+    background: #000 url("img/backdrop.jpg") no-repeat -150px -150px;
+}
+
+#banner-screenshot
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#banner h1
+{
+    color: #D0245E;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+@media (max-width: 350px) {
+    #banner h1
+    {
+        font-size: 36px;
+    }
+}
+#banner h5
+{
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.7em;
+    color: #FFF;
+}
+.btn-download
+{
+    background-color: #39B54A;
+}
+#banner i.material-icons
+{
+    width: 8px;
+}
+#tessellactation
+{
+    position: absolute;
+    width:100%;
+}
+#banner-screenshot img
+{
+    width: 100%;
+    max-width: 430px;
+}
+#banner-title
+{
+    position: relative;
+    height: auto;
+}
+#banner-title-content
+{
+    margin: 70px auto;
+}
+@media (max-width: 600px) {
+    #banner-title-content
+    {
+        margin: 20px;
+    }
+}
+#banner-title-content a 
+{
+    margin-bottom: 10px;
+}
+
+/* Introduction */
+#introduction-promo
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #eee;
+}
+#introduction-promo img
+{
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    max-width: 150px;
+}
+#introduction-promo>.col
+{
+    padding: 20px;
+}
+#introduction-about
+{
+    padding: 20px 30px 10px 30px;
+}
+.collection
+{
+    border: 0;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+ .collection .collection-item
+{
+    padding-left: 0;
+    background-color: rgba(0,0,0,0);
+}
+ .collection-item .title
+{
+    color: #252525;
+}
+ .collection-item p
+{
+    color: gray;
+    margin: 5px 0px 5px 0px;
+}
+ .collection-item .secondary-content
+{
+    color: #252525;
+    font-size: 0.8em;
+}
+
+/* Highlights */
+#highlights
+{
+    background-color: #F3F3F3;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+}
+#highlights .card
+{
+    float: left;
+    padding: 0px;
+    margin: 12px;
+    width: calc(50% - 24px);
+}
+#highlights .card-image
+{
+    height: 200px;
+}
+#highlights .card-image img
+{
+    margin-top: -10%;
+}
+@media (max-width: 600px) {
+    #highlights .card
+    {
+        width: calc(100% - 24px);
+    }
+}
+
+/* Mailing lists */
+#mail
+{
+    background-color: #D0245E;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 20px 0 40px 0;
+}
+#mail .input-field label 
+{
+     color: rgba(255,255,255,0.9);
+}
+#mail .input-field input[type=email]:focus + label 
+{
+     color: #fff;
+}
+#mail .input-field input[type=email]:focus 
+{
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+}
+#mail .input-field .prefix.active
+{
+     color: #fff;
+}
+.message-mail
+{
+    display: none;
+}
+.select-wrapper
+{
+    color: #FFF;
+}
+.select-wrapper span.caret
+{
+    color: inherit;
+}
+.dropdown-content li>span
+{
+    color: #D0245E;
+}
+
+/* Footer */
+footer.page-footer
+{
+    margin-top: 0px;
+    background-color: #252525;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: .85rem;
+    padding-top: 0;
+}
+footer.page-footer .footer-copyright
+{
+    height: auto;
+    line-height: 24px;
+    padding: 10px 0 10px 0;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0);
+}
+.page-footer .social img
+{
+    height: 50px;
+    opacity: 0.7;
+}
+.page-footer .social img:hover
+{
+    opacity: 1;
+}
+.page-footer ul
+{
+    margin-top: 0;
+}
+.page-footer h5
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.page-footer .row
+{
+    padding-bottom: 20px;
+}
+.footer-links
+{
+    margin-top: 5px;
+}
+.footer-links a
+{
+    color: #ddd;
+    font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-links li
+{
+    padding-bottom: 5px;
+}
+
+/* Header */
+.header
+{
+    height: 100px;
+    margin-top: 50px;
+}
+.header h1
+{
+    line-height: 100px;
+    font-size: 36px;
+}
+.header i.material-icons
+{
+    color: #252525;
+    float: left;
+    font-size: 36px;
+    line-height: 100px;
+    margin-right: 10px;
+}
+
+/* Content */
+.content
+{
+    padding: 20px 0 50px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);   
+    min-height: calc(100vh - 300px);
+}
+
+/* Downloads */
+.downloads .card-content img
+{
+    display: block;
+    margin: auto;
+}
+.downloads a
+{
+    color: #000;
+}
+.downloads a:hover
+{
+    color: #D0245E; 
+}
+.downloads .card .card-action
+{
+    padding: 10px 20px 10px 20px !important;
+    z-index: initial;
+    font-size: 18px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+.downloads .card .card-content
+{
+    height: 144px;
+}
+.downloads .other-downloads a
+{
+    display: block;
+    padding: 10px 40px 10px 40px;
+    border-top: 1px solid rgba(160,160,160,0.2);
+}
+.downloads .row
+{
+    margin-bottom: 0;
+}
+.collection.with-header .collection-header
+{
+    padding: 10px 40px 10px 40px;
+    border: 0;
+}
+.downloads .collection
+{
+    border: 0;
+}
+.other-downloads i
+{
+    float: left;
+    line-height: 2em;
+    margin-right: 10px;
+}
+
+/* News */
+.news-card .card-content
+{
+    min-height: 180px;
+}
+.card-title
+{
+    text-transform: capitalize;
+}
+.news-item .date
+{
+    color: rgba(0, 0, 0, 0.5);
+}
+.news-item .news-title
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.card .card-action a
+{
+    margin-right: 0px !important;
+}
+.card-date
+{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 48px;
+}
+.nav-right
+{
+    padding: 10px 0px 10px 10px;
+    text-transform: uppercase;
+}
+.nav-left
+{
+    padding: 10px 10px 10px 0px;
+    text-transform: uppercase;
+}
+#detect
+{
+    padding: 0px 20px 40px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+

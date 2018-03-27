@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#D0245E">
+    <link rel="icon" sizes="16x16" type="image/ico" href="<?php bloginfo('template_url');?>/img/favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="left">
+                <a href="#" data-activates="slide-out" class="left hide-on-large button-collapse"><i class="material-icons">menu</i></a>
+                <a class="white-text" href="<?php echo site_url(); ?>">
+                    <div id="nav-logo"></div>BRL-CAD</a>
+            </div>
+            <ul class="right nav-list hide-on-med-and-down">
+                <li><a class="waves-effect waves-light " href="#">HOME</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/download/" ? "active " : " "; ?>DOWNLOAD</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/about/" ? "active " : " "; ?>ABOUT</a></li>
+                <li><a class="waves-effect waves-light active" href="http://brlcad.org/wiki/Documentation">DOCUMENTATION</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/news/" ? "active " : " "; ?>NEWS</a></li>
+                <li><a class="waves-effect waves-light <?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == site_url()."/get-involved/" ? "active " : " "; ?>GET INVOLVED</a></li>
+            </ul>
+            <!-- Slide out navigation -->
+            <ul id="slide-out" class="side-nav">
+                <li><a href="<?php echo site_url();?>/">HOME</a></li>
+                <li><a href="<?php echo site_url();?>/download/">DOWNLOAD</a></li>
+                <li><a href="<?php echo site_url();?>/about/">ABOUT</a></li>
+                <li><a href="http://brlcad.org/wiki/Documentation">DOCUMENTATION</a></li>
+                <li><a href="<?php echo site_url();?>/news/">NEWS</a></li>
+                <li><a href="<?php echo site_url();?>/get-involved/">GET INVOLVED</a></li>
+            </ul>
+
+        </div>
+    </nav>
+<div class="toolbar">
+    <div class="container">
+        <div class="row">
+            <div class="col l6">
+                <ul class="toolbar-tabs">
+                    <li><a class="waves-effect active" href="#">PAGE</a></li>
+                    <li><a class="waves-effect" href="#">DISCUSSION</a></li>
+                    <li><a class="waves-effect" href="#">EDIT</a></li>
+                    <li><a class="waves-effect" href="#">HISTORY</a></li>
+                    <li><a class="waves-effect" href="#">MOVE</a></li>
+                    <li><a class="waves-effect" href="#">WATCH</a></li>
+                </ul>
+            </div>
+            <div class="col l6">
+                <ul class="toolbar-tabs tools">
+                    <input placeholder="Search" class="left" type="text" size="10">
+                    <li class="right"><a class="dropdown-button waves-effect" data-constrainwidth="false" data-beloworigin="true" data-activates="dropdown-account" href=""><i class="material-icons">person</i>ACCOUNT</a></li>
+                    <ul id='dropdown-account' class='dropdown-content'>
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Preferences</a></li>
+                        <li><a href="#!">Watchlist</a></li>
+                        <li><a href="#!">Contributions</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">Log out</a></li>
+                    </ul>
+                    <li class="right"><a class="dropdown-button waves-effect" data-constrainwidth="false" data-beloworigin="true" data-activates="dropdown-tools" href="#"><i class="material-icons">build</i>TOOLS</a></li>
+                    <ul id='dropdown-tools' class='dropdown-content'>
+                        <li><a href="#!">What links here</a></li>
+                        <li><a href="#!">Related changes</a></li>
+                        <li><a href="#!">Upload file</a></li>
+                        <li><a href="#!">Special pages</a></li>
+                        <li><a href="#!">Recent changes</a></li>
+                        <li><a href="#!">Printable version</a></li>
+                        <li><a href="#!">Permanent link</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<div class="header">
+	<div class="container">
+		<h1>BRL-CAD Documentation</h1>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+        <p>
+            Welcome to the BRL-CAD Wiki! A wiki is a type of site that allows visitors to directly contribute to the content of a website. The intention of the BRL-CAD Wiki is to get everyone in the community working together on providing the information that everyone needs. The wiki is intended as a place for any documentation, tutorials, support, examples, and other pieces of information that may be of use to others. All are welcome to contribute and anyone may edit most of the wiki pages. With everyone's help, we can make this a tremendous resource for the CAD community.
+<p>
+Don't be shy with your contributions. Give editing a try and be proud of your contributions! If you make a mistake, they're very easy to undo and you don't even need to have an account created. If you do create an account, however, you will be credited with the contribution in the page's history.
+</p>
+So be bold and improve our documentation!
+        </p>
+	</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 s6">
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="<?php echo site_url();?>/">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="<?php echo site_url();?>/about/">About</a></li>
+                    <li><a class="grey-text text-lighten-3" href="<?php echo site_url();?>/download/">Download</a></li>
+                    <li><a class="grey-text text-lighten-3" href="<?php echo site_url();?>/news/">News</a></li>
+                </ul>
+            </div>
+            <div class="col l2 s6">
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="<?php echo site_url();?>/get-involved/">Get involved</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://brlcad.org/wiki/Documentation">Documentation</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">OGV</a></li>
+                </ul>
+            </div>
+            <div class="col m12 l4 right social">
+                <a href="https://twitter.com/brl_cad"><img src="twitter.png" alt=""></a>
+                <a href="https://www.facebook.com/BRL-CAD-387112738872/"><img src="facebook.png" alt=""></a>
+                <a href="https://plus.google.com/s/brl%20-%20cad"><img src="google.png" alt=""></a>
+                <a href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="youtube.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/brlcad"><img src="linkedin.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            BRL-CAD © 2016 All trademarks referenced in here are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/brlcad.js"></script>
+</body>
+
+</html>
