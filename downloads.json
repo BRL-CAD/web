@@ -1,0 +1,109 @@
+{
+  "windows": {
+    "64bit": {
+      "latest": "7.26.0",
+      "7.26.0": {
+        "name": "7.26.0",
+        "version": "7.26.0",
+        "date": "2016-08-08",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/BRL-CAD_7.26.0.2_x64.exe/download",
+        "type": "r"
+      },
+      "7.24.0": {
+        "name": "7.24.0",
+        "version": "7.24.0",
+        "date": "2013-06-13",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.24.0/BRL-CAD_7.24.0_x64.exe/download",
+        "type": "r"
+      }
+    },
+    "32bit": {
+      "latest": "7.26.0",
+      "7.26.0": {
+        "name": "7.26.0",
+        "version": "7.26.0",
+        "date": "2016-08-08",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/BRL-CAD_7.26.0.2_x86.exe/download",
+        "type": "r"
+      },
+      "7.24.0": {
+        "name": "7.24.0",
+        "version": "7.24.0",
+        "date": "2013-06-13",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.24.0/BRL-CAD_7.24.0_x86.exe/download",
+        "type": "r"
+      }
+    }
+  },
+  "macos": {
+    "latest": "7.24.0",
+    "7.24.0": {
+      "name": "7.24.0",
+      "version": "7.24.0",
+      "date": "2013-06-13",
+      "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.24.0/BRL-CAD%207.24.0.dmg/download",
+      "type": "r"
+    }
+  },
+  "linux": {
+    "64bit": {
+      "latest": "7.28.0",
+      "7.28.0": {
+        "name": "7.28.0",
+        "version": "7.28.0",
+        "date": "2018-10-20",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/7.28.0/brlcad_7.28.0-0_amd64.deb/download",
+        "type": "r"
+      }
+    },
+    "32bit": {
+      "latest": "7.28.0",
+      "7.28.0": {
+        "name": "7.28.0",
+        "version": "7.28.0",
+        "date": "2018-10-20",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/7.28.0/brlcad_7.28.0-0_i386.deb/download",
+        "type": "r"
+      }
+    }
+  },
+  "bsd": {
+    "64bit": {
+      "latest": "7.26.0",
+      "7.26.0": {
+        "name": "7.26.0",
+        "version": "7.26.0",
+        "date": "2016-08-11",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.26.0/BRL-CAD_7.26.0_FreeBSD_amd64.tar.gz/download",
+        "type": "r"
+      }
+    },
+    "32bit": {
+      "latest": "7.18.0",
+      "7.18.0": {
+        "name": "7.18.0",
+        "version": "7.18.0",
+        "date": "2010-12-09",
+        "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.18.0/brlcad-7.18.0_fbsd_ia32.tbz/download",
+        "type": "r"
+      }
+    }
+  },
+  "source": {
+    "latest": "7.28.0",
+    "7.28.0": {
+      "name": "7.28.0",
+      "version": "7.28.0",
+      "date": "2018-10-02",
+      "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.28.0/brlcad-7.28.0.zip/download",
+      "type": "r"
+    },
+    "7.26.4": {
+      "name": "7.26.4",
+      "version": "7.26.4",
+      "date": "2017-09-22",
+      "url": "https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.26.4/brlcad-7.26.4.zip/download",
+      "type": "r"
+    }
+  }
+}
