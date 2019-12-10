@@ -1,19 +1,21 @@
 /**Basic Styling**/
 *{
-    margin: 0px;
+    margin:0px;
     padding: 0px;
     list-style: none;
 }
-
-html{
-	font-size:21px;
-	line-height:1.5;
+h2 {
+  color: #d0245e;
 }
 
+.words {
+  margin: 10px;
+  padding: 10px;
+}
 body{
     color: #2c3e50;
     font-family: Segoe UI, Open Sans, Roboto, sans-serif, Arial;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: normal;
 }
 a{
@@ -50,32 +52,32 @@ a:hover{
    color: #fff;
 }
 /**Scroll Bar**/
-/*
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 ::-webkit-scrollbar-thumb {
-    background: #a1a1a1;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #a1a1a1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #a1a1a1;
+	background: #a1a1a1; 
 }
-*/
 /**Navbar**/
 .header{
     height: 50pt;
     background: #fff;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     text-transform: uppercase;
+    background: #000; 
 }
 .header table{
     border-spacing: 0px 0px;
-    font-size: 1.33rem;
+    font-size: 24px;
     margin: 0px auto;
+    
 }
 .logo{
     width: 80%;
@@ -89,7 +91,7 @@ a:hover{
 .logomenu{
     text-align: center;
     width: 14%; /* 100 / 7 = 14 */
-    background: #000;
+    /*background: #000;
 /*    cursor: pointer;*/
 }
 
@@ -100,9 +102,10 @@ a:hover{
     text-align: center;
     width: 14%; /* 100 / 7 = 14 */
 /*    cursor: pointer;*/
+    
 }
 td.menu{
-    background: #000;
+    
     text-align: center;
     width: 14%; /* 100 / 7 = 14 */
     padding-top: 2%;
@@ -117,41 +120,35 @@ a.menu{
 .menu:hover{
     color: #fff;
 }
-.container{
-    width: 100%;
-    max-width: 1137px;
-    margin: 0 auto;
-}
+
 
 /**First**/
-.about{
+/**.about{
     left: 64px;
     padding: 25px;
-    font-size: 1.278rem;
+    font-size: 23px;
     background: #2d2d2d;
     text-align: center;
-    height: 350px;
-}
-.tessellactation-container{
-    /* FIXME: figure out how to position the canvas beneath the intro1 and header/menu elements */
-}
+    height: 300px;
+}**/
 #tessellactation{
     position: absolute;
-    top: 0px;
+    top: 50pt;
     left: 0px;
     width: 100%;
     height: 350px;
 }
 .main-h1{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 5.556rem;
+    font-size: 100px;
     color: #2d2d2d;  /* #2c3e50; */
-    margin-top: 20px;
+    margin-bottom: 0px;
 }
 .brl{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    color: #d0245e; /*d91a5d; */
+    font-size: 75px;
+    color: /*white;*/#d0245e; 
 
     text-shadow: 0px 0px 4px #282828,
     -1px -1px 0 #282828,
@@ -164,7 +161,9 @@ a.menu{
     top: -8px;
     left: -5px;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
     color: #888;
+    margin-bottom: 100px;
 
     text-shadow: 0px 0px 4px #111,
     -1px -1px 0 #111,
@@ -175,7 +174,9 @@ a.menu{
 .cad{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
     color: #fff;
+    margin-bottom: 100px;
 
     text-shadow: 0px 0px 4px #111,
     -1px -1px 0 #111,
@@ -186,7 +187,7 @@ a.menu{
 .byline{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 1.778rem;
+    font-size: 32px;
     color: #fff;
     top: -16px;
 
@@ -200,7 +201,7 @@ a.menu{
     padding-top: 20px;
     height: 180px;
     width: 180px;
-    color:#999;
+    color:#999;       
     transition: padding 0.2s linear; /* vendorless fallback */
     -o-transition: color 0.5s linear; /* opera */
     -ms-transition: color 0.5s linear; /* IE 10 */
@@ -212,58 +213,79 @@ a.menu{
 }
 .main-intro{
     font-family: Segoe UI, Open Sans, Arial, sans-serif;
-    font-size: 1.67rem;
+    font-size: 30px;
 }
+.wrapper-color {
+  background-color: #707A95;
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-07%20at%208.09.26%20AM.png?1575724187553"); /*cover, 350px height, white text - circle things*/
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-07%20at%207.46.23%20AM.png?1575722822109"); /*300px height, cover on this, white text - tank rendering*/
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2FScreenshot%202019-12-07%20at%208.18.22%20AM.png?1575724758274"); /*cover on this, white text - shape header */
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-07%20at%208.13.09%20AM.png?1575724465794"); /*use cover on this, pink text - dots*/
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-07%20at%207.51.47%20AM.png?1575723120536"); /*40% width, 300px height, background color #707A95, white text - cad ine drawing*/
+  /*background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-05%20at%205.55.30%20AM.png?1575543346523"); /*40% width, black background, pink text - gear thing*/
+  background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-09%20at%205.34.28%20AM.png?1575887709180");
+  background-color: rgba(255,255,255,0.25);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+
+
+
+
 .wrapper-main{
-    width: 60%;
+    width: 18%;
     margin: 0px auto;
-    padding-top: 40px;
+    padding-top: 45px;
+    padding-bottom: 5px;
+    /*background: #000; */
+    
 }
 .icon-table{
-    max-width:1200px;
+    width: 90%;
     margin: 10px auto;
+    margin-top: 40px;
     border-spacing: 10px 0px;
 }
-
-.icon-table:after{
-	content:"";
-	display:block;
-	clear:both;
-}
-
 .intro1{
-    box-sizing:border-box;
-    padding:0px 10px;
     text-align: center;
-    width:33%;
-    min-width:300px;
-    float:left;
-    margin:auto;
-    margin-top:-70px;
+    vertical-align: top;
+    width: 33%;
+}
+.intro2{
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
+}
+.intro3{
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
 }
 .intro-topic{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size:2rem;
+    font-size: 32px;
     font-weight: lighter;
 }
 .intro-main{
     font-weight: lighter;
     margin: 5px;
-    font-size:1rem;
-    color:#333;
 }
 .what-r{
-    margin-top: 20px;
+    margin: 10px auto;
+    margin-top: 380px;
     background: #000;
 /*     background: #f64747; */
     color: #fff;
     padding: 40px 90px 40px 90px;
     text-align: center;
-    font-size: 1.33rem;
+    font-size: 24px;
 }
 .what-p{
     font-weight: lighter;
-    font-size:1.11rem;
     margin: 15px;
 }
 .articles{
@@ -275,8 +297,8 @@ a.menu{
     margin: 10px auto;
 }
 .article-table img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     cursor: pointer;
     border-radius: 250px;
     -webkit-border-radius: 250px;
@@ -294,9 +316,6 @@ a.menu{
     -moz-columns: 2;
     -o-columns: 2;
     -ms-columns: 2;
-}
-.double li{
-	margin-bottom:30px;
 }
 /**Last**/
 .last{
@@ -328,7 +347,7 @@ a.menu{
     -o-border-radius: 5px;
     padding: 20px;
     font-family: Open Sans, Arial, sans-serif;
-    font-size: 1.22rem;
+    font-size: 22px;
     max-width: 90%;
     min-width: 90%;
     height: 100px;
@@ -348,7 +367,7 @@ a.menu{
     -o-border-radius: 5px;
     padding: 20px;
     font-family: Open Sans, Arial, sans-serif;
-    font-size: 1.22rem;
+    font-size: 22px;
     max-width: 90%;
     min-width: 90%;
     margin: 0px 0px 10px 0px;
@@ -368,7 +387,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 15px;
-    font-size: 1.22rem;
+    font-size: 22px;
     width: 93%;
     margin: 10px auto;
     margin-top: 0px;
@@ -422,16 +441,9 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 0.88rem;
+    font-size: 14px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
-    display:block;
-    width:200px;
-    height:35px;
-    line-height:35px;
-    margin:auto;
-    margin-top:20px;
-    text-align:center;
 }
 .nots-opts1:hover{
     background: #fff;
@@ -456,7 +468,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 0.78rem;
+    font-size: 14px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -484,7 +496,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 0.78rem;
+    font-size: 14px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -512,7 +524,7 @@ a.menu{
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 5px;
-    font-size: 0.78rem;
+    font-size: 14px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
@@ -558,7 +570,7 @@ a.menu{
             #dialogbox > div > #dialogboxhead{
                 text-align: center;
                 font-weight: normal;
-                font-size: 1.39rem;
+                font-size: 25px;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -638,7 +650,7 @@ a.menu{
                 z-index: 10;
                 background: url("img/bg.png");
             }
-            #dialogbox3{
+            #dialogbox3{ 
                 opacity:1;
                 display: none;
                 position: fixed;
@@ -660,7 +672,7 @@ a.menu{
             #dialogbox3 > div > #dialogboxhead3{
                 text-align: center;
                 font-weight: normal;
-                font-size: 1.39rem;
+                font-size: 25px;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -689,7 +701,7 @@ a.menu{
                 z-index: 10;
                 background: url("img/bg.png");
             }
-            #dialogbox4{
+            #dialogbox4{ 
                 opacity:1;
                 display: none;
                 position: fixed;
@@ -711,7 +723,7 @@ a.menu{
             #dialogbox4 > div > #dialogboxhead4{
                 text-align: center;
                 font-weight: normal;
-                font-size: 1.39rem;
+                font-size: 25px;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -762,7 +774,7 @@ a.menu{
             #dialogbox5 > div > #dialogboxhead5{
                 text-align: center;
                 font-weight: normal;
-                font-size: 1.39rem;
+                font-size: 25px;
                 font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                 padding: 10px;
                 margin-bottom: 0px;
@@ -782,20 +794,8 @@ a.menu{
                 font-size: 90%;
                 border-top: 1px solid #666;
             }
-	    @media screen and (max-width: 500px){
-		    .what-r{
-			    padding:40px 40px 40px 40px;
-			    text-align:left;
-		    }
-
-	    }
-	    @media screen and (max-width: 700px) and (min-width:601px){
-		 .wrapper-main{
-			margin-top:50px;
-		}
-	    }
            @media screen and (max-width: 700px) and (min-width: 100px){
-                html{
+                body{
                     font-size: 18px;
                 }
                 .header{
@@ -806,20 +806,21 @@ a.menu{
                     background: #2d2d2d;
 /*                    background: url("img/intro-background.gif"); */
                     text-align: center;
-                    height: 250px;
+                    height: 200px;
                 }
                 .tessellactation-container{
                     display: none;
                 }
                 .main-h1{
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 2.85rem;
+                    font-size: 40px;
                     color: #2c3e50;
                     margin-top: 20px;
                 }
                 .brl{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
                     color: #d0245e;
                     margin-top: 20px;
                 }
@@ -828,31 +829,41 @@ a.menu{
                     top: -8px;
                     left: -5px;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
                     color: #888;
                     margin-top: 20px;
                 }
                 .cad{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 40px;
                     color: #fff;
                     margin-top: 20px;
                 }
                 .byline{
                     position: relative;
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+                    font-size: 12px;
                     color: #fff;
                     top: -6px;
-		    font-size:1.11rem;
                 }
                 .main-intro{
+                    font-size: 17px;
                 }
                 .pad{
                     width: 100px;
                     height: 100px;
                     margin-top: 0px;
                 }
+                .intro-topic{
+                    font-size: 17px;
+                }
+                .intro-main{
+                    font-size: 70%;
+                }
                 .who-r{
                     margin-top: 450px;
+                    font-size: 16px;
                     padding: 20px 20px 20px 20px;
                 }
                 .articles{
@@ -872,199 +883,3 @@ a.menu{
                     padding: 20px 20px 20px 20px;
                 }
             }
-
-/**************
-New Navigtaion
-***************/
-
-.id_logo {
-  height: 50px;
-  margin-left: 20px;
-  float: left;
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: transparent;
-  display: inline-block;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-.circle img {
-  margin-top: 0px;
-}
-
-.head {
-  min-height: 50px;
-  background: #222222;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  -webkit-box-shadow: 0px 2px 3px #222222;
-  -moz-box-shadow: 0px 2px 3px #222222;
-  box-shadow: 0px 2px 3px #222222;
-}
-.head a {
-  color: #ececec;
-}
-.navbar {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-.navbar .navigation li {
-  float: right;
-  text-align:center;
-  width: 16%;
-  line-height: 50px;
-  font-size: 16px;
-  border-bottom: 2px solid #222222;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-.navbar .navigation li:hover {
-  border-bottom: 2px solid #ee3b5b;
-}
-
-.navbar .navigation li a {
-  display: block;
-}
-#nav-button {
-  display: none;
-  position: absolute;
-  right:0;
-  line-height: 50px;
-  color: white;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  margin-right: 20px;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/*Mail subsription*/
-.input-mail
-{
-  line-height: 35px;
-  background-color: #fff;
-  padding: 5px;
-  width: 250px;
-  border-radius: 5px;
-  border: 0;
-  margin-top: 20px;
-}
-.message-mail
-{
-  display: none;
-}
-.submit-mail
-{
-  border: 2px solid #fff;
-  color: #d0245e;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 0.88rem;
-  cursor: pointer;
-  display:block;
-  width:200px;
-  line-height:35px;
-  margin:auto;
-  margin-top:10px;
-  margin-bottom: 20px;
-  text-align:center;
-}
-.submit-mail:hover
-{
-  background-color: #d0245e;
-  color: #fff;
-}
-
-/* Desktop */
-@media only screen and (max-width: 1100px) {
-  .navbar .navigation li {
-    font-size: 14px;
-    width: 136px;
-  }
-}
-
-/* Tablet */
-@media only screen and (max-width: 945px) {
-  .intro1{
-	float:none;
-	width:60%;
-	margin-top:0px;
-  }
-  .navbar .navigation li {
-    font-size: 14px;
-    width: 33%;
-  }
-
-  .navbar .navigation {
-    float: right;
-    width: 80%;
-  }
-
-  .id_logo {
-    top: 25px;
-    left: 10px;
-  }
-  ul.double{
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    -o-columns: 1;
-    -ms-columns: 1;
-  }
-  #nav-button {
-    display: block;
-  }
-  .navbar {
-    display: none;
-  }
-
-  .navbar .navigation {
-    float: right;
-    width: 100%;
-  }
-
-  .navbar .navigation li {
-    font-size: 18px;
-    width: 100%;
-  }
-}
-
-/* Mobile */
-@media only screen and (max-width: 780px) {
-
-
-}
