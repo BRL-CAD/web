@@ -1063,6 +1063,54 @@ New Navigtaion
   }
 }
 
+.wrapper-color {
+  background-color: #707A95;
+  background-image: url("https://cdn.glitch.com/e4a7d1e9-26eb-4304-9ef7-86c830bf7582%2Fthumbnails%2FScreenshot%202019-12-09%20at%205.34.28%20AM.png?1575887709180");
+  background-color: rgba(255,255,255,0.25);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+.wrapper-about{
+    width: 18%;
+    margin: 0px auto;
+    padding-top: 45px;
+    padding-bottom: 5px;
+    /*background: #000; */
+    
+}
+
+.about-main-h1{
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 100px;
+    color: #2d2d2d;  /* #2c3e50; */
+    margin-bottom: 0px;
+}
+.about{
+    position: relative;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 75px;
+    color: /*white;*/#d0245e; 
+
+    text-shadow: 0px 0px 4px #282828,
+    -1px -1px 0 #282828,
+    1px -1px 0 #282828,
+    -1px 1px 0 #282828,
+    1px 1px 0 #282828;
+}
+
+h2 {
+  color: #d0245e;
+}
+
+.words {
+  margin: 10px;
+  padding: 10px;
+}
+
 /* Mobile */
 @media only screen and (max-width: 780px) {
 
