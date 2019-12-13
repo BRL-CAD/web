@@ -1,0 +1,408 @@
+
+{
+	"timeline":  
+	{
+		"headline":"Solid Modeling At The U.S. Army Ballistic Research Laboratory - an Informal, Unofficial Timeline",
+		"startDate":"1938",
+		"text":"<p>The U.S. Military has a long history of performing mathematical analysis on solid models, pre-dating even the development of general purpose electronic computers.  This timeline is an unofficial, hobbyist attempt to build a timeline of the public reports available documenting the Ballistic Research Laborary's work in this area up to the release of BRL's BRL-CAD solid modeling system as open source software in 2005.</p>",
+		"type":"default",
+		"date": [
+			{
+				"startDate":"1939,3,6",
+				"headline":"Appoximating Airplanes with Cylinders",
+				"text":"<p>The earliest know example of using solid three dimensional primitives to approximate the shape of a vehicle for analysis purposes appears in BRL technical report 132 by <a href=\"http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/kent-robert.pdf\">R.H. Kent</a> in the form of two perpendicular cylinders representing the shape of an airplane.</p><p>Note: The 1980 report <a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/01-Early/1980-04%20Terminal%20Effectiveness,%20Vulnerability%20Methodology%20and%20Fragmentation%20Warhead%20Optimization.%201.%20A%20Technical%20Survey%20from%20an%20Historical%20Perspective%20ARBRL-TR-02234%20ADA085021.pdf\">Terminal Effectiveness, Vulnerability Methodology and Fragmentation Warhead Optimization. 1. A Technical Survey from an Historical Perspective</a> by Dehn<a href=\"http://www.dtic.mil/docs/citations/ADA085021\"> (DTIC Accession Number: ADA085021)</a> is a useful survey of these early BRL reports and their significance.",
+				"asset":
+				{
+					"media":"BRL-132_airplane_model.png",
+					"credit":"<a href=\"http://www.dtic.mil/docs/citations/AD0491787\">DTIC Accession Number: AD0491787</a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/01-Early/1939-03%20The%20Probability%20of%20Hitting%20Various%20Parts%20of%20an%20Airplane%20as%20Dependent%20on%20the%20Fragmentation%20Characteristics%20of%20the%20Projectile%20BRL-132%20AD0491787.pdf\">The Probability of Hitting Various Parts of an Airplane as Dependent on the Fragmentation Characteristics of the Projectile</a>"
+				}
+			},
+			{
+				"startDate":"1950,12,18",
+				"headline":"The Lotto Method of Computing Kill Probabilities",
+				"text":"<p>The earliest know documentation of using geometric rays for vulnerability modeling (although not yet by computer) is found in BRL-MR-530 by F.G. King.  This method of simulation - a random selection of weapon positions and physical measurement of relevant distances and angles - can be thought of as a completely manual \"ray shooting\" to determine distance to the target from a point in space.  Without computers to assist in the processing of large numbers of \"shots\" the input set was of necessity quite limited, but the conceptual ancestry of modern methods is evident.</p>",
+				"asset":
+				{
+					"media":"BRL-530_string_ray.png",
+					"credit":"<a href=\"http://www.dtic.mil/docs/citations/AD0802147\">DTIC Accession Number: AD0802147</a>",
+					"caption":"<a href=\"http://brlcad.org\">Lotto Method of Computing Kill Probability of Large Warheads</a>"
+				}
+			},
+			{
+				"startDate":"1953,5",
+				"headline":"Airplane Geometric Model Analysis via Computer",
+				"text":"The earliest know use of a three dimensional vehicle description based on geometric primitives in a computer-based analysis appears in BRL technical report 867. This time ellipsoids are used rather than cylindars, apparently at the suggestion of John von Neumann.  The computer used is the ORDVAC.",
+				"asset":
+				{
+					"media":"BRL-867_airplane_model.png",
+					"credit":"<a href=\"http://www.dtic.mil/docs/citations/AD0017267\">DTIC Accession Number: AD0017267</a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/01-Early/1953-05%20A%20Mathematical%20Formulation%20for%20ORDVAC%20Computation%20of%20the%20Probability%20of%20Kill%20of%20an%20Airplane%20by%20a%20Missile%20BRL-867%20AD0017267.pdf\">A Mathematical Formulation for ORDVAC Computation of the Probability of Kill of an Airplane by a Missile</a>"
+				}
+			},
+			{
+				"startDate":"1960,11",
+				"headline":"Methodology Refinements",
+				"text":"In 1960 <a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/01-Early/1960-11%20A%20Mathematical%20Formulation%20for%20ORDVAC%20Computation%20of%20the%20Single-Shot%20Kill%20Probabilities%20of%20a%20General%20Missile%20Versus%20a%20General%20Aircraft%20BRL-1306%20AD0249957.pdf\">BRL memorandum report 1306</a> updated the ORDVAC methodologies originally defined in BRL-867, indicating both the methodology and ORDVAC were still in active use at that time.  <a href=\"http://www.dtic.mil/docs/citations/AD0249957\">DTIC Accession Number: AD0249957</a>",
+				"asset":
+				{
+					"media":"BRL-MR-1306.png",
+					"credit":"<a href=\"http://www.dtic.mil/docs/citations/AD0802147\">DTIC Accession Number: AD0802147</a>",
+					"caption":"<a href=\"http://brlcad.org\">A Mathematical Formulation for ORDVAC Computation of the Single-Shot Kill Probabilities of a General Missile Versus a General Aircraft</a>"
+				}
+			},
+			{
+				"startDate":"1960",
+				"headline":"First Outline by Hoyt of Solid Shotlining Methodology",
+				"text":"<p>David Hardison in <a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/01-Early/1999-04%20Historical%20Perspectives%20on%20VulnerabilityLethality%20Analysis%20ARL-SR-90%20ADA361816.pdf\">ARL-SR-90</a> relates the story of a meeting discussing analysis methodolgy in which Richard Hoyt suggests a new analysis methodology:</p><p><i>After only a decade of work in the tank vulnerability business, it had become reasonably clear at BRL that one really needed to describe each potential target vehicle in such a manner that the description could be used routinely whatever the attacking projectile. The person most responsible for doing just that was Dick Hoyt. Dick was quick, slick, clever, and to my personal knowledge, sometimes very wrong. He had a frontiersman's way of thinking not then found often, now rare indeed; a willingness to fell a forest one tree at a time. His proposed approach was to select a particular impact point and attack direction and then to describe the shotline all the way through the vehicle, noting the compartments traversed and defining all the stuff that would be encountered by, say, a nondeflected jet of great length.</i></p><p><i>A critic quickly pointed out that vehicles are far from homogeneous. If other impact points and/or attack direction be selected, the shot-line materials almost certainly would be different. Dick agreed, and asked how many samples would suffice (i.e., what grid size would make one comfortable).</i></p><p><i>Thinking that the effort involved would dissuade him from such a labor-intensive approach, it took about 10 s for one to suggest a cell size of 4 in, with one point to be selected uniformly at random within each cell. Dick's response was to calculate that, for seven directions of attack, there would be about 20,000 cells involved, that an industrious analyst should be able to characterize an average of about 30 cells per hour or 330 per working day. So one should be able to describe a target vehicle in a mere 2 mo of uninterrupted work.</i></p><p><i>And then, by golly, he did just that! Others checked cells selected at random and confirmed his data. The data files of these 20,000 or so cells per vehicle immediately suggested use of ORDVAC as the bookkeeper.</i></p><p>Unfortunately this account does not specifically date this meeting but the suggestion of ORDVAC as bookkeeper tentatively dates the meeting to the mid-to-late 1950s or possibly the early 1960s. The BRLESC computer was not suggested instead of ORDVAC and it was in operation at BRL by the end of 1961 - see, for example, <a href=\"http://www.dtic.mil/docs/citations/AD0270650\">BRL-MR-1379</a>) although this is not conclusive since the ORDVAC machine was scheduled to continue running for at least some time after BRLESC became operational (see <a href=\"http://www.dtic.mil/dtic/tr/fulltext/u2/277129.pdf\">Historical Monograph Electronic Computers Within the Ordance Corps</a> page 79).</p> <a href=\"http://www.dtic.mil/docs/citations/AD0249957\">DTIC Accession Number: AD0249957</a>"
+			},
+			{
+				"startDate":"1967,8",
+				"headline":"MAGI's Combinatorial Geometry Technique",
+				"text":"The publication of report MAGI-6701 introduced geometric description techniques that would serve as BRL's primary geometric target description representation for the next several decades.  The MAGIC system developed to implement these techniques is the earliest direct ancestor of the modern BRL-CAD modeling system.  Mathematical Applications Group Inc.'s \"combinatorial geometry\" combines basic primitive geometric shapes and basic operations from set theory (union, subtraction and intersection), allowing for compact, flexible, view independent, and arbitrarily detailed target descriptions guaranteed to describe solid volumes.",
+				"asset":
+				{
+					"media":"MAGI-6701_cover.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/AD0847576'>DTIC Accession Number: AD0847576</a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/02-MAGIC/1967-08%20A%20Geometric%20Description%20Technique%20Suitable%20for%20Computer%20Analysis%20of%20Both%20the%20Nuclear%20and%20Conventional%20Vulnerability%20of%20Armored%20Military%20Vehicles%20MAGI%206701%20AD0847576.pdf\">A Geometric Description Technique Suitable for Computer Analysis of Both the Nuclear and Conventional Vulnerability of Armored Military Vehicles</a>"
+				}
+			},
+			{
+				"startDate":"1969,8",
+				"headline":"MAGIC Users Conference",
+				"text":"The <a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/02-MAGIC/1971-05%20The%20First%20Conference%20of%20Users%20of%20the%20Magic%20and%20SAM-C%20Programs%20AMSAA%20TM%2098%20AD0728124.pdf\">first</a> (and apparently last) conference for users of the MAGIC software is held at the Army Materiel Systems Analysis Agency, Aberdeen Proving Ground, Maryland. <a href=\"http://www.dtic.mil/docs/citations/AD0728124\">(DTIC Accession Number: AD0728124)</a>.",
+				"asset":
+				{
+					"media":"MAGIC_conference.png",
+					"credit":"<a href=\"http://www.dtic.mil/docs/citations/AD0802147\">DTIC Accession Number: AD0802147</a>",
+					"caption":"<a href=\"http://brlcad.org\">The First Conference of Users of the Magic and SAM-C Programs</a>"
+				}
+			},
+			{
+				"startDate":"1970,7",
+				"headline":"JTCG/ME MAGIC Documentation, Volume 1",
+				"text":"The Joint Technical Coordinating Group for Munitions Effectiveness (JTCG/ME) issues a User Manual for the MAGIC Computer Simulation system.",
+				"asset":
+				{
+					"media":"JTCG-MAGIC_vol1_image.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA567888'>DTIC Accession Number: ADA567888</a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/02-MAGIC/1970-07%20MAGIC%20Computer%20Simulation%20Volume%201%20User%20Manual%2061%20JTCGME-71-7-1%20ADA567888.pdf\">MAGIC Computer Simulation. Volume 1: User Manual</a>"
+				}
+			},
+			{
+				"startDate":"1971,5",
+				"headline":"JTCG/ME MAGIC Documentation, Volume 2",
+				"text":"The Joint Technical Coordinating Group for Munitions Effectiveness (JTCG/ME) issues an Analyst Manual for the MAGIC Computer Simulation system in two volumes.",
+				"asset":
+				{
+					"media":"JTCG-MAGIC_vol2_image.png",
+					"credit":"DTIC Accession Numbers: <a href='http://www.dtic.mil/docs/citations/ADA567889'>ADA567889</a>, <a href='http://www.dtic.mil/docs/citations/ADA567890'>ADA567890</a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/02-MAGIC/1971-05%20MAGIC%20Computer%20Simulation%20Volume%202%20Analyst%20Manual,%20Part%201%2061%20JTCGME-7-2-1%20ADA567889.pdf\">MAGIC Computer Simulation Volume 2 - Analyst Manual Part 1</a> <br> <a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/02-MAGIC/1971-05%20MAGIC%20Computer%20Simulation%20Volume%202%20Analyst%20Manual,%20Part%202%2061%20JTCGME-7-2-2%20ADA567890.pdf\">MAGIC Computer Simulation Volume 2 - Analyst Manual Part 2"
+				}
+			},
+			{
+				"startDate":"1974,6",
+				"headline":"Vegetation Modeling in Combinatorial Geometry",
+				"text":"MAGI extends the Combinatorial Geometry technique for modeling vegetation with solid geometry.",
+				"asset":
+				{
+					"media":"GIFT_tree.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/AD0782883'>DTIC Accession Number: AD0782883</a>",
+					"caption":"<a href=\"http://brlcad.org\">An Extension of the Combinatorial Geometry Technique for Modeling Vegetation and Terrain Features</a>"
+				}
+			},
+			{
+				"startDate":"1974,8",
+				"headline":"New Combinatorial Geometry Extensions",
+				"text":"In 1974 MAGI also introduced new primitives into the Combinatorial Geometry method, including the general ellipsoid.",
+				"asset":
+				{
+					"media":"BRL-CR-177.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA000897'>DTIC Accession Number: ADA000897</a>",
+					"caption":"<a href=\"http://brlcad.org\">Extensions and Adjuncts to the BRL-COMGEOM Program</a>"
+				}
+			},
+			{
+				"startDate":"1975,7",
+				"headline":"Geometric Information for Targets",
+				"text":"A system called \"Geometric Information for Targets\" (GIFT) is introduced as a successor to the MAGIC system.  While MAGIC pioneered the initial techniques, it was understood from the outset that there were a lot of possible optimizations and enhancements that would have to be added after the initial working system was demonstrated - hence the development of GIFT.",
+				"asset":
+				{
+					"media":"GIFT_vol1_image.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADB006037'>DTIC Accession Number: ADB006037</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADB006037\">The Gift Code User Manual. Volume I. Introduction and Input Requirements</a>"
+				}
+			},
+			{
+				"startDate":"1975,9",
+				"headline":"MAGIC to GIFT",
+				"text":"Gary Kuehl of the Ballistic Research Laboratory introduced a Fortran program designed to convert older MAGIC target description data to a form compatible with GIFT called EDIT-COMGEOM.",
+				"asset":
+				{
+					"media":"edit_comgeom.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADB007108'>DTIC Accession Number: ADB007108</a>",
+					"caption":"<a href=\"http://brlcad.org\">The EDIT-COMGEOM Code</a>"
+				}
+			},
+			{
+				"startDate":"1976,12",
+				"headline":"Tools to Help Create Target Descriptions",
+				"text":"A series of programs to help develop COM-GEOM targets for GIFT are written for the WANG 2200 mini-computer in BASIC.  Many of the basic problems they are solving, like line/plane intersection, will look familiar to modern users.  Also present in these tools is AMTRACK, an early instance of procedural geometry generation.",
+				"asset":
+				{
+					"media":"GEOM_TOOLS_1976_AMTRACK.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA035060'>DTIC Accession Number: ADA035060</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA035060\">Geometry Programs to Aid in Producing Combinatorial Geometry Target Descriptions</a>"
+				}
+			},
+			{
+				"startDate":"1977,3",
+				"headline":"Using GIFT in the Oak Ridge National Laboratory's Vehicle Code System (VCS)",
+				"text":"BRL Report 1967 documents work experimenting with replacing the native combinatorial geometry used by VCS's MORSE computer code with GIFT.  It isn't currently know if this work was incorporated back into the main VCS, although the 1993 report <a href=\"https://www.osti.gov/biblio/10167260-M4tAht/\">Status of the MORSE multigroup Monte Carlo radiation transport code</a> does not appear to mention it.",
+				"asset":
+				{
+					"media":"BRL-R-1967.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA037898'>DTIC Accession Number: ADA037898</a>",
+					"caption":"<a href=\"http://brlcad.org\">MIFT GIFT Combinatorial Geometry Input to VCS Code</a>"
+				}
+			},
+			{
+				"startDate":"1977,8",
+				"headline":"Plannning a Methodology Update",
+				"text":"In 1977, BRL undertook a study to prepare plans for updating lethality/vulnerability methodoology for armored combat vehicles.  Among those plans was Task 46, to develop an \"optimum\" target description system for the purposes of vulnerability analysis.  Five factors were identified to to use for evaluating efficiency: 1) ease/timeliness of converting data (engineering drawings, measurements, etc.) into a target description; 2) computer resources required for using the target description; 3) efficiency of running trajectory-tracing codes on the target description; 4) efficiency of producing pictures from the target description; and 5) ease of redesigning the target (rearranging or modifying components, etc.) This was the genesis of the effort that would lead to GED and (eventually) BRL-CAD.",
+				"asset":
+				{
+					"media":"BRL-X-77-22-T46.png",
+					"credit":"<a href='http://brlcad.org'></a>",
+					"caption":"<a href=\"http://brlcad.org/DoD_Public_Release/000-Reports/1977-08%20Plans%20for%20Updating%20the%20Armored%20Vehicle%20LethalityVulnerability%20Methodology%20-%20Vehicle%20Modeling%20Subset%20BRL-X-77-22-T46.pdf\">Plans for Updating the Armored Vehicle LethalityVulnerability Methodology - Vehicle Modeling Subset</a>"
+				}
+			},
+			{
+				"startDate":"1979,9",
+				"headline":"Geometric Information for Targets - Output Options",
+				"text":"BRL Report ARBRL-TR-02189 documented the various outputs GIFT could provide to its users.  The options were textual output, or (for more sophisticated drawings) plotting machines.",
+				"asset":
+				{
+					"media":"GIFT_vol2_image.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA078364'>DTIC Accession Number: ADA078364</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA078364\">The Gift Code User Manual. Volume 2. The Output Options</a> <br> This image shows a gridded printout of hit and miss results for a grid of rays fired at a sample target by GIFT, with M representing a miss and H representing a hit.  In a sense this can be regarded as a 'raytraced image'of the target, although using textual output rather than the graphical interpretations modern users are familiar with today."
+				}
+			},
+			{
+				"startDate":"1979,9",
+				"headline":"Supporting Triangle-Based Geometry in GIFT",
+				"text":"In order to re-use target descriptions written for the SHOTGEN/FASTGEN systems, support was added to BRL's V/L processing systems for the PATCH geometry format. The existing shotline codes for those formats were modified to produce GIFT style output and integrated into the BRL system.",
+				"asset":
+				{
+					"media":"PATCH_vs_COMGEOM_ktank_1979.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA077118'>DTIC Accession Number: ADA077118</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA077118\">Utilization of Patch/Triangular Target Description Data in BRL Parallel Ray Vulnerability Assessment Codes</a>"
+				}
+			},
+			{
+				"startDate":"1979,11",
+				"headline":"Functional Requirements of a Target Description System",
+				"text":"In the context of BRL's Task 46 from 1977, Earl Weaver publishes a report defining requirements for BRL's uses of a Target Description System.  Specifically called out is a need to support illustring targets on graphics devices such as the Vector General graphics terminals.",
+				"asset":
+				{
+					"media":"ARBRL-MR-02972.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA079897'>DTIC Accession Number: ADA079897</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA079897\">Functional Requirements of a Target Description System for Vulnerability Analysis</a>"
+				}
+			},
+			{
+				"startDate":"1981,08",
+				"headline":"Improved Modeling of Humans with COM-GEOM",
+				"text":"In 1981 ARBRL-MR-03125 documented work using the COM-GEOM modeling technique to create human representation geometry models with improved fidelity, although not at a level considered suitable for ballistic wound studies.",
+				"asset":
+				{
+					"media":"ARBRL-MR-03125.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADB060185'>DTIC Accession Number: ADB060185</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADB060185\">Combinatorial Geometry Computer Models of Sitting and Standing Crew Personnel</a>"
+				}
+			},
+			{
+				"startDate":"1983,3",
+				"headline":"Interactive Geometry Viewing and Editing - GED",
+				"text":"Recognizing that the punch-card and plotting based approach to target modeling was both labor intensive and error prone, BRL utilized new developments in computer graphics hardware to develop the 'Graphics EDitor' (GED) - an interactive system for viewing and editing COM-GEOM target models.  While the report was published in 1983, work on the system began circa 1979, per the requirements of ARBRL-MR-02972.  A static 3D display of the XM1 tank was achieved in 1980, and source code comments in the oldest available GED code in the BRL-CAD repository indicate work was certainly taking place in 1981.  Since a version of GED eventually became BRL-CAD's primary editing interface, the development work on GED can be regarded as the earliest beginnings of BRL-CAD development.",
+				"asset":
+				{
+					"media":"GED_PDP11.jpg",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA126657'>DTIC Accession Number: ADA126657</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA126657\">GED: An Interactive Solid Modeling System For Vulnerability Assessments.</a> <br> <br> The photo comes from Mike Muuss's <a href='http://ftp.arl.army.mil/~mike/comphist/hist.html'>computer history website</a> - his comments: <br> <q>This picture was taken in 1980, and already I was working on applications of interactive graphics. There is the (then) XM1 tank design on the Vector-General \"3D\" display. I'm sitting there operating it. Next to me, Earl Weaver is consulting a print out of the COMGEOM description representing that XM1 design. I might add, the target description is much thicker now then it was back then. That was all being done on the PDP-11/70 there.</q>"
+				}
+			},
+			{
+				"startDate":"1983,08",
+				"headline":"Modeling Air Volumes with COM-GEOM on a TEKTRONIX&reg; terminal",
+				"text":"In 1983 James E. Shiells described in ARBRL-MR-03303 a computer program called CADAIR which used the ARS COM-GEOM primitive and plotting routines to allow users to interactively lay out air volumes in targets.",
+				"asset":
+				{
+					"media":"ARBRL-MR-03303.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA133686'>DTIC Accession Number: ADA133686</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA133686\">Computer Aided Design of Polyhedron Solids to Model Air in Com-Geom Descriptions</a>"
+				}
+			},
+			{
+				"startDate":"1984,3,27",
+				"headline":"First C Raytracing Code (LIBRT and RT)",
+				"text":"This date is listed in the comment headers of the earliest iteration of Mike Muuss's C raytracing source code.  While Mike Muuss is the primary author, Edwin Davidson is credited for \"Analysis\" - presumably work on describing the raytracing algorithms for the ellipsoid and arbitrary regular polyhedron primitives.  If one chooses to measure from the start of the raytracing development rather than the start of GED development, this would be the beginning of BRL-CAD.",
+				"asset":
+				{
+					"media":"first_ell_cad_code.png"
+				}
+			},
+			{
+				"startDate":"1984,4,2",
+				"headline":"First commit of C Raytracing Code to Version Control",
+				"text":"BRL-CAD's version control system documents April 2, 1984 as the first commit of the earliest state of libbn, librt, and the rt application (among other things). Earlier commits in the repository history document changes to the jove text editor (which was bundled for many years with BRL-CAD) rather than raytracing code.",
+				"asset":
+				{
+					"media":"first_rt_tag.png"
+				}
+			},
+			{
+				"startDate":"1984,8",
+				"headline":"The COM-GEOM Interactive Display Debugger",
+				"text":"Gary G. Kuehl introduce in ARBRL-TR-02574 a system for visualizing and editing COM-GEOM solids and regions on CYBER and VAX computers.  Not sure yet what relationship (if any) this code has with BRL-CAD.",
+				"asset":
+				{
+					"media":"ARBRL-MR-02574.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA145001'>DTIC Accession Number: ADA145001</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA145001\">COM-GEOM Interactive Display Debugger (CIDD)</a>"
+				}
+			},
+			{
+				"startDate":"1984,9",
+				"headline":"Introducing Solid Modeling (In Color!)",
+				"text":"In 1984, Paul Deitz published the first of a series of BRL reports documenting the Solid Modeling methodology and its use at BRL.  This was a very early use of color printing in Army reports - the images to the left are just two of over a dozen color images used to illustrate both targets and analytic methods.",
+				"asset":
+				{
+					"media":"BRL-MR-3383.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA148762'>DTIC Accession Number: ADA148762</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA148762\">Solid Geometric Modeling - The Key to Improved Material Acquisition from Concept to Deployment.</a>"
+				}
+			},
+			{
+				"startDate":"1984,10",
+				"headline":"Solid Modeling at BRL",
+				"text":"To coincide with BRL-MR-3383, Paul Deitz also re-published his paper presented in 1982 as a (slightly updated) BRL report. (It cites a 1983 publication, so we know it was updated to at least that extent.)",
+				"asset":
+				{
+					"media":"BRL-MR-3392.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA147491'>DTIC Accession Number: ADA147491</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA147491\">Solid Modeling at the U.S. Army Ballistic Research Laboratory.</a>"
+				}
+			},
+			{
+				"startDate":"1984,11,16",
+				"headline":"(M)GED is added to the BRL-CAD repository",
+				"text":"Revision 91 in BRL-CAD's version control system documents the addition of the GED source code to the same version control repository being used to track Muuss's C raytracing code.  This is not the original version of the GED code, but at least some of the code appears to be descended from it - the angle/distance cursor file adc.c contains a revision log in its comments tracing it back to December 1, 1981.  Based on the headers, it looks like the original source code for GED might have been stored in a succession of C source files named GED#.c, although they were given more informative names when they were added to the repository."
+			},
+			{
+				"startDate":"1985,10,8",
+				"headline":"The Future of Army Item-Level Modeling",
+				"text":"Paper at the Army Operations Research Symposium in 1985, subsequently reprinted in 1988 as BRL-MR-3666.",
+				"asset":
+				{
+					"media":"brlcad_mr_3666.png"
+				}
+			},
+			{
+				"startDate":"1987,1,1",
+				"headline":"Release 1.12",
+				"text":"The Ballistic Research Library CAD Release 1.12 is officially released.  This appears to be the first version to be released with a manual.",
+				"asset":
+				{
+					"media":"brlcad_1.12_release.png"
+				}
+			},
+			{
+				"startDate":"1987,6,2",
+				"headline":"Release 1.21",
+				"text":"The Ballistic Research Library CAD Release 1.21 is officially released.",
+				"asset":
+				{
+					"media":"brlcad_1.21_release.png"
+				}
+			},
+			{
+				"startDate":"1987,10,9",
+				"headline":"BRL CAD Overview at USENIX",
+				"text":"As one of a set of three papers presented at the Fourth USENIX Computer Graphics Workshop, Phil Dykstra presented what appears to be the first public overview of the Ballistic Research Laboratory CAD software package.  One interesting aspect of this paper is that the name \"BRL CAD\" as used here pre-dates the use of the dash in the name (Note: the ARL reprint's title page used the modern spelling, but the original paper does in fact use the pre-hyphen nominclature.)",
+				"asset":
+				{
+					"media":"brl_cad_1987_usenix.png"
+				}
+			},
+			{
+				"startDate":"1987,10,9",
+				"headline":"RT and REMRT at USENIX",
+				"text":"As one of a set of three papers presented at the Fourth USENIX Computer Graphics Workshop, Mike Muuss presented a paper documenting the RT and REMRT parallel raytracing applications.",
+				"asset":
+				{
+					"media":"rt_1987_usenix.png"
+				}
+			},
+			{
+				"startDate":"1987,10,9",
+				"headline":"B-Spline Raytracing",
+				"text":"As one of a set of three papers presented at the Fourth USENIX Computer Graphics Workshop, Paul Stay presented a paper documenting work to implement NURBS raytracing.  Even as early as 1987, it was clear that this would be a desirable capability.  However, while progress was made, both the implementation approach and the hardware of the time proved to be too slow for practical use of NURBS inputs for full scale BRL modeling projects.",
+				"asset":
+				{
+					"media":"bspline_1987_usenix.png"
+				}
+			},
+			{
+				"startDate":"1988,2",
+				"headline":"Predictive Signature Modeling",
+				"text":"TODO...",
+				"asset":
+				{
+					"media":"brl_mr_3664.png"
+				}
+			},
+			{
+				"startDate":"1988,2",
+				"headline":"Modern Computer-Aided Tools",
+				"text":"TODO...",
+				"asset":
+				{
+					"media":"brl_mr_3665.png"
+				}
+			},
+			{
+				"startDate":"1988,2",
+				"headline":"Computer-Aided Survivability/Lethality Modeling",
+				"text":"More early color pictures...",
+				"asset":
+				{
+					"media":"brl_mr_3667.png"
+				}
+			},
+			{
+				"startDate":"1989,5",
+				"headline":"An Integrated Target Description Environment - BRL-CAD",
+				"text":"By 1989, the \"BRL CAD\" system announced at USENIX two years ago had built up substantial capabilities for interactive geometry editing, raytracing, and geometry format support.  BRL-MR-3754 summarizes the capabilities developed to date, as well as highlighting new native support for PATCH style geometries - one format could now hold all types of target data, rather than needing to have special files for SHOTLINE/FASTGEN style targets.",
+				"asset":
+				{
+					"media":"deitz_1989_tank.png",
+					"credit":"<a href='http://www.dtic.mil/docs/citations/ADA209667'>DTIC Accession Number: ADA209667</a>",
+					"caption":"<a href=\"http://handle.dtic.mil/100.2/ADA209667\">An Integrated Environment for Army, Navy and Air Force Target Description Support</a>"
+				}
+			},
+
+			{
+				"startDate":"2005,1,9",
+				"headline":"BRL-CAD Becomes an Open Source Project",
+				"text":"The BRL-CAD open source project is publicized on the Slashdot technical news website, announcing a new era in the development of BRL-CAD.  Two days prior, the uploading of BRL-CAD 7.0.2 to SourceForge had officially launched the open source project.",
+				"asset":
+				{
+					"media":"slashdot_BRL-CAD_os_announce.png",
+					"credit":"",
+					"caption":"<a href='http://developers.slashdot.org/story/05/01/08/1823248/us-army-research-lab-opens-brl-cad-source'>The Slashdot announcement of BRL-CAD as an open source project</a>"
+				}
+			}
+		]
+	}
+}
