@@ -1,55 +1,89 @@
 /**Basic Styling**/
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 
-html{
-	font-size:21px;
-	line-height:1.5;
+html {
+    font-size: 21px;
+    line-height: 1.5;
 }
 
-body{
+body {
     color: #2c3e50;
     font-family: Segoe UI, Open Sans, Roboto, sans-serif, Arial;
     font-size: 1rem;
     font-weight: normal;
 }
-a{
+
+a {
     text-decoration: none;
     color: #2c3e50;
 }
-a:hover{
-    color:#d0245e;
+
+a:hover {
+    color: #d0245e;
     transition: ease-in .2s color;
     -webkit-transition: ease-in .2s color;
     -moz-transition: ease-in .2s color;
     -o-transition: ease-in .2s color;
     -ms-transition: ease-in .2s color;
 }
+
+section {
+    width: 98vw;
+    height: auto;
+    padding: 2vh 5vw 2vh 5vw;
+}
+
+section p {
+    font-weight: lighter;
+    font-size: 1.11rem;
+    margin: 15px;
+}
+
+hr {
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
+
 /**Text Selection**/
+
  ::selection {
     background-color: #f1f1f1;
     color: #000;
- }
+}
+
 ::-moz-selection {
-   background-color: #352e7e;
-   color: #fff;
+    background-color: #352e7e;
+    color: #fff;
 }
+
 ::-o-selection {
-   background-color: #352e7e;
-   color: #fff;
+    background-color: #352e7e;
+    color: #fff;
 }
+
 ::-ms-selection {
-   background-color: #352e7e;
-   color: #fff;
+    background-color: #352e7e;
+    color: #fff;
 }
+
 ::-webkit-selection {
-   background-color: #352e7e;
-   color: #fff;
+    background-color: #352e7e;
+    color: #fff;
 }
+
+
 /**Scroll Bar**/
+
+
 /*
 ::-webkit-scrollbar {
     width: 10px;
@@ -65,66 +99,80 @@ a:hover{
 	background: #a1a1a1;
 }
 */
+
+
 /**Navbar**/
-.header{
+
+.header {
     height: 50pt;
     background: #fff;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     text-transform: uppercase;
 }
-.header table{
+
+.header table {
     border-spacing: 0px 0px;
     font-size: 1.33rem;
     margin: 0px auto;
 }
-.logo{
+
+.logo {
     width: 80%;
-    height:auto;
+    height: auto;
     margin-top: -8px;
     padding-top: 0px;
     border-radius: 50%;
     background: #000;
     z-index: 2;
 }
-.logomenu{
+
+.logomenu {
     text-align: center;
-    width: 14%; /* 100 / 7 = 14 */
+    width: 14%;
+    /* 100 / 7 = 14 */
     background: #000;
-/*    cursor: pointer;*/
+    /*    cursor: pointer;*/
 }
 
-.menutable{
+.menutable {
     width: 100%;
 }
-.menu{
+
+.menu {
     text-align: center;
-    width: 14%; /* 100 / 7 = 14 */
-/*    cursor: pointer;*/
+    width: 14%;
+    /* 100 / 7 = 14 */
+    /*    cursor: pointer;*/
 }
-td.menu{
+
+td.menu {
     background: #000;
     text-align: center;
-    width: 14%; /* 100 / 7 = 14 */
+    width: 14%;
+    /* 100 / 7 = 14 */
     padding-top: 2%;
     padding-bottom: 380px;
 }
 
-a.menu{
+a.menu {
     color: #d0245e;
     width: 10%;
 }
 
-.menu:hover{
+.menu:hover {
     color: #fff;
 }
-.container{
+
+.container {
     width: 100%;
     max-width: 1137px;
     margin: 0 auto;
 }
 
+
 /**First**/
-.about{
+
+.about {
     left: 64px;
     padding: 25px;
     font-size: 1.278rem;
@@ -132,149 +180,156 @@ a.menu{
     text-align: center;
     height: 350px;
 }
-.tessellactation-container{
+
+.tessellactation-container {
     /* FIXME: figure out how to position the canvas beneath the intro1 and header/menu elements */
 }
-#tessellactation{
+
+#tessellactation {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 350px;
 }
-.main-h1{
+
+.main-h1 {
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     font-size: 5.556rem;
-    color: #2d2d2d;  /* #2c3e50; */
+    color: #2d2d2d;
+    /* #2c3e50; */
     margin-top: 20px;
 }
-.brl{
+
+.brl {
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    color: #d0245e; /*d91a5d; */
-
-    text-shadow: 0px 0px 4px #282828,
-    -1px -1px 0 #282828,
-    1px -1px 0 #282828,
-    -1px 1px 0 #282828,
-    1px 1px 0 #282828;
+    color: #d0245e;
+    /*d91a5d; */
+    text-shadow: 0px 0px 4px #282828, -1px -1px 0 #282828, 1px -1px 0 #282828, -1px 1px 0 #282828, 1px 1px 0 #282828;
 }
-.dash{
+
+.dash {
     position: relative;
     top: -8px;
     left: -5px;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     color: #888;
-
-    text-shadow: 0px 0px 4px #111,
-    -1px -1px 0 #111,
-    1px -1px 0 #111,
-    -1px 1px 0 #111,
-    1px 1px 0 #111;
+    text-shadow: 0px 0px 4px #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 }
-.cad{
+
+.cad {
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     color: #fff;
-
-    text-shadow: 0px 0px 4px #111,
-    -1px -1px 0 #111,
-    1px -1px 0 #111,
-    -1px 1px 0 #111,
-    1px 1px 0 #111;
+    text-shadow: 0px 0px 4px #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 }
-.byline{
+
+.byline {
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     font-size: 1.778rem;
     color: #fff;
     top: -16px;
-
-    text-shadow: 0px 0px 8px #111,
-    -1px -1px 0 #111,
-    1px -1px 0 #111,
-    -1px 1px 0 #111,
-    1px 1px 0 #111;
+    text-shadow: 0px 0px 8px #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 }
-.pad{
+
+.pad {
     padding-top: 20px;
     height: 180px;
     width: 180px;
-    color:#999;
-    transition: padding 0.2s linear; /* vendorless fallback */
-    -o-transition: color 0.5s linear; /* opera */
-    -ms-transition: color 0.5s linear; /* IE 10 */
-    -moz-transition: color 0.5s linear; /* Firefox */
-    -webkit-transition: padding 0.2s linear; /*safari and chrome */
+    color: #999;
+    transition: padding 0.2s linear;
+    /* vendorless fallback */
+    -o-transition: color 0.5s linear;
+    /* opera */
+    -ms-transition: color 0.5s linear;
+    /* IE 10 */
+    -moz-transition: color 0.5s linear;
+    /* Firefox */
+    -webkit-transition: padding 0.2s linear;
+    /*safari and chrome */
 }
-.pad:hover{
+
+.pad:hover {
     padding-top: 10px;
 }
-.main-intro{
+
+.main-intro {
     font-family: Segoe UI, Open Sans, Arial, sans-serif;
     font-size: 1.67rem;
 }
-.wrapper-main{
+
+.wrapper-main {
     width: 60%;
     margin: 0px auto;
     padding-top: 40px;
 }
-.icon-table{
-    max-width:1200px;
+
+.icon-table {
+    max-width: 1200px;
     margin: 10px auto;
     border-spacing: 10px 0px;
 }
 
-.icon-table:after{
-	content:"";
-	display:block;
-	clear:both;
+.icon-table:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-.intro1{
-    box-sizing:border-box;
-    padding:0px 10px;
+.intro1 {
+    box-sizing: border-box;
+    padding: 0px 10px;
     text-align: center;
-    width:33%;
-    min-width:300px;
-    float:left;
-    margin:auto;
-    margin-top:-70px;
+    width: 33%;
+    min-width: 300px;
+    float: left;
+    margin: auto;
+    margin-top: -70px;
 }
-.intro-topic{
+
+.intro-topic {
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    font-size:2rem;
+    font-size: 2rem;
     font-weight: lighter;
 }
-.intro-main{
+
+.intro-main {
     font-weight: lighter;
     margin: 5px;
-    font-size:1rem;
-    color:#333;
+    font-size: 1rem;
+    color: #333;
 }
-.what-r{
+
+.what-r {
     margin-top: 20px;
     background: #000;
-/*     background: #f64747; */
+    /*     background: #f64747; */
     color: #fff;
     padding: 40px 90px 40px 90px;
     text-align: center;
     font-size: 1.33rem;
 }
-.what-p{
+
+.what-p {
     font-weight: lighter;
-    font-size:1.11rem;
+    font-size: 1.11rem;
     margin: 15px;
 }
-.articles{
+
+.articles {
+    background-color: #D7DBDD;
     text-align: center;
     padding: 70px 50px 70px 70px;
 }
-.article-table{
+
+.article-table {
     border-spacing: 20px 20px;
     margin: 10px auto;
 }
-.article-table img{
+
+.article-table img {
     height: 200px;
     width: 200px;
     cursor: pointer;
@@ -284,44 +339,54 @@ a.menu{
     -o-border-radius: 250px;
     -ms-border-radius: 250px;
 }
-.why-us{
+
+.why-us {
     background: url("img/intro-background.gif");
     padding: 60px;
 }
-.double{
+
+.double {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
     -o-columns: 2;
     -ms-columns: 2;
 }
-.double li{
-	margin-bottom:30px;
+
+.double li {
+    margin-bottom: 30px;
 }
+
+
 /**Last**/
-.last{
+
+.last {
     padding: 20px 120px 80px 120px;
     background: #fff;
     text-align: center;
 }
-.whole-con{
+
+.whole-con {
     width: 100%;
     margin: 10px auto;
     margin-top: 20px;
     border-spacing: 10px 10px;
 }
-.con1{
+
+.con1 {
     vertical-align: top;
     width: 50%;
 }
-.con2{
+
+.con2 {
     vertical-align: top;
     width: 50%;
 }
-.message{
+
+.message {
     width: 90%;
     outline-color: #d0245e;
-/*    outline-color: #f64747;*/
+    /*    outline-color: #f64747;*/
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -337,11 +402,12 @@ a.menu{
     border: none;
     border: 1px solid #999;
 }
-.inputs{
+
+.inputs {
     border: 1px solid #999;
     width: 100%;
     outline-color: #d0245e;
-/*    outline-color: #f64747; */
+    /*    outline-color: #f64747; */
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -353,16 +419,17 @@ a.menu{
     min-width: 90%;
     margin: 0px 0px 10px 0px;
 }
-.submits{
+
+.submits {
     border: 2px solid #d0245e;
-/*#f64747; */
+    /*#f64747; */
     width: 100%;
     background: #d0245e;
-/*    background: #f64747; */
+    /*    background: #f64747; */
     color: #fff;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     outline-color: #d0245e;
-/*    outline-color: #f64747; */
+    /*    outline-color: #f64747; */
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -373,50 +440,59 @@ a.menu{
     margin: 10px auto;
     margin-top: 0px;
 }
-.submits:hover{
+
+.submits:hover {
     background: #fff;
     color: #d0245e;
-/*    color: #f64747; */
+    /*    color: #f64747; */
     transition: ease-in-out .3s background;
     -webkit-transition: ease-in-out .3s background;
     -moz-transition: ease-in-out .3s background;
     -o-transition: ease-in-out .3s background;
     -ms-transition: ease-in-out .3s background;
 }
-.social{
+
+.social {
     width: auto;
     background: #d0245e;
     color: #fff;
     text-align: center;
     padding: 10px;
 }
-.links{
+
+.links {
     margin-top: 30px;
 }
-.links li{
+
+.links li {
     display: inline;
     margin: 10px;
 }
-.links li img{
+
+.links li img {
     height: 50px;
     width: auto;
 }
-.footer{
+
+.footer {
     background: #3a3a3a;
     color: #fff;
     padding: 70px 200px 70px 200px;
     text-align: center;
 }
+
+
 /**Other**/
-.nots-opts1{
+
+.nots-opts1 {
     border: 2px solid #d0245e;
-/*#f64747; */
+    /*#f64747; */
     background: #d0245e;
-/*    background: #f64747; */
+    /*    background: #f64747; */
     color: #fff;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     outline-color: #d0245e;
-/*    outline-color: #f64747; */
+    /*    outline-color: #f64747; */
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -425,32 +501,34 @@ a.menu{
     font-size: 0.88rem;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
-    display:block;
-    width:200px;
-    height:35px;
-    line-height:35px;
-    margin:auto;
-    margin-top:20px;
-    text-align:center;
+    display: block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
 }
-.nots-opts1:hover{
+
+.nots-opts1:hover {
     background: #fff;
     color: #d0245e;
-/*    color: #f64747; */
+    /*    color: #f64747; */
     transition: ease-in-out .3s background;
     -webkit-transition: ease-in-out .3s background;
     -moz-transition: ease-in-out .3s background;
     -o-transition: ease-in-out .3s background;
     -ms-transition: ease-in-out .3s background;
 }
-.nots-opts2{
+
+.nots-opts2 {
     border: 2px solid #d0245e;
-/* #f64747; */
+    /* #f64747; */
     background: #f64747;
     color: #fff;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     outline-color: #d0245e;
-/*    outline-color: #f64747; */
+    /*    outline-color: #f64747; */
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -460,66 +538,11 @@ a.menu{
     margin: 0px 0px 20px 0px;
     cursor: pointer;
 }
-.nots-opts2:hover{
+
+.nots-opts2:hover {
     background: #fff;
     color: #d0245e;
-/*    color: #f64747; */
-    transition: ease-in-out .3s background;
-    -webkit-transition: ease-in-out .3s background;
-    -moz-transition: ease-in-out .3s background;
-    -o-transition: ease-in-out .3s background;
-    -ms-transition: ease-in-out .3s background;
-}
-.nots-opts3{
-    border: 2px solid #d0245e;
-/*#f64747;*/
-    background: #d0245e;
-/*    background: #f64747; */
-    color: #fff;
-    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    outline-color: #d0245e;
-/*    outline-color: #f64747; */
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    padding: 5px;
-    font-size: 0.78rem;
-    margin: 0px 0px 20px 0px;
-    cursor: pointer;
-}
-.nots-opts3:hover{
-    background: #fff;
-    color: #d0245e;
-/*    color: #f64747; */
-    transition: ease-in-out .3s background;
-    -webkit-transition: ease-in-out .3s background;
-    -moz-transition: ease-in-out .3s background;
-    -o-transition: ease-in-out .3s background;
-    -ms-transition: ease-in-out .3s background;
-}
-.nots-opts4{
-    border: 2px solid #d0245e;
-/* #f64747; */
-    background: #d0245e;
-/*    background: #f64747; */
-    color: #fff;
-    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-    outline-color: #d0245e;
-/*    outline-color: #f64747; */
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    padding: 5px;
-    font-size: 0.78rem;
-    margin: 0px 0px 20px 0px;
-    cursor: pointer;
-}
-.nots-opts4:hover{
-    background: #fff;
-    color: #d0245e;
-/*    color: #f64747; */
+    /*    color: #f64747; */
     transition: ease-in-out .3s background;
     -webkit-transition: ease-in-out .3s background;
     -moz-transition: ease-in-out .3s background;
@@ -527,544 +550,836 @@ a.menu{
     -ms-transition: ease-in-out .3s background;
 }
 
-            #dialogoverflow{
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                background: url("img/bg.png");
-            }
-            #dialogbox{
-                opacity:1;
-                display: none;
-                position: fixed;
-                background: #fff;
-                color: #444;
-                border: 1px solid #1a1a1a;
-                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -o-border-radius: 3px;
-                -ms-border-radius: 3px;
-                width: 750px;
-                z-index: 10;
-            }
-            #dialogbox > div > #dialogboxhead{
-                text-align: center;
-                font-weight: normal;
-                font-size: 1.39rem;
-                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                padding: 10px;
-                margin-bottom: 0px;
-                border-bottom: 1px solid #666;
-            }
-            #dialogbox > div > #dialogboxbody{
-                font-weight: normal;
-                padding: 10px;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                font-size: 90%;
-                height: 300px;
-                overflow-y: scroll;
-            }
-            #dialogbox > div > #dialogboxfoot{
-                padding: 10px;
-                font-size: 90%;
-                border-top: 1px solid #666;
-            }
-            #dialogoverflow2{
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                background: url("img/bg.png");
-            }
-            #dialogbox2{
-                opacity:1;
-                display: none;
-                position: fixed;
-                background: #fff;
-                color: #444;
-                border: 1px solid #1a1a1a;
-                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -o-border-radius: 3px;
-                -ms-border-radius: 3px;
-                width: 750px;
-                z-index: 10;
-            }
-            #dialogbox2 > div > #dialogboxhead2{
-                text-align: center;
-                font-weight: normal;
-                font-size: 25px;
-                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                padding: 10px;
-                margin-bottom: 0px;
-                border-bottom: 1px solid #666;
-            }
-            #dialogbox2 > div > #dialogboxbody2{
-                font-weight: normal;
-                padding: 10px;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                font-size: 90%;
-                height: 300px;
-                overflow-y: scroll;
-            }
-            #dialogbox2 > div > #dialogboxfoot2{
-                padding: 10px;
-                font-size: 90%;
-                border-top: 1px solid #666;
-            }
-            #dialogoverflow3{
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                background: url("img/bg.png");
-            }
-            #dialogbox3{
-                opacity:1;
-                display: none;
-                position: fixed;
-                background: #fff;
-                color: #444;
-                border: 1px solid #1a1a1a;
-                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -o-border-radius: 3px;
-                -ms-border-radius: 3px;
-                width: 750px;
-                z-index: 10;
-            }
-            #dialogbox3 > div > #dialogboxhead3{
-                text-align: center;
-                font-weight: normal;
-                font-size: 1.39rem;
-                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                padding: 10px;
-                margin-bottom: 0px;
-                border-bottom: 1px solid #666;
-            }
-            #dialogbox3 > div > #dialogboxbody3{
-                font-weight: normal;
-                padding: 10px;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                font-size: 90%;
-                height: 300px;
-                overflow-y: scroll;
-            }
-            #dialogbox3 > div > #dialogboxfoot3{
-                padding: 10px;
-                font-size: 90%;
-                border-top: 1px solid #666;
-            }
-            #dialogoverflow4{
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                background: url("img/bg.png");
-            }
-            #dialogbox4{
-                opacity:1;
-                display: none;
-                position: fixed;
-                background: #fff;
-                color: #444;
-                border: 1px solid #1a1a1a;
-                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -o-border-radius: 3px;
-                -ms-border-radius: 3px;
-                width: 750px;
-                z-index: 10;
-            }
-            #dialogbox4 > div > #dialogboxhead4{
-                text-align: center;
-                font-weight: normal;
-                font-size: 1.39rem;
-                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                padding: 10px;
-                margin-bottom: 0px;
-                border-bottom: 1px solid #666;
-            }
-            #dialogbox4 > div > #dialogboxbody4{
-                font-weight: normal;
-                padding: 10px;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                font-size: 90%;
-                height: 300px;
-                overflow-y: scroll;
-            }
-            #dialogbox4 > div > #dialogboxfoot4{
-                padding: 10px;
-                font-size: 90%;
-                border-top: 1px solid #666;
-            }
-            #dialogoverflow5{
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                background: url("img/bg.png");
-            }
-            #dialogbox5{
-                opacity:1;
-                display: none;
-                position: fixed;
-                background: #fff;
-                color: #444;
-                border: 1px solid #1a1a1a;
-                box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -o-border-radius: 3px;
-                -ms-border-radius: 3px;
-                width: 550px;
-                z-index: 10;
-            }
-            #dialogbox5 > div > #dialogboxhead5{
-                text-align: center;
-                font-weight: normal;
-                font-size: 1.39rem;
-                font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                padding: 10px;
-                margin-bottom: 0px;
-                border-bottom: 1px solid #666;
-            }
-            #dialogbox5 > div > #dialogboxbody5{
-                font-weight: normal;
-                padding: 10px;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                font-size: 90%;
-                height: 150px;
-                overflow-y: scroll;
-            }
-            #dialogbox5 > div > #dialogboxfoot5{
-                padding: 10px;
-                font-size: 90%;
-                border-top: 1px solid #666;
-            }
-	    @media screen and (max-width: 500px){
-		    .what-r{
-			    padding:40px 40px 40px 40px;
-			    text-align:left;
-		    }
+.nots-opts3 {
+    border: 2px solid #d0245e;
+    /*#f64747;*/
+    background: #d0245e;
+    /*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+    /*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 0.78rem;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
 
-	    }
-	    @media screen and (max-width: 700px) and (min-width:601px){
-		 .wrapper-main{
-			margin-top:50px;
-		}
-	    }
-           @media screen and (max-width: 700px) and (min-width: 100px){
-                html{
-                    font-size: 18px;
-                }
-                .header{
-                    display: none;
-                }
-                .about{
-                    padding: 10px;
-                    background: #2d2d2d;
-/*                    background: url("img/intro-background.gif"); */
-                    text-align: center;
-                    height: 250px;
-                }
-                .tessellactation-container{
-                    display: none;
-                }
-                .main-h1{
-                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    font-size: 2.85rem;
-                    color: #2c3e50;
-                    margin-top: 20px;
-                }
-                .brl{
-                    position: relative;
-                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    color: #d0245e;
-                    margin-top: 20px;
-                }
-                .dash{
-                    position: relative;
-                    top: -8px;
-                    left: -5px;
-                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    color: #888;
-                    margin-top: 20px;
-                }
-                .cad{
-                    position: relative;
-                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    color: #fff;
-                    margin-top: 20px;
-                }
-                .byline{
-                    position: relative;
-                    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
-                    color: #fff;
-                    top: -6px;
-		    font-size:1.11rem;
-                }
-                .main-intro{
-                }
-                .pad{
-                    width: 100px;
-                    height: 100px;
-                    margin-top: 0px;
-                }
-                .who-r{
-                    margin-top: 450px;
-                    padding: 20px 20px 20px 20px;
-                }
-                .articles{
-                    display: none;
-                }
-                .why-us{
-                    padding: 10px 10px 10px 10px;
-                }
-                .last{
-                    display: none;
-                }
-                .links li img{
-                    width: 30px;
-                    height: auto;
-                }
-                .footer{
-                    padding: 20px 20px 20px 20px;
-                }
-            }
+.nots-opts3:hover {
+    background: #fff;
+    color: #d0245e;
+    /*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+
+.nots-opts4 {
+    border: 2px solid #d0245e;
+    /* #f64747; */
+    background: #d0245e;
+    /*    background: #f64747; */
+    color: #fff;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #d0245e;
+    /*    outline-color: #f64747; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 0.78rem;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+}
+
+.nots-opts4:hover {
+    background: #fff;
+    color: #d0245e;
+    /*    color: #f64747; */
+    transition: ease-in-out .3s background;
+    -webkit-transition: ease-in-out .3s background;
+    -moz-transition: ease-in-out .3s background;
+    -o-transition: ease-in-out .3s background;
+    -ms-transition: ease-in-out .3s background;
+}
+
+#dialogoverflow {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background: url("img/bg.png");
+}
+
+#dialogbox {
+    opacity: 1;
+    display: none;
+    position: fixed;
+    background: #fff;
+    color: #444;
+    border: 1px solid #1a1a1a;
+    box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    width: 750px;
+    z-index: 10;
+}
+
+#dialogbox>div>#dialogboxhead {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.39rem;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #666;
+}
+
+#dialogbox>div>#dialogboxbody {
+    font-weight: normal;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 90%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#dialogbox>div>#dialogboxfoot {
+    padding: 10px;
+    font-size: 90%;
+    border-top: 1px solid #666;
+}
+
+#dialogoverflow2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background: url("img/bg.png");
+}
+
+#dialogbox2 {
+    opacity: 1;
+    display: none;
+    position: fixed;
+    background: #fff;
+    color: #444;
+    border: 1px solid #1a1a1a;
+    box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    width: 750px;
+    z-index: 10;
+}
+
+#dialogbox2>div>#dialogboxhead2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #666;
+}
+
+#dialogbox2>div>#dialogboxbody2 {
+    font-weight: normal;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 90%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#dialogbox2>div>#dialogboxfoot2 {
+    padding: 10px;
+    font-size: 90%;
+    border-top: 1px solid #666;
+}
+
+#dialogoverflow3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background: url("img/bg.png");
+}
+
+#dialogbox3 {
+    opacity: 1;
+    display: none;
+    position: fixed;
+    background: #fff;
+    color: #444;
+    border: 1px solid #1a1a1a;
+    box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    width: 750px;
+    z-index: 10;
+}
+
+#dialogbox3>div>#dialogboxhead3 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.39rem;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #666;
+}
+
+#dialogbox3>div>#dialogboxbody3 {
+    font-weight: normal;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 90%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#dialogbox3>div>#dialogboxfoot3 {
+    padding: 10px;
+    font-size: 90%;
+    border-top: 1px solid #666;
+}
+
+#dialogoverflow4 {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background: url("img/bg.png");
+}
+
+#dialogbox4 {
+    opacity: 1;
+    display: none;
+    position: fixed;
+    background: #fff;
+    color: #444;
+    border: 1px solid #1a1a1a;
+    box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    width: 750px;
+    z-index: 10;
+}
+
+#dialogbox4>div>#dialogboxhead4 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.39rem;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #666;
+}
+
+#dialogbox4>div>#dialogboxbody4 {
+    font-weight: normal;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 90%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#dialogbox4>div>#dialogboxfoot4 {
+    padding: 10px;
+    font-size: 90%;
+    border-top: 1px solid #666;
+}
+
+#dialogoverflow5 {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background: url("img/bg.png");
+}
+
+#dialogbox5 {
+    opacity: 1;
+    display: none;
+    position: fixed;
+    background: #fff;
+    color: #444;
+    border: 1px solid #1a1a1a;
+    box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    -o-box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    width: 550px;
+    z-index: 10;
+}
+
+#dialogbox5>div>#dialogboxhead5 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.39rem;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #666;
+}
+
+#dialogbox5>div>#dialogboxbody5 {
+    font-weight: normal;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 90%;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+#dialogbox5>div>#dialogboxfoot5 {
+    padding: 10px;
+    font-size: 90%;
+    border-top: 1px solid #666;
+}
+
+@media screen and (max-width: 500px) {
+    .what-r {
+        padding: 40px 40px 40px 40px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width:601px) {
+    .wrapper-main {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 100px) {
+    html {
+        font-size: 18px;
+    }
+    .header {
+        display: none;
+    }
+    .about {
+        padding: 10px;
+        background: #2d2d2d;
+        /*                    background: url("img/intro-background.gif"); */
+        text-align: center;
+        height: 250px;
+    }
+    .tessellactation-container {
+        display: none;
+    }
+    .main-h1 {
+        font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+        font-size: 2.85rem;
+        color: #2c3e50;
+        margin-top: 20px;
+    }
+    .brl {
+        position: relative;
+        font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+        color: #d0245e;
+        margin-top: 20px;
+    }
+    .dash {
+        position: relative;
+        top: -8px;
+        left: -5px;
+        font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+        color: #888;
+        margin-top: 20px;
+    }
+    .cad {
+        position: relative;
+        font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+        color: #fff;
+        margin-top: 20px;
+    }
+    .byline {
+        position: relative;
+        font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+        color: #fff;
+        top: -6px;
+        font-size: 1.11rem;
+    }
+    .pad {
+        width: 100px;
+        height: 100px;
+        margin-top: 0px;
+    }
+    .who-r {
+        margin-top: 450px;
+        padding: 20px 20px 20px 20px;
+    }
+    .articles {
+        display: none;
+    }
+    .why-us {
+        padding: 10px 10px 10px 10px;
+    }
+    .last {
+        display: none;
+    }
+    .links li img {
+        width: 30px;
+        height: auto;
+    }
+    .footer {
+        padding: 20px 20px 20px 20px;
+    }
+}
+
 
 /**************
 New Navigtaion
 ***************/
 
 .id_logo {
-  height: 50px;
-  margin-left: 20px;
-  float: left;
+    height: 50px;
+    margin-left: 20px;
+    float: left;
 }
 
 .circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: transparent;
-  display: inline-block;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    display: inline-block;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
 }
+
 .circle img {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .head {
-  min-height: 50px;
-  background: #222222;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  -webkit-box-shadow: 0px 2px 3px #222222;
-  -moz-box-shadow: 0px 2px 3px #222222;
-  box-shadow: 0px 2px 3px #222222;
+    min-height: 50px;
+    background: #222222;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 2px 3px #222222;
+    -moz-box-shadow: 0px 2px 3px #222222;
+    box-shadow: 0px 2px 3px #222222;
 }
+
 .head a {
-  color: #ececec;
+    color: #ececec;
 }
+
 .navbar {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
 }
+
 .navbar .navigation li {
-  float: right;
-  text-align:center;
-  width: 16%;
-  line-height: 50px;
-  font-size: 16px;
-  border-bottom: 2px solid #222222;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+    float: right;
+    text-align: center;
+    width: 16%;
+    line-height: 50px;
+    font-size: 16px;
+    border-bottom: 2px solid #222222;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
 }
+
 .navbar .navigation li:hover {
-  border-bottom: 2px solid #ee3b5b;
+    border-bottom: 2px solid #ee3b5b;
 }
 
 .navbar .navigation li a {
-  display: block;
+    display: block;
 }
+
 #nav-button {
-  display: none;
-  position: absolute;
-  right:0;
-  line-height: 50px;
-  color: white;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  margin-right: 20px;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: none;
+    position: absolute;
+    right: 0;
+    line-height: 50px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 20px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 
 /*Mail subsription*/
-.input-mail
-{
-  line-height: 35px;
-  background-color: #fff;
-  padding: 5px;
-  width: 250px;
-  border-radius: 5px;
-  border: 0;
-  margin-top: 20px;
+
+.input-mail {
+    line-height: 35px;
+    background-color: #fff;
+    padding: 5px;
+    width: 250px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 20px;
 }
-.message-mail
-{
-  display: none;
+
+.message-mail {
+    display: none;
 }
-.submit-mail
-{
-  border: 2px solid #fff;
-  color: #d0245e;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 0.88rem;
-  cursor: pointer;
-  display:block;
-  width:200px;
-  line-height:35px;
-  margin:auto;
-  margin-top:10px;
-  margin-bottom: 20px;
-  text-align:center;
+
+.submit-mail {
+    border: 2px solid #fff;
+    color: #d0245e;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    line-height: 35px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
-.submit-mail:hover
-{
-  background-color: #d0245e;
-  color: #fff;
+
+.submit-mail:hover {
+    background-color: #d0245e;
+    color: #fff;
 }
+
+
+/* code for features' section */
+
+.features-section {
+    display: block;
+    height: auto;
+    padding-bottom: 5vh;
+}
+
+.features-container {
+    margin-top: 5vh;
+    position: relative;
+    height: auto;
+    width: 78vw;
+    margin-left: -1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 0 100px;
+    color: #fff;
+}
+
+.features-container .features-box {
+    padding-top: 5vh;
+    margin-bottom: 4vh;
+    position: relative;
+    height: 425.53px;
+    width: 110%;
+    background: #060c21;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px solid #000;
+}
+
+.features-container .features-box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #2c67b7;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+}
+
+.features-container .features-box:nth-child(1):before {
+    background: linear-gradient(315deg, #ffc107, #ff0057);
+}
+
+.features-container .features-box:nth-child(2):before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.features-container .features-box:nth-child(3):before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.features-content {
+    height: inherit;
+    position: relative;
+    padding-top: -10vh !important;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.features-content img {
+    transition: all 0.3s;
+    position: relative;
+    top: 25vh;
+    font-size: 10em;
+    color: lightgray;
+    height: 200px;
+    width: 200px;
+    opacity: 0.4;
+    transform: 0.5s;
+    border-radius: 50%;
+}
+
+.features-box:hover .features-content img {
+    top: 0;
+    color: #fff !important;
+    opacity: 1;
+}
+
+.features-box .features-content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.features-box .features-content p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.features-box .features-content a {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.features-box:hover .features-content a {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.features-box .features-content a:hover {
+    color: #000;
+    background: #fff;
+}
+
+
+/* Feature's section modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2vh;
+    border: 1px solid #888;
+    width: 80%;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+}
+
+.modal-body {
+    width: 100%;
+}
+
+.close {
+    margin-top: -1vh;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/*about page*/
+
+.about-img {
+    width: 500px;
+    height: 330px;
+}
+
 
 /* Desktop */
+
 @media only screen and (max-width: 1100px) {
-  .navbar .navigation li {
-    font-size: 14px;
-    width: 136px;
-  }
+    .navbar .navigation li {
+        font-size: 14px;
+        width: 136px;
+    }
 }
+
 
 /* Tablet */
+
 @media only screen and (max-width: 945px) {
-  .intro1{
-	float:none;
-	width:60%;
-	margin-top:0px;
-  }
-  .navbar .navigation li {
-    font-size: 14px;
-    width: 33%;
-  }
-
-  .navbar .navigation {
-    float: right;
-    width: 80%;
-  }
-
-  .id_logo {
-    top: 25px;
-    left: 10px;
-  }
-  ul.double{
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    -o-columns: 1;
-    -ms-columns: 1;
-  }
-  #nav-button {
-    display: block;
-  }
-  .navbar {
-    display: none;
-  }
-
-  .navbar .navigation {
-    float: right;
-    width: 100%;
-  }
-
-  .navbar .navigation li {
-    font-size: 18px;
-    width: 100%;
-  }
+    .intro1 {
+        float: none;
+        width: 60%;
+        margin-top: 0px;
+    }
+    .navbar .navigation li {
+        font-size: 14px;
+        width: 33%;
+    }
+    .navbar .navigation {
+        float: right;
+        width: 80%;
+    }
+    .id_logo {
+        top: 25px;
+        left: 10px;
+    }
+    ul.double {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        -o-columns: 1;
+        -ms-columns: 1;
+    }
+    #nav-button {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar .navigation {
+        float: right;
+        width: 100%;
+    }
+    .navbar .navigation li {
+        font-size: 18px;
+        width: 100%;
+    }
 }
+
 
 /* Mobile */
-@media only screen and (max-width: 780px) {
 
-
-}
+@media only screen and (max-width: 780px) {}

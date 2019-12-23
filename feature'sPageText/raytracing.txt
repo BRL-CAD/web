@@ -1,0 +1,18 @@
+<span class="close">×</span>
+<div style="width: inherit;height: 60vh;">
+    <div style="text-align: center;">Raytracing</div>
+    <img src="img/Features' images/Raytracing.png" style="height: 50vh; width: 40vw; float: right;">
+    <div style="width:35vw;text-align: left; float: left;">Raytracing is central to BRL-CAD as a means for performing geometric analysis (e.g., calculating weights and moments of inertia) and for rendering images for visualization purposes. The image shown is a BRL-CAD 2D framebuffer screenshot displaying the rendering of a ball bearing. The bearing is modeled with a material appearance resembling acrylic glass, and this raytracing result shows reflection, refraction, shadowing, and some caustic effects.</div>
+</div>
+<a href="http://write.flossmanuals.net/contributors-guide-to-brl-cad/feature-overview/" class="nots-opts1">All Features</a>
+<script>
+    var modal = document.getElementById("myModal");
+    document.getElementsByClassName("close")[0].onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

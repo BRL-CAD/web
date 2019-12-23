@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BRL-CAD Features</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="head">
+        <div class="id_logo" id='logo'>
+            <span class="circle" href="#">
+                <a href="http://brlcad.org/"><img src="img/logo_color.png" width="50px" height="50px"/></a>
+            </span>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navigation id_main-nav" id="main-nav">
+                <li><a href="http://brlcad.org/gallery">
+                        Gallery</a></li>
+                <li><a href="https://sourceforge.net/projects/brlcad/support">
+                        Support</a></li>
+                <li><a href="https://www.facebook.com/BRL-CAD-387112738872/">
+                        News</a></li>
+                <li><a href="http://brlcad.org/wiki/">
+                        Documentation</a></li>
+                <li><a href="http://brlcad.org/d/download">
+                        Download
+                    </a>
+                </li>
+                <li>
+                    <a href="http://brlcad.org/d/about">
+                            About
+                        </a>
+                </li>
+
+            </ul>
+        </nav>
+        <div id="nav-button" onClick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
+    <div class="about" id="about">
+
+        <div class="tessellactation-container">
+            <canvas id="tessellactation" width="923" height="400"></canvas>
+        </div>
+
+        <div class="wrapper-main">
+            <h1 class="main-h1"><span class="brl">BRL</span><span class="dash">‑</span><span class="cad">CAD</span></h1>
+            <h2 class="byline">About Us</h2>
+        </div>
+
+    </div>
+    <section>
+        <center>
+            <hr>
+            <p class="intro-topic">
+                <b>
+                    Who we are?
+                </b>
+            </p>
+            <hr><br />
+        </center>
+        <p>
+            <!--Image from Pexels(free and open souced), url: https://www.pexels.com/photo/thank-you-signage-2072165/. (modified)--><img src="img/whoweare.jpg" alt="Who we are? - BRL-CAD" align="left" class="about-img" style="margin-right: 1vw;border-radius: 10px;">BRL-CAD is a constructive solid geometry (CSG) solid modeling computer-aided design (CAD) system. It includes
+            an interactive geometry editor, ray tracing support for graphics rendering and geometric analysis, computer network distributed framebuffer support, scripting, image-processing and signal-processing tools. The entire package is distributed
+            in source code and binary form.
+        </p>
+
+        <p>Although BRL-CAD can be used for a variety of engineering and graphics applications, the package's primary purpose continues to be the support of ballistic and electromagnetic analyses. In keeping with the Unix philosophy of developing independent
+            tools to perform single, specific tasks and then linking the tools together in a package, BRL-CAD is basically a collection of libraries, tools, and utilities that work together to create, raytrace, and interrogate geometry and manipulate
+            files and data. In contrast to many other 3D modelling applications, BRL-CAD primarily uses CSG rather than boundary representation. This means BRL-CAD can "study physical phenomena such as ballistic penetration and thermal, radiative, neutron,
+            and other types of transport". It does also support boundary representation.</p>
+
+        <p>The BRL-CAD libraries are designed primarily for the geometric modeler who also wants to tinker with software and design custom tools. Each library is designed for a specific purpose: creating, editing, and ray tracing geometry, and image handling.
+            The application side of BRL-CAD also offers a number of tools and utilities that are primarily concerned with geometric conversion, interrogation, image format conversion, and command-line-oriented image manipulation.</p>
+
+    </section>
+    <section style="background: url(img/intro-background.gif);">
+        <center>
+            <hr>
+            <p class="intro-topic">
+                <b>
+                    History and Vision
+                </b>
+            </p>
+            <hr><br />
+        </center>
+        <p>
+            <!--image from unsplash.com(free and open sourced images), url: https://unsplash.com/photos/I_LgQ8JZFGE--><img src="img/history.jpg" align="right" alt="History - BRL-CAD" class="about-img" style="border-radius: 10px;margin-left: 1vw;">BRL-CAD was originally conceived and written by the late Michael Muuss, the inventor of the popular PING network
+            program. In 1979, the U.S. Army Ballistic Research Laboratory (BRL) (the agency responsible for creating ENIAC, the world's first general-purpose electronic computer in the 1940s) identified a need for tools that could assist with the computer
+            simulations and analysis of combat vehicle systems and environments. When no existing CAD package was found to be adequate for this specialized purpose, Mike and fellow software developers began developing and assembling a unique suite of
+            utilities capable of interactively displaying, editing, and interrogating geometric models. Those early efforts subsequently became the foundation on which BRL-CAD was built.</p>
+        <p>
+            Development of BRL-CAD as a unified software package began in 1983, and its first public release came in 1984. Then, in 2004, BRL-CAD was converted from a limited-distribution U.S. government-controlled code to an open source project, with portions licensed
+            under the LGPL and BSD licenses.
+        </p>
+        <p>
+            Today, the package's source code repository is credited as being the world's oldest, continuously developed open source repository. As a project, pride is taken in preserving all history and contributions.
+        </p>
+        <p>
+            The ongoing vision for BRL-CAD development is to provide a robust, powerful, flexible, and comprehensive solid modeling system that includes:
+        </p>
+        <ul style="margin-left: 3vw;">
+            <li class="what-p">Faithful high-performance geometric representation.</li>
+            <li class="what-p">Efficient and intuitive geometry editing.</li>
+            <li class="what-p">Comprehensive conversion support for all solid geometry formats.</li>
+            <li class="what-p">Effective geometric analysis tools for 3D CAD.</li>
+        </ul>
+    </section>
+    <section>
+        <center>
+            <hr>
+            <p class="intro-topic">
+                <b>
+                    Key Strengths
+                </b>
+            </p>
+            <hr><br />
+        </center>
+        <p>
+            <!--Image from Pexels(free and open souced), url: https://www.pexels.com/photo/person-tossing-globe-1275393/--><img src="img/strength.jpg" alt="Strategy - BRL-CAD" class="about-img" style="margin-right: 2.5vw;border-radius: 10px;" align="left">All CAD packages are not alike. Among the many strengths of the BRL-CAD package are the following:</p>
+        <ul style="margin-left: 4vw;">
+            <li class="what-p">BRL-CAD is <strong>open source</strong>! Don't like something? You can make it better.</li>
+            <li class="what-p">You can leverage <strong>decades of invested development</strong>. BRL-CAD is the most feature-filled open source CAD system available, with hundreds of years time invested.</li>
+            <li class="what-p"><strong>Your work will get used</strong>. BRL-CAD is in production use and downloaded thousands of times every month by people all around the world.</li>
+            <li class="what-p">You have the ability to create extensively <strong>detailed realistic models</strong>.</li>
+            <li class="what-p">You can model objects on scales ranging from (potentially) the subatomic through the galactic, while essentially&nbsp;providing <strong>all the details, all the time</strong>.</li>
+            <li class="what-p">You can leverage <strong>one of the fastest</strong> raytracers in existence (for&nbsp;many types of geometry).</li>
+            <li class="what-p">You can convert to and from a wide range of <strong>geometry file formats</strong>.</li>
+            <li class="what-p">BRL-CAD has a powerful, <strong>customizable scripting interface</strong> with many advanced editing and processing capabilities.</li>
+        </ul>
+    </section>
+    <div class="social">
+        <h1 class="main-h1" style="font-size: 35px; color: #fff;">view us on social media!</h1>
+        <ul class="links">
+            <li>
+                <a target="blank" href="https://www.facebook.com/pages/BRL-CAD/387112738872"><img src="img/facebook.png" alt="ICON"></a>
+            </li>
+            <li>
+                <a target="blank" href="https://twitter.com/brl_cad"><img src="img/twitter.png" alt="ICON"></a>
+            </li>
+            <li>
+                <a target="blank" href="https://plus.google.com/s/brl%20-%20cad"><img src="img/google.png" alt="ICON"></a>
+            </li>
+            <li>
+                <a target="blank" href="https://www.linkedin.com/in/brlcad"><img src="img/linkedin.png" alt="ICON"></a>
+            </li>
+            <li>
+                <a target="blank" href="https://www.youtube.com/results?search_query=brl+-+cad"><img src="img/youtube.png" alt="ICON"></a>
+            </li>
+        </ul>
+        <a href="https://bestpractices.coreinfrastructure.org/projects/66"><img src="https://bestpractices.coreinfrastructure.org/projects/66/badge"></a>
+    </div>
+    <div class="footer">
+        <h1 class="main-h1" style="font-size: 25px; color: #fff; margin-top: 0px">BRL-CAD © 2016</h1>
+        <p>All trademarks referenced herein are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.</p>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/landing.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script type="text/javascript" src="js/tessellactation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<span class="close">×</span>
+<div style="width: inherit;height: 60vh;">
+    <div style="text-align: center;">Solid Geometry</div>
+    <img src="img/Features' images/Solid Geometry.png" style="height: 50vh; width: 40vw; float: right;">
+    <div style="width:35vw;text-align: left; float: left;">BRL-CAD focuses on solid modeling CAD. Solid modeling is distinguished from other forms of geometric modeling by an emphasis on being physically accurate, fully describing 3D space. Shown is a 3D model of a Goliath tracked mine, a German-engineered
+        remote controlled vehicle used during World War II. This model was created by students new to BRL-CAD in the span of about 2 weeks, starting from actual measurements in a museum.</div>
+</div>
+<a href="http://write.flossmanuals.net/contributors-guide-to-brl-cad/feature-overview/" class="nots-opts1">All Features</a>
+<script>
+    var modal = document.getElementById("myModal");
+    document.getElementsByClassName("close")[0].onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

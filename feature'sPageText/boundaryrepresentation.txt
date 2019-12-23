@@ -1,0 +1,18 @@
+<span class="close">×</span>
+<div style="width: inherit;height: 60vh;">
+    <div style="text-align: center;">Boundary Representation</div>
+    <img src="img/Features' images/Boundary Representation.png" style="height: 50vh; width: 40vw; float: right;">
+    <div style="width:35vw;text-align: left; float: left;">Boundary representation NURBS surface geometry is one of the dominant geometric representation formats in CAD.  BRL-CAD is one of the few 3D solid modeling systems that not only support geometry in boundary representation NURBS format but also provide extensive support for robust solid ray tracing of NURBS geometry.  The image shown is the classic computer graphics Utah teapot model prepared for 3D printing and rendered via BRL-CAD ray tracing.</div>
+</div>
+<a href="http://write.flossmanuals.net/contributors-guide-to-brl-cad/feature-overview/" class="nots-opts1">All Features</a>
+<script>
+    var modal = document.getElementById("myModal");
+    document.getElementsByClassName("close")[0].onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
