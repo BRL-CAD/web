@@ -32,6 +32,26 @@ a:hover {
     -ms-transition: ease-in .2s color;
 }
 
+section {
+    width: 98vw;
+    height: auto;
+    padding: 2vh 5vw 2vh 5vw;
+}
+
+section p {
+    font-weight: lighter;
+    font-size: 1.11rem;
+    margin: 15px;
+}
+
+hr {
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
 
 /**Text Selection**/
 
@@ -1296,6 +1316,13 @@ New Navigtaion
         top: 0;
         opacity: 1;
     }
+}
+
+/*about page*/
+
+.about-img {
+    width: 500px;
+    height: 330px;
 }
 
 
