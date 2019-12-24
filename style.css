@@ -50,7 +50,7 @@ a:hover{
    color: #fff;
 }
 /**Scroll Bar**/
-/*
+/* 
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -1063,8 +1063,148 @@ New Navigtaion
   }
 }
 
+
+
+
+/* features */
+
+#add-container-feature{
+    padding-bottom: 100px;
+}
+
+#title-container-feature{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#title-container-feature p{
+    color: #d0245e;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+}
+
+.container-slick{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+#features-2{
+    display: none;
+}
+
+.container-feature{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+}
+
+.feature{
+    width: 240px;
+    height: 300px;
+    margin: 0px 15px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.container-icon-feature{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.icon-feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34pt;
+    color: #d0245e;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transition: 0.4s;
+}
+
+.title-feature{
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.description-feature{
+    font-size: 9pt;
+    color: rgb(161, 160, 160);
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.feature:nth-child(1n+1):hover{
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgb(179, 178, 178);
+    transform: scale(1.1);
+}
+.feature:nth-child(1n+1):hover .icon-feature{
+    background: #d0245e;
+    color: white;
+}
+
+.icon-arrow-feature{
+    width: 65px;
+    height: 60px;
+    background: rgb(221, 239, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.icon-arrow-feature i{
+    color: #d0245e;
+}
+
+.container-arrow-feature{
+    display: flex; 
+    justify-content: start; 
+    width: 5%;
+    cursor: pointer;
+}
+
+.icon-arrow-feature:hover{
+    background: #d0245e;
+}
+
+.icon-arrow-feature:hover i{
+    color: white;
+}
+
+.container-arrow-feature-mobile{
+    margin-top: 60px;
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+    cursor: pointer;
+}
+
+#container-arrow-features-mobile{
+    display: none;
+}
+
 /* Mobile */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1010px) {
 
+    /* feature */
 
+    .container-arrow-feature{
+        display: none;
+    }
+
+    #container-arrow-features-mobile{
+        display: block;
+    }
 }
