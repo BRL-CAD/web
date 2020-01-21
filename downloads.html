@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Downloads | BRL-CAD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://brlcad.org/style.css">
+    <style>
+	.menu{
+  padding-bottom: 5%;
+}
+
+.dash{
+  color: #d0245e;
+}
+li{
+  padding-bottom: 1%;
+}
+.buttonclass{
+  margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+}
+
+.button{
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color:white;
+  transition: 0.3s;
+}
+
+.button:hover{
+  background-color: #d0245e;
+  transition: 0.3s;
+}
+
+.button:hover .downloadbutton{
+  color:white;
+  text-decoration: none;
+}
+
+.downloadbutton{
+  color: white;
+  text-decoration: none;
+}
+.header-text{
+  background-color: white;
+  color:black;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  font-size:1.5em;
+}
+
+.download-list{
+  margin-top: 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+.download-list div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+.download-list div:hover{
+  transition: 1s;
+  background-color: #d0245e;
+}
+
+.download-list div:hover a{
+  color:white;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <table class="menutable">
+        <tr>
+          <td valign="top" class="menu" style="padding-bottom:2%;">
+            <div ><a href="http://brlcad.org/downloads" class="menu">download</a></div>
+          </td>
+          <td valign="top" class="menu" style="padding-bottom:2%;">
+            <div ><a href="https://www.facebook.com/BRL-CAD-387112738872/" class="menu">news</a></div>
+          </td>
+          <td valign="top" class="menu" style="padding-bottom:2%;">
+            <div ><a href="https://en.wikipedia.org/wiki/BRL-CAD" class="menu">about</a></div>
+          </td>
+          <td valign="top" class="logomenu" style="padding-bottom:2%;">
+            <img onclick="menu_home()" src="https://brlcad.org/img/logo_color.png" alt="Home" class="logo">
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="/wiki/" class="menu" style="padding-bottom:2%;">docs</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div onclick="menu_support()" onclick="menu_docs()" style="padding-bottom:2%;"><a href="https://sourceforge.net/projects/brlcad/support" class="menu">support</a></div>
+          </td>
+          <td valign="top" class="menu">
+            <div ><a href="/gallery/" class="menu" style="padding-bottom:2%;">gallery</a></div>
+            <!-- onclick="menu_gallery()" -->
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="header-text">
+      <h1 class="header-text-h1">Download</h1>
+    </div>
+
+    <div class="why-us">
+      <p class="intro-main" style="font-size:1.4em;">Download the latest version for your operating system:
+        <div id="fordefault">
+          <div class="download-list">
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/7.28.0/">Linux</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/">Windows</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.26.0/">Mac OS X</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.26.0/">BSD</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Solaris/7.14.0/">Solaris</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20IRIX/7.10.4/">IRIX</a></div>
+            <div class="grid-column:2/3;"><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.28.0/">Source Code</a></div>
+          </div>
+        </div>
+
+        <div id="forwindows">
+          <div class="buttonclass">
+            <div class="button">
+              <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/" class="downloadbutton">Download for Windows
+            </div>
+            </a>
+          </div>
+          <p class="intro-main" style="font-size:1.2em;">Download for another platform:</p>
+           <div class="download-list">
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/7.28.0/">Linux</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.26.0/">Mac OS X</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.26.0/">BSD</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Solaris/7.14.0/">Solaris</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20IRIX/7.10.4/">IRIX</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.28.0/">Source Code</a></div>
+           </div>
+          </ul>
+        </div>
+
+        <div id="formacos">
+          <div class="buttonclass">
+            <div class="button">
+              <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.26.0/" class="downloadbutton">Download for Mac OS X
+            </div>
+            </a>
+          </div>
+          <p class="intro-main" style="font-size:1.2em;">Download for another platform:</p>
+          <div class="download-list">
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Linux/7.28.0/">Linux</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/">Windows</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.26.0/">BSD</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Solaris/7.14.0/">Solaris</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20IRIX/7.10.4/">IRIX</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.28.0/">Source Code</a></div>
+          </div>
+        </div>
+
+        <div id="forlinux">
+          <div class="buttonclass">
+            <div class="button">
+              <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.26.0/" class="downloadbutton">Download for Linux
+            </div>
+            </a>
+          </div>
+          <p class="intro-main" style="font-size:1.2em;">Download for another platform:</p>
+           <div class="download-list">
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Windows/7.26.0/">Windows</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/7.26.0/">Mac OS X</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20BSD/7.26.0/">BSD</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Solaris/7.14.0/">Solaris</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20IRIX/7.10.4/">IRIX</a></div>
+            <div><a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.28.0/">Source Code</a></div>
+          </div>
+        </div>
+
+      </p>
+    </div>
+
+    <div class="footer">
+      <h1 class="main-h1" style="font-size: 25px; color: #fff; margin-top: 0px">BRL-CAD &COPY; 2020</h1>
+      <p>All trademarks referenced herein are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.</p>
+    </div>
+
+    <script src="https://brlcad.org/js/rAF.js"></script>
+    <script src="https://brlcad.org/js/TweenLite.min.js"></script>
+    <script src="https://brlcad.org/js/EasePack.min.js"></script>
+    <script type="text/javascript" src="https://brlcad.org/js/tessellactation.js" ></script>
+
+    <script type="text/javascript">
+    var OSName="Unknown OS";
+    if (navigator.userAgent.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.userAgent.indexOf("Mac OS X")!=-1) OSName="MacOS";
+    if (navigator.userAgent.indexOf("Linux")!=-1) OSName="Linux";
+
+    if(OSName == "Windows"){
+     document.getElementById('forwindows').style.display = "block";
+     document.getElementById('formacos').style.display = "none";
+     document.getElementById('forlinux').style.display = "none";
+     document.getElementById('fordefault').style.display = "none";
+   } else if(OSName=="MacOS") {
+     document.getElementById('formacos').style.display = "block";
+     document.getElementById('forwindows').style.display = "none";
+     document.getElementById('forlinux').style.display = "none";
+     document.getElementById('fordefault').style.display = "none";
+   } else if (OSName=="Linux") {
+      document.getElementById('forlinux').style.display = "block";
+      document.getElementById('formacos').style.display = "none";
+      document.getElementById('forwindows').style.display = "none";
+      document.getElementById('fordefault').style.display = "none";
+   } else {
+    document.getElementById('fordefault').style.display = "block";
+    document.getElementById('formacos').style.display = "none";
+    document.getElementById('forlinux').style.display = "none";
+    document.getElementById('forwindows').style.display = "none";
+   }
+    </script>
+
+  </body>
+</html>
