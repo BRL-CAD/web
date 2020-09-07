@@ -1,3 +1,4 @@
 gallery/
 *~
 .DS_Store
+/.idea/

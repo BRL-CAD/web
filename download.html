@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>BRL-CAD: Downloads</title>
+    <link rel="stylesheet" type="text/css" href="/style-download.css">
+    <script src="/js/download.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+    <table class="menutable">
+        <tbody>
+        <tr>
+            <td valign="top" class="menu">
+                <div><a href="/download.html" class="menu">download</a></div>
+            </td>
+            <td valign="top" class="menu">
+                <div><a href="https://www.facebook.com/BRL-CAD-387112738872/" class="menu">news</a></div>
+            </td>
+            <td valign="top" class="menu">
+                <div><a href="https://en.wikipedia.org/wiki/BRL-CAD" class="menu">about</a></div>
+            </td>
+            <td valign="top" class="logomenu">
+                <img src="/img/logo_color.png" alt="Home" class="logo">
+            </td>
+            <td valign="top" class="menu">
+                <div><a href="/wiki/" class="menu">docs</a></div>
+            </td>
+            <td valign="top" class="menu">
+                <div><a href="https://sourceforge.net/projects/brlcad/support" class="menu">support</a></div>
+            </td>
+            <td valign="top" class="menu">
+                <div><a href="/gallery/" class="menu">gallery</a></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="about" id="about">
+
+    <div class="wrapper-main">
+        <h1 class="main-h1">Download</h1>
+        <h2 class="byline"><span class="brl">BRL</span><span class="dash">‑</span><span class="cad">CAD</span></h2>
+    </div>
+    <table class="dl-os">
+        <tbody>
+        <tr id="os-cell">
+            <td class="dl-os-lm">
+                <a id="os-scf" class="os-a" href="https://sourceforge.net/projects/brlcad/files/" rel="noreferrer" target="_blank">
+                    <img class="os-ico" src="/img/download/sourcecode.png">
+                    <div class="os-os">
+                        <div class="os-d"></div>
+                        <div class="os-n">All downloads</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="list">
+    <div class="list-switch">
+        <button id="list-switch-win64" class="list-switch-i" onclick="changeList('win64')">Windows 64bit</button>
+        <button id="list-switch-win32" class="list-switch-i" onclick="changeList('win32')">Windows 32bit</button>
+        <button id="list-switch-macos" class="list-switch-i" onclick="changeList('macos')">MacOS</button>
+        <button id="list-switch-linux64" class="list-switch-i" onclick="changeList('linux64')">Linux 64bit</button>
+        <button id="list-switch-linux32" class="list-switch-i" onclick="changeList('linux32')">Linux 32bit</button>
+        <button id="list-switch-bsd64" class="list-switch-i" onclick="changeList('bsd64')">BSD 64bit</button>
+        <button id="list-switch-bsd32" class="list-switch-i" onclick="changeList('bsd32')">BSD 32bit</button>
+        <button id="list-switch-source" class="list-switch-i" onclick="changeList('source')">Source</button>
+        <button id="list-switch-all" class="list-switch-i"><a href="https://sourceforge.net/projects/brlcad/files/" rel="noreferrer"><div>Other Versions</div></a></button>
+    </div>
+    <div id="list-win64" class="list-i"></div>
+    <div id="list-win32" class="list-i"></div>
+    <div id="list-macos" class="list-i"></div>
+    <div id="list-linux64" class="list-i"></div>
+    <div id="list-linux32" class="list-i"></div>
+    <div id="list-bsd64" class="list-i"></div>
+    <div id="list-bsd32" class="list-i"></div>
+    <div id="list-source" class="list-i"></div>
+</div>
+<div class="footer">
+    <h1 class="main-h1">BRL-CAD © 2016-2019</h1>
+    <p>All trademarks referenced herein are the properties of their respective owners. This site is not sponsored, endorsed, or run by the U.S. Government.</p>
+</div>
+</body>
+</html>
