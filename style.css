@@ -6,8 +6,8 @@
 }
 
 html{
-	font-size:21px;
-	line-height:1.5;
+    font-size:21px;
+    line-height:1.5;
 }
 
 body{
@@ -28,6 +28,13 @@ a:hover{
     -o-transition: ease-in .2s color;
     -ms-transition: ease-in .2s color;
 }
+
+.points li {
+    margin-left: 10px;
+    list-style-type: square;
+    color: #fff;
+    font-size: 1.11rem;
+ }
 /**Text Selection**/
  ::selection {
     background-color: #f1f1f1;
@@ -50,7 +57,7 @@ a:hover{
    color: #fff;
 }
 /**Scroll Bar**/
-/*
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -62,9 +69,9 @@ a:hover{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #a1a1a1;
+    background: #a1a1a1;
 }
-*/
+
 /**Navbar**/
 .header{
     height: 50pt;
@@ -123,6 +130,23 @@ a.menu{
     margin: 0 auto;
 }
 
+.features .align-center{
+  text-align: center;
+}
+
+.what-p .points {
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    color:  rgba(237, 241, 246, 1);
+    font-size: 40px;
+    padding-bottom: 10px;
+
+    text-shadow: 0px 0px 4px #111,
+    -1px -1px 0 #111,
+    1px -1px 0 #111,
+    -1px 1px 0 #111,
+    1px 1px 0 #111;
+}
+
 /**First**/
 .about{
     left: 64px;
@@ -132,6 +156,18 @@ a.menu{
     text-align: center;
     height: 350px;
 }
+
+.about-features{
+    left: 64px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    font-size: 1.278rem;
+    background: #2d2d2d;
+    text-align: left;
+    height: 200px;
+    border-top: #111 solid 50px;
+}
+
 .tessellactation-container{
     /* FIXME: figure out how to position the canvas beneath the intro1 and header/menu elements */
 }
@@ -146,8 +182,15 @@ a.menu{
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
     font-size: 5.556rem;
     color: #2d2d2d;  /* #2c3e50; */
-    margin-top: 20px;
+    margin-top: 10px;
 }
+
+.features .main-h1{
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    font-size: 6rem;
+    color: #2d2d2d;  /* #2c3e50; */
+}
+
 .brl{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
@@ -159,6 +202,22 @@ a.menu{
     -1px 1px 0 #282828,
     1px 1px 0 #282828;
 }
+
+.features .brl{
+    position: relative;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    color: rgba(237, 241, 246, 1); /*d91a5d; */
+    font-size: 85px;
+    padding-bottom: 10px;
+
+    text-shadow: 0px 0px 4px #282828,
+    -1px -1px 0 #282828,
+    1px -1px 0 #282828,
+    -1px 1px 0 #282828,
+    1px 1px 0 #282828;
+}
+
+
 .dash{
     position: relative;
     top: -8px;
@@ -183,6 +242,31 @@ a.menu{
     -1px 1px 0 #111,
     1px 1px 0 #111;
 }
+
+.features .cad{
+    
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    color:  rgba(237, 241, 246, 1);
+    font-size: 85px;
+    padding-bottom: 10px;
+
+    text-shadow: 0px 0px 4px #111,
+    -1px -1px 0 #111,
+    1px -1px 0 #111,
+    -1px 1px 0 #111,
+    1px 1px 0 #111;
+}
+
+
+p .cad {
+  font-size: 20px
+}
+
+li .cad {
+  font-size: 20px;
+  text-align: left;
+}
+
 .byline{
     position: relative;
     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
@@ -207,6 +291,19 @@ a.menu{
     -moz-transition: color 0.5s linear; /* Firefox */
     -webkit-transition: padding 0.2s linear; /*safari and chrome */
 }
+
+.features .pad{
+    padding-bottom: 10px;
+    height: 180px;
+    width: 180px;
+    color:#999;
+    transition: padding 0.2s linear; /* vendorless fallback */
+    -o-transition: color 0.5s linear; /* opera */
+    -ms-transition: color 0.5s linear; /* IE 10 */
+    -moz-transition: color 0.5s linear; /* Firefox */
+    -webkit-transition: padding 0.2s linear; /*safari and chrome */
+}
+
 .pad:hover{
     padding-top: 10px;
 }
@@ -219,6 +316,13 @@ a.menu{
     margin: 0px auto;
     padding-top: 40px;
 }
+
+.features-main{
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+}
+
 .icon-table{
     max-width:1200px;
     margin: 10px auto;
@@ -226,9 +330,9 @@ a.menu{
 }
 
 .icon-table:after{
-	content:"";
-	display:block;
-	clear:both;
+    content:"";
+    display:block;
+    clear:both;
 }
 
 .intro1{
@@ -263,7 +367,7 @@ a.menu{
 }
 .what-p{
     font-weight: lighter;
-    font-size:1.11rem;
+    font-size:1.20rem;
     margin: 15px;
 }
 .articles{
@@ -288,6 +392,11 @@ a.menu{
     background: url("img/intro-background.gif");
     padding: 60px;
 }
+
+h3 {
+  padding-top: 20px;
+}
+
 .double{
     columns: 2;
     -webkit-columns: 2;
@@ -296,7 +405,7 @@ a.menu{
     -ms-columns: 2;
 }
 .double li{
-	margin-bottom:30px;
+    margin-bottom:30px;
 }
 /**Last**/
 .last{
@@ -782,18 +891,18 @@ a.menu{
                 font-size: 90%;
                 border-top: 1px solid #666;
             }
-	    @media screen and (max-width: 500px){
-		    .what-r{
-			    padding:40px 40px 40px 40px;
-			    text-align:left;
-		    }
+        @media screen and (max-width: 500px){
+            .what-r{
+                padding:40px 40px 40px 40px;
+                text-align:left;
+            }
 
-	    }
-	    @media screen and (max-width: 700px) and (min-width:601px){
-		 .wrapper-main{
-			margin-top:50px;
-		}
-	    }
+        }
+        @media screen and (max-width: 700px) and (min-width:601px){
+         .wrapper-main{
+            margin-top:50px;
+        }
+        }
            @media screen and (max-width: 700px) and (min-width: 100px){
                 html{
                     font-size: 18px;
@@ -842,7 +951,7 @@ a.menu{
                     font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
                     color: #fff;
                     top: -6px;
-		    font-size:1.11rem;
+            font-size:1.11rem;
                 }
                 .main-intro{
                 }
@@ -872,6 +981,58 @@ a.menu{
                     padding: 20px 20px 20px 20px;
                 }
             }
+
+
+.features .icon-table{
+    max-width:100%;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.features .icon-table:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+
+.features .intro1{
+    text-align: -webkit-right;
+    width:25%;
+    min-width: 250px;
+    float:left;
+
+}
+
+.features .what-r{
+    background: #000;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    /*background-color: rgb(0, 0, 0);*/
+    background: #2d2d2d;
+    border-bottom: #111 solid 50px;
+    color: #fff;
+    padding: 40px 90px 40px 90px;
+    text-align: left;
+    padding-left: 100px;
+    font-size: 1.33rem;
+}
+.features .what-p{
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 15px;
+}
+
+
+
 
 /**************
 New Navigtaion
@@ -1020,9 +1181,9 @@ New Navigtaion
 /* Tablet */
 @media only screen and (max-width: 945px) {
   .intro1{
-	float:none;
-	width:60%;
-	margin-top:0px;
+    float:none;
+    width:60%;
+    margin-top:0px;
   }
   .navbar .navigation li {
     font-size: 14px;
