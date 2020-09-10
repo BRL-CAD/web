@@ -252,6 +252,12 @@ a.menu{
     font-size:1rem;
     color:#333;
 }
+.intro-main2 {
+    font-weight: lighter;
+    margin: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
 .what-r{
     margin-top: 20px;
     background: #000;
@@ -265,6 +271,12 @@ a.menu{
     font-weight: lighter;
     font-size:1.11rem;
     margin: 15px;
+}
+.features {
+    background: #000;
+    padding: 40px 90px 40px 90px;
+    color: #fff;
+    font-size: 1.33rem;
 }
 .articles{
     text-align: center;
@@ -526,6 +538,40 @@ a.menu{
     -o-transition: ease-in-out .3s background;
     -ms-transition: ease-in-out .3s background;
 }
+.nots-opts5 {
+    border: 2px solid #fff;
+    background: #fff;
+    color: #d0245e;
+    font-family: Intro, Segoe UI, Open Sans, Arial, sans-serif;
+    outline-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    font-size: 0.88rem;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    margin-left:500px;
+}
+
+    .nots-opts5:hover {
+        background: #000;
+        color: #fff;
+        /*    color: #f64747; */
+        transition: ease-in-out .3s background;
+        -webkit-transition: ease-in-out .3s background;
+        -moz-transition: ease-in-out .3s background;
+        -o-transition: ease-in-out .3s background;
+        -ms-transition: ease-in-out .3s background;
+    }
 
             #dialogoverflow{
                 display: none;
