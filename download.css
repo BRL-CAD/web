@@ -1,0 +1,65 @@
+.menu{
+  padding-bottom: 5%;
+}
+.dash{
+  color: #d0245e;
+}
+li{
+  padding-bottom: 1%;
+}
+.buttonclass{
+  margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+}
+.button{
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color:white;
+  transition: 0.3s;
+}
+.button:hover{
+  background-color: #d0245e;
+  transition: 0.3s;
+}
+.button:hover .downloadbutton{
+  color:white;
+  text-decoration: none;
+}
+.downloadbutton{
+  color: white;
+  text-decoration: none;
+}
+.header-text{
+  background-color: white;
+  color:black;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  font-size:1.5em;
+}
+.download-list{
+  margin-top: 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+.download-list div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+.download-list div:hover{
+  transition: 1s;
+  background-color: #d0245e;
+}
+.download-list div:hover a{
+  color:white;
+}
