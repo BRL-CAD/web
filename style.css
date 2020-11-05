@@ -28,6 +28,27 @@ a:hover{
     -o-transition: ease-in .2s color;
     -ms-transition: ease-in .2s color;
 }
+section {
+    width: 98vw;
+    height: auto;
+    padding: 2vh 5vw 2vh 5vw;
+    /*padding: top right bottom left*/
+}
+
+section p {
+    font-weight: lighter;
+    font-size: 1.11rem;
+    margin: 15px;
+}
+
+hr {
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
 /**Text Selection**/
  ::selection {
     background-color: #f1f1f1;
@@ -1008,6 +1029,13 @@ New Navigtaion
   background-color: #d0245e;
   color: #fff;
 }
+
+
+.about-img {
+    width: 500px;
+    height: 330px;
+}
+
 
 /* Desktop */
 @media only screen and (max-width: 1100px) {
