@@ -155,3 +155,11 @@ $(document).ready(function() {
       return false;
    });
  });
+$(document).ready(function() {
+    $('.openPopup').on('click', function() {
+        var dataURL = $(this).attr('data-href');
+        $('.modal-body').load(dataURL, function() {
+            $('#myModal').css({ 'display': 'block' });
+        });
+    });
+});
