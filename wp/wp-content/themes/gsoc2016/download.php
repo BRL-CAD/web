@@ -37,18 +37,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="col s6 m3">
-                    <a href="https://sourceforge.net/projects/brlcad/files/BRL-CAD%20for%20Mac%20OS%20X/">
-                        <div class="card waves-effect waves-block">
-                            <div class="card-content">
-                                <img src="<?php bloginfo('template_url');?>/img/macos.png" alt="">
-                            </div>
-                            <div class="card-action center">
-                                macOS
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
             <div class="row">
                 <div class="col m6 s12">
